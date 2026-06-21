@@ -233,18 +233,29 @@ def build_html_report(repos, date_str):
     return html
 
 def send_email(config, html_content, date_str):
-    sender = config.get("sender_email")
-    recipient = config.get("recipient_email")
-    password = config.get("smtp_password")
+    sender = config.get("sender_email", "").strip().replace('"', '').replace("'", "")
+    recipient = config.get("recipient_email", "")
+    password = config.get("smtp_password", "").strip()
     
     if not sender or not password or sender == "your-email@gmail.com":
         print("[WARNING] Email credentials not configured. Skipping email sending.")
         return False
         
+    # Clean and split recipients defensively
+    recipients = []
+    for r in recipient.split(","):
+        r_clean = r.strip().replace('"', '').replace("'", "").replace('<', '').replace('>', '')
+        if r_clean:
+            recipients.append(r_clean)
+            
+    if not recipients:
+        print("[WARNING] No valid recipient email addresses found.")
+        return False
+        
     msg = MIMEMultipart('alternative')
     msg['Subject'] = f"🚀 GitHub 每日熱門專案報告 [{date_str}]"
     msg['From'] = f"GitHub Trending Robot <{sender}>"
-    msg['To'] = recipient
+    msg['To'] = ", ".join(recipients)
     
     msg.attach(MIMEText(html_content, 'html'))
     
@@ -259,7 +270,6 @@ def send_email(config, html_content, date_str):
             server.starttls()
             
         server.login(sender, password)
-        recipients = [r.strip() for r in recipient.split(",") if r.strip()]
         server.sendmail(sender, recipients, msg.as_string())
         server.quit()
         print(f"Email sent successfully to {len(recipients)} recipients!")
