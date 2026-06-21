@@ -319,6 +319,7 @@ def main():
         print("Job completed successfully.")
     else:
         print("Job completed without sending email.")
+        sys.exit(1)
 
 if __name__ == "__main__":
     main()
