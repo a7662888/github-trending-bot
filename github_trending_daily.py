@@ -259,9 +259,10 @@ def send_email(config, html_content, date_str):
             server.starttls()
             
         server.login(sender, password)
-        server.sendmail(sender, [recipient], msg.as_string())
+        recipients = [r.strip() for r in recipient.split(",") if r.strip()]
+        server.sendmail(sender, recipients, msg.as_string())
         server.quit()
-        print("Email sent successfully!")
+        print(f"Email sent successfully to {len(recipients)} recipients!")
         return True
     except Exception as e:
         print(f"Failed to send email: {e}")
