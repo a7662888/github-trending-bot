@@ -44,6 +44,7 @@ jobs:
             git add archive/
             if ! git diff --quiet && ! git diff --staged --quiet; then
               git commit -m "Auto-archive GitHub trending report for $(date +'%Y-%m-%d')"
+              git checkout -- .
               git pull --rebase origin main
               git push origin main
             else
