@@ -1,0 +1,8 @@
+{
+  "smtp_server": "smtp.gmail.com",
+  "smtp_port": 465,
+  "sender_email": "your-email@gmail.com",
+  "smtp_password": "your-gmail-app-password",
+  "recipient_email": "a7662888@gmail.com",
+  "archive_dir": "e:\\OneDrive\\Obsidian Vault\\github-trending-archive"
+}
