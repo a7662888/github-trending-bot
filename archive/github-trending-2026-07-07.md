@@ -11,21 +11,19 @@ date: 2026-07-07
 
 | 專案名稱 (連結) | 開發語言 | 本日新增星星 | 總星星數 | 繁體中文專案摘要 |
 | :--- | :---: | :---: | :---: | :--- |
-| [asgeirtj/system_prompts_leaks](https://github.com/asgeirtj/system_prompts_leaks) | `JavaScript` | `+1,378` | `51,476` | 從 Anthropic 擷取的系統提示 - Claude Fable 5、Opus 4.8、Claude Code、Claude Design。 OpenAI - ChatGPT 5.5 思考、GPT 5.5 即時、Codex。 Google - Gemini 3.5 Flash、3.1 Pro、反重力。 xAI - Grok、Cursor、Copilot、VS Code、Perplexity 等。定期更新。 |
-| [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) | `Shell` | `+1,112` | `70,767` | Production-grade engineering skills for AI coding agents. |
-| [Zackriya-Solutions/meetily](https://github.com/Zackriya-Solutions/meetily) | `Rust` | `+2,494` | `19,320` | 隱私第一，AI 會議助理具有 4 倍快的 Parakeet/Whisper 即時轉錄、發言者分類和基於 Rust 構建的 Ollama 摘要。 100%本地加工。無需雲。 Meetily（Meetly Ai - https://meetily.ai）是適用於 macOS 和 Windows 的排名第一的自架開源人工智慧會議記錄工具。 |
-| [ruvnet/RuView](https://github.com/ruvnet/RuView) | `Rust` | `+470` | `77,493` | π RuView 將商用 WiFi 訊號轉化為即時空間智慧、生命體徵監測和存在檢測 - 所有這些都無需視訊像素。 |
-| [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) | `JavaScript` | `+1,458` | `58,891` | 品味技能 - 給你的人工智慧良好的品味。阻止人工智慧產生無聊的、通用的斜坡 |
-| [alirezarezvani/claude-skills](https://github.com/alirezarezvani/claude-skills) | `Python` | `+610` | `21,134` | 345 個 Claude Code 技能和代理技能和外掛程式（30 多個代理程式、70 多個自訂指令、330 多個技能、可自訂參考、腳本），適用於 Claude Code、Codex、Gemini CLI、Cursor 和另外 8 個編碼代理 — 工程、行銷、產品、合規性、C 級、諮詢 |
-| [openai/codex-plugin-cc](https://github.com/openai/codex-plugin-cc) | `JavaScript` | `+906` | `26,263` | 使用 Claude Code 的 Codex 來審查程式碼或委派任務。 |
-| [mvanhorn/last30days-skill](https://github.com/mvanhorn/last30days-skill) | `Python` | `+458` | `49,721` | AI 代理技能可研究 Reddit、X、YouTube、HN、Polymarket 和網路上的任何主題，然後綜合得出有根據的摘要 |
-| [ogulcancelik/herdr](https://github.com/ogulcancelik/herdr) | `Rust` | `+779` | `12,849` | 位於您終端機中的代理程式多工器。 |
-| [bradautomates/claude-video](https://github.com/bradautomates/claude-video) | `Python` | `+427` | `4,202` | Give Claude the ability to watch any video. /watch downloads, extracts frames, transcribes, hands it all to Claude. |
-| [karakeep-app/karakeep](https://github.com/karakeep-app/karakeep) | `TypeScript` | `+199` | `26,874` | 一個自託管的書籤應用程式（連結、註釋和圖像），具有基於人工智慧的自動標記和全文搜索 |
-| [firecrawl/firecrawl](https://github.com/firecrawl/firecrawl) | `TypeScript` | `+867` | `146,220` | 用於大規模搜尋、抓取網路並與網路互動的 API。 🔥 |
-| [steipete/CodexBar](https://github.com/steipete/CodexBar) | `Swift` | `+598` | `16,721` | Show usage stats for OpenAI Codex and Claude Code, without having to login. |
-| [alibaba/zvec](https://github.com/alibaba/zvec) | `C++` | `+382` | `13,492` | 輕量級、快如閃電的進程內向量資料庫 |
-| [sindresorhus/awesome](https://github.com/sindresorhus/awesome) | `N/A` | `+345` | `482,271` | 😎 關於各種有趣主題的精彩列表 |
+| [MadsLorentzen/ai-job-search](https://github.com/MadsLorentzen/ai-job-search) | `TypeScript` | `+2,402` | `10,747` | 基於 Claude Code 所建構的人工智慧驅動的職位申請架構。叉開它，填寫你的個人資料，讓克勞德評估工作，定製履歷，寫求職信，並為你的面試做好準備。 |
+| [Zackriya-Solutions/meetily](https://github.com/Zackriya-Solutions/meetily) | `Rust` | `+1,781` | `20,682` | 隱私第一，AI 會議助理具有 4 倍快的 Parakeet/Whisper 即時轉錄、發言者分類和基於 Rust 構建的 Ollama 摘要。 100%本地加工。無需雲。 Meetily（Meetly Ai - https://meetily.ai）是適用於 macOS 和 Windows 的排名第一的自架開源人工智慧會議記錄工具。 |
+| [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) | `JavaScript` | `+1,311` | `72,103` | AI 編碼代理的生產級工程技能。 |
+| [ruvnet/RuView](https://github.com/ruvnet/RuView) | `Rust` | `+1,122` | `78,477` | π RuView 將商用 WiFi 訊號轉化為即時空間智慧、生命體徵監測和存在檢測 - 所有這些都無需視訊像素。 |
+| [asgeirtj/system_prompts_leaks](https://github.com/asgeirtj/system_prompts_leaks) | `JavaScript` | `+1,704` | `52,953` | 從 Anthropic 擷取的系統提示 - Claude Fable 5、Opus 4.8、Claude Code、Claude Design。 OpenAI - ChatGPT 5.5 思考、GPT 5.5 即時、Codex。 Google - Gemini 3.5 Flash、3.1 Pro、反重力。 xAI - Grok、Cursor、Copilot、VS Code、Perplexity 等。定期更新。 |
+| [TencentCloud/CubeSandbox](https://github.com/TencentCloud/CubeSandbox) | `Rust` | `+665` | `8,441` | 適用於 AI 代理的即時、並發、安全和輕量級沙箱。 |
+| [AhmadIbrahiim/Website-downloader](https://github.com/AhmadIbrahiim/Website-downloader) | `HTML` | `+173` | `3,968` | 💡 下載任何網站的完整原始碼（包括所有資產）。 [ JavaScript、樣式表、圖像 ] 使用 Node.js |
+| [steipete/CodexBar](https://github.com/steipete/CodexBar) | `Swift` | `+377` | `17,024` | 顯示 OpenAI Codex 和 Claude Code 的使用統計信息，無需登入。 |
+| [dotnet/skills](https://github.com/dotnet/skills) | `C#` | `+82` | `4,299` | 使用 .NET 和 C# 協助 AI 編碼代理程式的技能儲存庫 |
+| [iOfficeAI/OfficeCLI](https://github.com/iOfficeAI/OfficeCLI) | `C#` | `+802` | `9,888` | OfficeCLI 是第一個也是最好的 Office 套件，專為 AI 代理構建，用於讀取、編輯和自動化 Word、Excel 和 PowerPoint 文件。免費、開源、單一二進位文件，無需安裝 Office。 |
+| [bradautomates/claude-video](https://github.com/bradautomates/claude-video) | `Python` | `+953` | `5,136` | 讓克勞德能夠觀看任何影片。 /watch 下載、提取影格、轉錄，然後將其全部交給 Claude。 |
+| [kyutai-labs/pocket-tts](https://github.com/kyutai-labs/pocket-tts) | `Python` | `+510` | `6,141` | 適合您 CPU（和口袋）的 TTS |
+| [hesreallyhim/awesome-claude-code](https://github.com/hesreallyhim/awesome-claude-code) | `Python` | `+227` | `49,104` | 為最出色的特工 Claude Code 精心挑選的最優質資源，Claude Code 是無可爭議的編碼夥伴冠軍，來自 Anthropic PBC 勢不可擋的團隊。頂級技能、靈巧的代理、閃爍的狀態列、一流的開發人員工具的令人愉快的展示，而且我們還有插件 |
 
 
 ---
