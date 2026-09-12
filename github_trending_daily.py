@@ -43,7 +43,7 @@ def load_config():
         "smtp_port": 465,
         "sender_email": "your-email@gmail.com",
         "smtp_password": "your-gmail-app-password",
-        "recipient_email": "a7662888@gmail.com",
+        "recipient_email": "recipient@example.com",
         "archive_dir": "e:\\OneDrive\\Obsidian Vault\\github-trending-archive"
     }
     config.update(local_config)
@@ -133,6 +133,63 @@ def fetch_github_trending():
         
     return repos
 
+# --- 授權分級：決定「能不能取用」先於「值不值得用」 ---
+PERMISSIVE = {"MIT", "Apache-2.0", "BSD-2-Clause", "BSD-3-Clause", "ISC",
+              "Unlicense", "0BSD", "MPL-2.0", "Zlib", "PostgreSQL"}
+COPYLEFT = {"GPL-2.0", "GPL-3.0", "AGPL-3.0", "LGPL-2.1", "LGPL-3.0",
+            "GPL-2.0-only", "GPL-3.0-only", "GPL-3.0-or-later", "AGPL-3.0-only"}
+
+def classify_license(spdx):
+    """回傳 (顯示字串, 取用風險註記)。
+    NOASSERTION 不等於無授權，只代表 GitHub 偵測器比對不到，必須人工開 LICENSE 檔確認。"""
+    if spdx == "NOASSERTION":
+        return "⚠️ 自訂/未識別", "需人工開 LICENSE 確認（偵測失敗，不等於無授權）"
+    if not spdx or spdx == "NONE":
+        return "🚫 無授權檔", "All rights reserved，不得取用程式碼"
+    if spdx in PERMISSIVE:
+        return f"✅ {spdx}", "寬鬆，可在地化取用"
+    if spdx in COPYLEFT:
+        return f"⚠️ {spdx}", "copyleft 傳染，衍生作品須同授權；僅可讀設計"
+    return f"❓ {spdx}", "非常見授權，取用前人工確認"
+
+def enrich_with_github_api(repos):
+    """補 trending 頁面沒有的欄位：授權、建立日期、權威 star/fork 數。
+    未授權 API 為 60 req/hr，本服務單輪 15 筆；設 GITHUB_TOKEN 可提高上限。"""
+    headers = {"Accept": "application/vnd.github+json",
+               "User-Agent": "github-trending-daily"}
+    token = os.environ.get("GITHUB_TOKEN")
+    if token:
+        headers["Authorization"] = f"Bearer {token}"
+
+    for repo in repos:
+        repo.setdefault("license_display", "—")
+        repo.setdefault("license_note", "未查詢")
+        repo.setdefault("created_at", "—")
+        repo.setdefault("fork_ratio", "—")
+        try:
+            r = requests.get("https://api.github.com/repos/" + repo["full_name"],
+                             headers=headers, timeout=15)
+            if r.status_code != 200:
+                print(f"  API {r.status_code} for {repo['full_name']}")
+                continue
+            d = r.json()
+            spdx = (d.get("license") or {}).get("spdx_id")
+            repo["license_display"], repo["license_note"] = classify_license(spdx)
+            repo["created_at"] = (d.get("created_at") or "")[:10] or "—"
+            stars = d.get("stargazers_count")
+            forks = d.get("forks_count")
+            if isinstance(stars, int):
+                repo["stars_total"] = f"{stars:,}"
+            if isinstance(forks, int):
+                repo["forks"] = f"{forks:,}"
+            # fork/star 比：辨識「被真正使用」還是「只被收藏」
+            if isinstance(stars, int) and isinstance(forks, int) and forks > 0:
+                repo["fork_ratio"] = f"1:{round(stars / forks)}"
+        except Exception as e:
+            print(f"  API error for {repo['full_name']}: {e}")
+    return repos
+
+
 def build_markdown_report(repos, date_str):
     md = f"""---
 title: "GitHub 每日熱門專案 [{date_str}]"
@@ -145,11 +202,15 @@ date: {date_str}
 
 # 🚀 GitHub 每日熱門專案報告 ({date_str})
 
-| 專案名稱 (連結) | 開發語言 | 本日新增星星 | 總星星數 | 繁體中文專案摘要 |
-| :--- | :---: | :---: | :---: | :--- |
+| 專案名稱 (連結) | 開發語言 | 本日新增星星 | 總星星數 | Fork | Fork:Star | 授權 | 建立日期 | 繁體中文專案摘要 |
+| :--- | :---: | :---: | :---: | :---: | :---: | :--- | :---: | :--- |
 """
     for repo in repos:
-        md += f"| [{repo['full_name']}]({repo['link']}) | `{repo['lang']}` | `+{repo['stars_today']}` | `{repo['stars_total']}` | {repo['desc_zh']} |\n"
+        md += (f"| [{repo['full_name']}]({repo['link']}) | `{repo['lang']}` "
+               f"| `+{repo['stars_today']}` | `{repo['stars_total']}` "
+               f"| `{repo.get('forks', '-')}` | `{repo.get('fork_ratio', '-')}` "
+               f"| {repo.get('license_display', '-')} | {repo.get('created_at', '-')} "
+               f"| {repo['desc_zh']} |\n")
         
     md += "\n\n---\n*本報告由 Python 爬蟲與 Google 翻譯 API 自動產生並歸檔。*"
     return md
@@ -178,6 +239,9 @@ def build_html_report(repos, date_str):
                 </div>
                 <div style="font-size: 14px; color: #c9d1d9; line-height: 1.5;">{repo['desc_zh']}</div>
                 <div style="font-size: 12px; color: #8b949e; margin-top: 4px; font-style: italic;">Original: {repo['desc_en']}</div>
+                <div style="font-size: 11px; color: #6e7681; margin-top: 6px;">
+                    &#x1F374; Fork {repo.get('forks', '-')} &nbsp;|&nbsp; Fork:Star {repo.get('fork_ratio', '-')} &nbsp;|&nbsp; 建立 {repo.get('created_at', '-')}
+                </div>
             </td>
             <td style="padding: 16px; text-align: center; vertical-align: middle;">
                 <span style="background-color: {lang_color}; color: {text_color}; padding: 3px 8px; border-radius: 12px; font-size: 12px; font-weight: bold; white-space: nowrap;">
@@ -189,6 +253,10 @@ def build_html_report(repos, date_str):
             </td>
             <td style="padding: 16px; text-align: center; vertical-align: middle; color: #e3b341; font-weight: bold; font-size: 14px; white-space: nowrap;">
                 {repo['stars_total']}
+            </td>
+            <td style="padding: 16px; text-align: center; vertical-align: middle; font-size: 12px; color: #c9d1d9;">
+                <div style="white-space: nowrap; font-weight: bold;">{repo.get('license_display', '-')}</div>
+                <div style="color: #6e7681; margin-top: 4px; font-size: 10px; line-height: 1.4; max-width: 130px;">{repo.get('license_note', '')}</div>
             </td>
         </tr>
         """
@@ -215,6 +283,7 @@ def build_html_report(repos, date_str):
                             <th style="padding: 12px 16px; text-align: center;">主要語言</th>
                             <th style="padding: 12px 16px; text-align: center;">今日新增</th>
                             <th style="padding: 12px 16px; text-align: center;">總星星數</th>
+                            <th style="padding: 12px 16px; text-align: center;">授權</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -295,6 +364,9 @@ def main():
     repos = repos[:15]
     print(f"Processing top {len(repos)} repositories...")
     
+    print("Enriching with GitHub API (license / created / authoritative counts)...")
+    enrich_with_github_api(repos)
+
     for i, repo in enumerate(repos):
         print(f"Translating ({i+1}/{len(repos)}): {repo['full_name']}...")
         repo['desc_zh'] = translate_to_zh_tw(repo['desc_en'])
