@@ -31,6 +31,10 @@ jobs:
           SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
           SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
           RECIPIENT_EMAIL: ${{ secrets.RECIPIENT_EMAIL }}
+          # Actions runner 走共享 IP，未授權 GitHub API 為 60 req/hr/IP，
+          # 補授權與 fork 欄位的 15 次查詢會被 403。此 token 由 Actions 自動提供，
+          # 無須另設 secret，額度 1000 req/hr。
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           python github_trending_daily.py
 
