@@ -1,6 +1,7 @@
 import os
 import sys
 import re
+import html
 import glob
 import json
 import time
@@ -16,6 +17,10 @@ from bs4 import BeautifulSoup
 TAIPEI_TZ = datetime.timezone(datetime.timedelta(hours=8))
 TOP_N = int(os.environ.get("TOP_N", "10"))
 DEDUP_DAYS = int(os.environ.get("DEDUP_DAYS", "7"))
+BROWSER_UA = (
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+    "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+)
 
 
 def log(msg):
@@ -177,26 +182,62 @@ def normalize_zh_tw(zh):
     return zh.strip()
 
 
+def _has_cjk(s):
+    return bool(re.search(r"[\u4e00-\u9fff]", str(s or "")))
+
+
 def translate_to_zh_tw(text):
+    """三層翻譯瀑布（Google gtx + Browser UA -> clients5.google.com -> MyMemory），確保在雲端 Runner 不因限流退回英文。"""
     if not text or text == "No description":
         return "無專案描述"
 
-    url = (
-        "https://translate.googleapis.com/translate_a/single"
-        f"?client=gtx&sl=auto&tl=zh-TW&dt=t&q={urllib.parse.quote(text)}"
-    )
-    for attempt in range(3):
-        try:
-            res = requests.get(url, timeout=10)
-            if res.status_code == 200:
-                result = res.json()
-                translated_parts = [part[0] for part in result[0] if part and part[0]]
-                zh = "".join(translated_parts)
+    headers = {"User-Agent": BROWSER_UA, "Accept-Language": "zh-TW,zh;q=0.9,en;q=0.8"}
+    sl = "auto" if _has_cjk(text) else "en"
+
+    # Tier 1: translate.googleapis.com (with Browser User-Agent)
+    try:
+        url1 = (
+            "https://translate.googleapis.com/translate_a/single"
+            f"?client=gtx&sl={sl}&tl=zh-TW&dt=t&q={urllib.parse.quote(text)}"
+        )
+        r1 = requests.get(url1, headers=headers, timeout=10)
+        if r1.status_code == 200:
+            data = r1.json()
+            zh = "".join(part[0] for part in data[0] if part and part[0]).strip()
+            if _has_cjk(zh):
                 return normalize_zh_tw(zh)
-        except Exception as e:
-            if attempt == 2:
-                log(f"Translation error: {e}")
-            time.sleep(1)
+        else:
+            log(f"  [Translate Tier 1 HTTP {r1.status_code}] Switching to Tier 2...")
+    except Exception as e:
+        log(f"  [Translate Tier 1 error: {e}] Switching to Tier 2...")
+
+    # Tier 2: clients5.google.com (Chrome extension dictionary endpoint)
+    try:
+        url2 = f"https://clients5.google.com/translate_a/t?client=dict-chrome-ex&sl={sl}&tl=zh-TW"
+        r2 = requests.post(url2, data={"q": text}, headers=headers, timeout=10)
+        if r2.status_code == 200:
+            data2 = r2.json()
+            if isinstance(data2, list) and data2:
+                first = data2[0]
+                zh2 = first[0] if isinstance(first, list) else str(first)
+                if _has_cjk(zh2):
+                    return normalize_zh_tw(zh2)
+        else:
+            log(f"  [Translate Tier 2 HTTP {r2.status_code}] Switching to Tier 3...")
+    except Exception as e:
+        log(f"  [Translate Tier 2 error: {e}] Switching to Tier 3...")
+
+    # Tier 3: MyMemory Translation API (non-Google independent cloud fallback)
+    try:
+        url3 = f"https://api.mymemory.translated.net/get?q={urllib.parse.quote(text[:480])}&langpair=en|zh-TW"
+        r3 = requests.get(url3, headers=headers, timeout=10)
+        if r3.status_code == 200:
+            zh3 = (r3.json().get("responseData") or {}).get("translatedText") or ""
+            if _has_cjk(zh3):
+                return normalize_zh_tw(zh3)
+    except Exception as e:
+        log(f"  [Translate Tier 3 error: {e}]")
+
     return normalize_zh_tw(text)
 
 
@@ -214,12 +255,7 @@ def parse_int_stars(s):
 
 def fetch_github_trending(since="daily"):
     url = f"https://github.com/trending?since={since}"
-    headers = {
-        "User-Agent": (
-            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-            "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
-        )
-    }
+    headers = {"User-Agent": BROWSER_UA}
 
     for attempt in range(3):
         try:
@@ -320,7 +356,7 @@ def classify_license(spdx):
 
 
 def fetch_readme_summary_en(full_name, headers):
-    """擷取專案 README 第一段實質文字說明，補強過短的官方一句話描述。"""
+    """擷取專案 README 第一段實質文字說明，清除 HTML 標籤與符號列。"""
     try:
         h = dict(headers)
         h["Accept"] = "application/vnd.github.raw+json"
@@ -330,37 +366,40 @@ def fetch_readme_summary_en(full_name, headers):
         lines = r.text.splitlines()
         cleaned_lines = []
         in_code = False
-        for line in lines[:120]:
+        for line in lines[:150]:
             s = line.strip()
             if s.startswith("```"):
                 in_code = not in_code
                 continue
-            if in_code or not s:
+            if in_code:
+                continue
+            if not s:
                 if cleaned_lines:
                     break
                 continue
-            # 跳過標題、徽章、HTML 標籤、圖片與表格分隔線
+            s = html.unescape(s)
+            s = re.sub(r"<[^>]+>", " ", s).strip()
             if (
                 s.startswith("#")
                 or s.startswith("!")
                 or s.startswith("[![")
-                or s.startswith("<")
                 or s.startswith("|")
                 or s.startswith("---")
                 or s.startswith(">")
                 or re.match(r"^\[.*\]\(.*\)$", s)
             ):
                 continue
-            # 移除行內 Markdown 連結語法 [text](url) -> text
+            s = re.sub(r"!\[[^\]]*\]\([^)]*\)", "", s)
             s = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", s)
-            s = re.sub(r"[*_`~]+", "", s).strip()
-            if len(s) >= 25:
+            s = re.sub(r"[*_`~•·|]+", " ", s)
+            s = re.sub(r"\s+", " ", s).strip()
+            if len(s) >= 30 and len(re.findall(r"[A-Za-z\u4e00-\u9fff]{2,}", s)) >= 5:
                 cleaned_lines.append(s)
                 if sum(len(x) for x in cleaned_lines) >= 180:
                     break
         summary = " ".join(cleaned_lines).strip()
-        if len(summary) > 260:
-            summary = summary[:257].rsplit(" ", 1)[0] + "..."
+        if len(summary) > 240:
+            summary = summary[:237].rsplit(" ", 1)[0] + "..."
         return summary
     except Exception:
         return ""
@@ -431,7 +470,6 @@ def fetch_repo_api_meta(repo):
     except Exception:
         pass
 
-    # 擷取 README 首段，讓每個入選專案都有完整繁中功能說明
     readme_en = fetch_readme_summary_en(repo["full_name"], headers)
     if readme_en and readme_en.lower() != repo.get("desc_en", "").lower():
         repo["readme_en"] = readme_en
@@ -440,12 +478,6 @@ def fetch_repo_api_meta(repo):
 
 
 def select_top_repos_with_dedup(candidates, history, today_str, top_n=TOP_N):
-    """
-    7 天內不重複篩選邏輯：
-    - 若過去 7 天內未推送過：入選
-    - 若過去 7 天內已推送過：檢查是否有新 Release 版本、說明更新、新提交且當日熱度高、或星數暴增
-      若有更新則標記 update_reason 並允許重新推送；否則略過。
-    """
     records = history.get("records", {})
     today = datetime.date.fromisoformat(today_str)
     cutoff = today - datetime.timedelta(days=DEDUP_DAYS)
@@ -476,7 +508,6 @@ def select_top_repos_with_dedup(candidates, history, today_str, top_n=TOP_N):
                 break
             continue
 
-        # 在 7 天內曾推送過 -> 檢查是否有重大更新
         fetch_repo_api_meta(repo)
         old_tag = (prev.get("release_tag") or "").strip()
         new_tag = (repo.get("release_tag") or "").strip()
@@ -531,8 +562,8 @@ date: {date_str}
     for idx, repo in enumerate(repos, 1):
         update_tag = f" 🔄 *({repo['update_reason']})*" if repo.get("update_reason") else ""
         full_zh = repo["desc_zh"]
-        if repo.get("readme_highlight_zh"):
-            full_zh += f"<br>💡 **README 亮點**：{repo['readme_highlight_zh']}"
+        if repo.get("readme_highlight_zh") and repo["readme_highlight_zh"] != repo["desc_zh"]:
+            full_zh += f"<br>💡 **功能亮點**：{repo['readme_highlight_zh']}"
         md += (
             f"| {idx} | [{repo['full_name']}]({repo['link']}){update_tag} | `{repo['lang']}` "
             f"| `+{repo['stars_today']}` | `{repo['stars_total']}` "
@@ -557,8 +588,8 @@ def build_plain_text_report(repos, date_str):
         lines.append(f"#{idx} {repo['full_name']}{upd}")
         lines.append(f"🔗 連結：{repo['link']}")
         lines.append(f"📝 繁中說明：{repo['desc_zh']}")
-        if repo.get("readme_highlight_zh"):
-            lines.append(f"💡 補充介紹：{repo['readme_highlight_zh']}")
+        if repo.get("readme_highlight_zh") and repo["readme_highlight_zh"] != repo["desc_zh"]:
+            lines.append(f"💡 功能亮點：{repo['readme_highlight_zh']}")
         lines.append(
             f"📊 語言：{repo['lang']} | 今日 +{repo['stars_today']} ★ | 總星數 {repo['stars_total']} | 授權 {repo.get('license_display', '-')}"
         )
@@ -605,7 +636,7 @@ def build_html_report(repos, date_str):
             )
 
         readme_block = ""
-        if repo.get("readme_highlight_zh"):
+        if repo.get("readme_highlight_zh") and repo["readme_highlight_zh"] != repo["desc_zh"]:
             readme_block = (
                 f'<div style="font-size: 13px; color: #b1bac4; line-height: 1.5; margin-top: 6px; '
                 f'padding: 6px 10px; background-color: #0d1117; border-left: 3px solid #1f6feb; border-radius: 4px;">'
@@ -655,7 +686,7 @@ def build_html_report(repos, date_str):
         </tr>
         """
 
-    html = f"""
+    html_doc = f"""
     <!DOCTYPE html>
     <html>
     <head>
@@ -693,7 +724,7 @@ def build_html_report(repos, date_str):
     </body>
     </html>
     """
-    return html
+    return html_doc
 
 
 def _resolve_ipv4_host(server_host):
@@ -762,7 +793,6 @@ def send_email(config, plain_content, html_content, date_str):
     max_retries = int(os.environ.get("SMTP_MAX_RETRIES", "12"))
     base_delay = int(os.environ.get("SMTP_RETRY_DELAY", "15"))
 
-    # 交替嘗試 SSL:465 / STARTTLS:587 以及預設 DNS / 強制 IPv4
     endpoints = [
         (465, True, False),
         (587, False, False),
