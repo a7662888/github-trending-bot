@@ -5,70 +5,70 @@
       "pushed_at": "2026-11-06T22:32:32Z",
       "release_tag": "",
       "sent_date": "2026-11-08",
-      "stars_int": 188931
+      "stars_int": 188933
     },
     "astral-sh/ruff": {
       "desc_en": "An extremely fast Python linter and code formatter, written in Rust.",
       "pushed_at": "2026-11-08T06:11:02Z",
       "release_tag": "0.17.4",
       "sent_date": "2026-11-08",
-      "stars_int": 51026
+      "stars_int": 51027
     },
     "cloudflare/security-audit-skill": {
       "desc_en": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
       "pushed_at": "2026-09-14T19:29:02Z",
       "release_tag": "",
       "sent_date": "2026-11-08",
-      "stars_int": 66022
+      "stars_int": 66030
     },
     "google/skills": {
       "desc_en": "Agent Skills for Google products and technologies",
       "pushed_at": "2026-11-07T14:41:39Z",
       "release_tag": "",
       "sent_date": "2026-11-08",
-      "stars_int": 23519
+      "stars_int": 23523
     },
     "mattpocock/skills": {
       "desc_en": "Skills for Real Engineers. Straight from my .agents directory.",
       "pushed_at": "2026-11-05T10:40:01Z",
       "release_tag": "v1.3.2",
       "sent_date": "2026-11-08",
-      "stars_int": 317916
+      "stars_int": 317921
     },
     "meta/astryx": {
       "desc_en": "An open source design system that's fully customizable and agent ready",
-      "pushed_at": "2026-11-08T06:14:24Z",
+      "pushed_at": "2026-11-08T06:19:35Z",
       "release_tag": "v0.7.11",
       "sent_date": "2026-11-08",
-      "stars_int": 14743
+      "stars_int": 14749
     },
     "milind-soni/OpenMausBot": {
       "desc_en": "Open-source Grok Bot alternative with a virtual machine that bots can use",
-      "pushed_at": "2026-11-08T06:14:09Z",
+      "pushed_at": "2026-11-08T06:21:38Z",
       "release_tag": "v0.1.148",
       "sent_date": "2026-11-08",
-      "stars_int": 17278
+      "stars_int": 17290
     },
     "prometheus/prometheus": {
       "desc_en": "The Prometheus monitoring system and time series database.",
       "pushed_at": "2026-11-07T22:52:23Z",
       "release_tag": "v3.16.0",
       "sent_date": "2026-11-08",
-      "stars_int": 67485
+      "stars_int": 67487
     },
     "sherlock-project/sherlock": {
       "desc_en": "Hunt down social media accounts by username across social networks",
       "pushed_at": "2026-11-08T05:13:22Z",
       "release_tag": "v0.16.2",
       "sent_date": "2026-11-08",
-      "stars_int": 101049
+      "stars_int": 101063
     },
     "vercel-labs/agent-browser": {
       "desc_en": "Browser automation CLI for AI agents",
       "pushed_at": "2026-11-08T05:23:01Z",
       "release_tag": "v0.41.2",
       "sent_date": "2026-11-08",
-      "stars_int": 47005
+      "stars_int": 47010
     }
   }
 }
