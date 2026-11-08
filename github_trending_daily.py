@@ -4,6 +4,7 @@ import re
 import glob
 import json
 import time
+import socket
 import datetime
 import urllib.parse
 import smtplib
@@ -73,7 +74,6 @@ def load_history(history_file, archive_dir):
         except Exception as e:
             log(f"[Warn] Failed to read {history_file}: {e}")
 
-    # 自動從 archive 資料夾回填過去 7 天已出現過的 repo
     if archive_dir and os.path.exists(archive_dir):
         today = datetime.datetime.now(TAIPEI_TZ).date()
         cutoff = today - datetime.timedelta(days=DEDUP_DAYS)
@@ -85,7 +85,7 @@ def load_history(history_file, archive_dir):
                 file_date = datetime.date.fromisoformat(m_date.group(1))
             except ValueError:
                 continue
-            if file_date <= cutoff or file_date >= today:
+            if file_date < cutoff or file_date >= today:
                 continue
             try:
                 content = open(md_path, "r", encoding="utf-8").read()
@@ -97,6 +97,7 @@ def load_history(history_file, archive_dir):
                             "desc_en": "",
                             "stars_int": 0,
                             "release_tag": "",
+                            "pushed_at": "",
                         }
             except Exception:
                 pass
@@ -118,7 +119,6 @@ def save_history(history_file, history, repos, date_str):
             "pushed_at": repo.get("pushed_at", ""),
         }
 
-    # 只保留最近 30 天紀錄
     today = datetime.date.fromisoformat(date_str)
     cutoff_30d = today - datetime.timedelta(days=30)
     cleaned = {}
@@ -139,6 +139,44 @@ def save_history(history_file, history, repos, date_str):
         log(f"[Warn] Failed to save {history_file}: {e}")
 
 
+TW_TERM_MAP = [
+    ("開源項目", "開源專案"),
+    ("軟件", "軟體"),
+    ("硬件", "硬體"),
+    ("代碼", "程式碼"),
+    ("源碼", "原始碼"),
+    ("視頻", "影片"),
+    ("視訊", "影片"),
+    ("音頻", "音訊"),
+    ("項目", "專案"),
+    ("倉庫", "儲存庫"),
+    ("數據庫", "資料庫"),
+    ("數據", "資料"),
+    ("內存", "記憶體"),
+    ("網絡", "網路"),
+    ("接口", "介面"),
+    ("默認", "預設"),
+    ("支持", "支援"),
+    ("信息", "資訊"),
+    ("調用", "呼叫"),
+    ("運行", "執行"),
+    ("服務器", "伺服器"),
+    ("客戶端", "用戶端"),
+    ("智能體", "AI 代理（Agent）"),
+    ("編碼代理", "寫程式代理（Coding Agent）"),
+    ("格式化程序", "格式化工具"),
+    ("程序", "程式"),
+    ("標記", "Token"),
+    ("座席", "Agent"),
+]
+
+
+def normalize_zh_tw(zh):
+    for src, dst in TW_TERM_MAP:
+        zh = zh.replace(src, dst)
+    return zh.strip()
+
+
 def translate_to_zh_tw(text):
     if not text or text == "No description":
         return "無專案描述"
@@ -153,22 +191,25 @@ def translate_to_zh_tw(text):
             if res.status_code == 200:
                 result = res.json()
                 translated_parts = [part[0] for part in result[0] if part and part[0]]
-                zh = "".join(translated_parts).strip()
-                # 常見中國大陸術語轉台灣慣用繁中術語
-                zh = (
-                    zh.replace("代碼", "程式碼")
-                    .replace("視頻", "影片")
-                    .replace("項目", "專案")
-                    .replace("倉庫", "儲存庫")
-                    .replace("數據", "資料")
-                    .replace("開源項目", "開源專案")
-                )
-                return zh
+                zh = "".join(translated_parts)
+                return normalize_zh_tw(zh)
         except Exception as e:
             if attempt == 2:
                 log(f"Translation error: {e}")
             time.sleep(1)
-    return text
+    return normalize_zh_tw(text)
+
+
+def parse_int_stars(s):
+    if not s:
+        return 0
+    m = re.search(r"([\d,]+)", str(s))
+    if not m:
+        return 0
+    try:
+        return int(m.group(1).replace(",", ""))
+    except Exception:
+        return 0
 
 
 def fetch_github_trending(since="daily"):
@@ -225,13 +266,11 @@ def fetch_github_trending(since="daily"):
             .replace("stars this month", "")
             .strip()
         )
+        stars_today_int = parse_int_stars(stars_today_cleaned)
 
         stars_total_el = article.find("a", href=lambda h: h and h.endswith("/stargazers"))
         stars_total = stars_total_el.text.strip() if stars_total_el else "N/A"
-        try:
-            stars_int = int(stars_total.replace(",", "").strip())
-        except Exception:
-            stars_int = 0
+        stars_int = parse_int_stars(stars_total)
 
         forks_el = article.find("a", href=lambda h: h and h.endswith("/forks"))
         forks = forks_el.text.strip() if forks_el else "N/A"
@@ -243,11 +282,15 @@ def fetch_github_trending(since="daily"):
             "link": repo_link,
             "desc_en": description_en,
             "desc_zh": "",
+            "readme_highlight_zh": "",
             "lang": lang,
             "stars_today": stars_today_cleaned,
+            "stars_today_int": stars_today_int,
             "stars_total": stars_total,
             "stars_int": stars_int,
             "forks": forks,
+            "topics": [],
+            "homepage": "",
             "update_reason": "",
         })
 
@@ -276,8 +319,55 @@ def classify_license(spdx):
     return f"❓ {spdx}", "非常見授權，取用前人工確認"
 
 
+def fetch_readme_summary_en(full_name, headers):
+    """擷取專案 README 第一段實質文字說明，補強過短的官方一句話描述。"""
+    try:
+        h = dict(headers)
+        h["Accept"] = "application/vnd.github.raw+json"
+        r = requests.get(f"https://api.github.com/repos/{full_name}/readme", headers=h, timeout=10)
+        if r.status_code != 200 or not r.text:
+            return ""
+        lines = r.text.splitlines()
+        cleaned_lines = []
+        in_code = False
+        for line in lines[:120]:
+            s = line.strip()
+            if s.startswith("```"):
+                in_code = not in_code
+                continue
+            if in_code or not s:
+                if cleaned_lines:
+                    break
+                continue
+            # 跳過標題、徽章、HTML 標籤、圖片與表格分隔線
+            if (
+                s.startswith("#")
+                or s.startswith("!")
+                or s.startswith("[![")
+                or s.startswith("<")
+                or s.startswith("|")
+                or s.startswith("---")
+                or s.startswith(">")
+                or re.match(r"^\[.*\]\(.*\)$", s)
+            ):
+                continue
+            # 移除行內 Markdown 連結語法 [text](url) -> text
+            s = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", s)
+            s = re.sub(r"[*_`~]+", "", s).strip()
+            if len(s) >= 25:
+                cleaned_lines.append(s)
+                if sum(len(x) for x in cleaned_lines) >= 180:
+                    break
+        summary = " ".join(cleaned_lines).strip()
+        if len(summary) > 260:
+            summary = summary[:257].rsplit(" ", 1)[0] + "..."
+        return summary
+    except Exception:
+        return ""
+
+
 def fetch_repo_api_meta(repo):
-    """查詢單一 repo 的 GitHub API 元資料與最新 Release tag。"""
+    """查詢單一 repo 的 GitHub API 元資料、Topics、Homepage、最新 Release 與 README 摘要。"""
     headers = {
         "Accept": "application/vnd.github+json",
         "User-Agent": "github-trending-daily",
@@ -292,6 +382,9 @@ def fetch_repo_api_meta(repo):
     repo.setdefault("fork_ratio", "—")
     repo.setdefault("release_tag", "")
     repo.setdefault("pushed_at", "")
+    repo.setdefault("topics", [])
+    repo.setdefault("homepage", "")
+    repo.setdefault("readme_en", "")
 
     try:
         r = requests.get(
@@ -305,6 +398,10 @@ def fetch_repo_api_meta(repo):
             repo["license_display"], repo["license_note"] = classify_license(spdx)
             repo["created_at"] = (d.get("created_at") or "")[:10] or "—"
             repo["pushed_at"] = d.get("pushed_at") or ""
+            repo["topics"] = (d.get("topics") or [])[:5]
+            homepage = (d.get("homepage") or "").strip()
+            if homepage and homepage.startswith(("http://", "https://")):
+                repo["homepage"] = homepage
             if d.get("description"):
                 repo["desc_en"] = d["description"].strip()
             stars = d.get("stargazers_count")
@@ -321,7 +418,6 @@ def fetch_repo_api_meta(repo):
     except Exception as e:
         log(f"  API error for {repo['full_name']}: {e}")
 
-    # 查詢最新 release tag（供「有更新再推送」判斷）
     try:
         r_rel = requests.get(
             f"https://api.github.com/repos/{repo['full_name']}/releases/latest",
@@ -335,6 +431,11 @@ def fetch_repo_api_meta(repo):
     except Exception:
         pass
 
+    # 擷取 README 首段，讓每個入選專案都有完整繁中功能說明
+    readme_en = fetch_readme_summary_en(repo["full_name"], headers)
+    if readme_en and readme_en.lower() != repo.get("desc_en", "").lower():
+        repo["readme_en"] = readme_en
+
     return repo
 
 
@@ -342,7 +443,7 @@ def select_top_repos_with_dedup(candidates, history, today_str, top_n=TOP_N):
     """
     7 天內不重複篩選邏輯：
     - 若過去 7 天內未推送過：入選
-    - 若過去 7 天內已推送過：檢查是否有新 Release 版本、描述更新、或星數暴增（+25% 且 >=1000 星）
+    - 若過去 7 天內已推送過：檢查是否有新 Release 版本、說明更新、新提交且當日熱度高、或星數暴增
       若有更新則標記 update_reason 並允許重新推送；否則略過。
     """
     records = history.get("records", {})
@@ -363,7 +464,7 @@ def select_top_repos_with_dedup(candidates, history, today_str, top_n=TOP_N):
         if prev and prev.get("sent_date"):
             try:
                 sent_date = datetime.date.fromisoformat(str(prev["sent_date"])[:10])
-                if sent_date > cutoff and sent_date < today:
+                if sent_date >= cutoff and sent_date < today:
                     in_recent_window = True
             except Exception:
                 pass
@@ -375,7 +476,7 @@ def select_top_repos_with_dedup(candidates, history, today_str, top_n=TOP_N):
                 break
             continue
 
-        # 在 7 天內曾推送過 -> 先抓 API 檢查是否有重大更新
+        # 在 7 天內曾推送過 -> 檢查是否有重大更新
         fetch_repo_api_meta(repo)
         old_tag = (prev.get("release_tag") or "").strip()
         new_tag = (repo.get("release_tag") or "").strip()
@@ -383,6 +484,8 @@ def select_top_repos_with_dedup(candidates, history, today_str, top_n=TOP_N):
         new_desc = (repo.get("desc_en") or "").strip()
         old_stars = int(prev.get("stars_int") or 0)
         new_stars = int(repo.get("stars_int") or 0)
+        old_pushed = (prev.get("pushed_at") or "")[:10]
+        new_pushed = (repo.get("pushed_at") or "")[:10]
 
         update_reasons = []
         if new_tag and old_tag and new_tag != old_tag:
@@ -393,8 +496,10 @@ def select_top_repos_with_dedup(candidates, history, today_str, top_n=TOP_N):
         if old_desc and new_desc and old_desc != new_desc:
             update_reasons.append("專案說明更新")
 
-        if old_stars > 0 and (new_stars - old_stars) >= 1000 and (new_stars / old_stars) >= 1.25:
+        if old_stars > 0 and (new_stars - old_stars) >= 1000 and (new_stars / old_stars) >= 1.20:
             update_reasons.append(f"星數暴增 +{new_stars - old_stars:,}")
+        elif new_pushed and old_pushed and new_pushed > old_pushed and repo.get("stars_today_int", 0) >= 500:
+            update_reasons.append(f"近期更新 ({new_pushed}) 且今日再增 +{repo['stars_today']} 星")
 
         if update_reasons:
             repo["update_reason"] = "、".join(update_reasons)
@@ -425,16 +530,40 @@ date: {date_str}
 """
     for idx, repo in enumerate(repos, 1):
         update_tag = f" 🔄 *({repo['update_reason']})*" if repo.get("update_reason") else ""
+        full_zh = repo["desc_zh"]
+        if repo.get("readme_highlight_zh"):
+            full_zh += f"<br>💡 **README 亮點**：{repo['readme_highlight_zh']}"
         md += (
             f"| {idx} | [{repo['full_name']}]({repo['link']}){update_tag} | `{repo['lang']}` "
             f"| `+{repo['stars_today']}` | `{repo['stars_total']}` "
             f"| `{repo.get('forks', '-')}` | `{repo.get('fork_ratio', '-')}` "
             f"| {repo.get('license_display', '-')} | {repo.get('created_at', '-')} "
-            f"| {repo['desc_zh']} |\n"
+            f"| {full_zh} |\n"
         )
 
-    md += "\n\n---\n*本報告由 GitHub Actions 雲端排程自動產生（7 天內不重複、有更新再推送）。*"
+    md += "\n\n---\n*本報告由 GitHub Actions 雲端排程自動產生（每日 06:43・7 天內不重複・有更新再推送）。*"
     return md
+
+
+def build_plain_text_report(repos, date_str):
+    lines = [
+        f"🚀 GitHub 每日熱門專案 Top {len(repos)} ({date_str})",
+        "每日 06:43 自動推送｜7 天內不重複・有更新再推",
+        "=" * 60,
+        "",
+    ]
+    for idx, repo in enumerate(repos, 1):
+        upd = f" [🔄 {repo['update_reason']}]" if repo.get("update_reason") else ""
+        lines.append(f"#{idx} {repo['full_name']}{upd}")
+        lines.append(f"🔗 連結：{repo['link']}")
+        lines.append(f"📝 繁中說明：{repo['desc_zh']}")
+        if repo.get("readme_highlight_zh"):
+            lines.append(f"💡 補充介紹：{repo['readme_highlight_zh']}")
+        lines.append(
+            f"📊 語言：{repo['lang']} | 今日 +{repo['stars_today']} ★ | 總星數 {repo['stars_total']} | 授權 {repo.get('license_display', '-')}"
+        )
+        lines.append("-" * 60)
+    return "\n".join(lines)
 
 
 def build_html_report(repos, date_str):
@@ -466,20 +595,46 @@ def build_html_report(repos, date_str):
                 f'<span style="background-color:#9e6a03;color:#fff;padding:2px 8px;'
                 f'border-radius:10px;font-size:11px;margin-left:8px;">🔄 {repo["update_reason"]}</span>'
             )
-        rel_info = f" &nbsp;|&nbsp; 最新版本 {repo['release_tag']}" if repo.get("release_tag") else ""
+
+        rel_info = f" &nbsp;|&nbsp; 最新版 {repo['release_tag']}" if repo.get("release_tag") else ""
+        homepage_link = ""
+        if repo.get("homepage"):
+            homepage_link = (
+                f' &nbsp;|&nbsp; <a href="{repo["homepage"]}" '
+                f'style="color:#58a6ff;text-decoration:none;" target="_blank">🌐 官網/Demo</a>'
+            )
+
+        readme_block = ""
+        if repo.get("readme_highlight_zh"):
+            readme_block = (
+                f'<div style="font-size: 13px; color: #b1bac4; line-height: 1.5; margin-top: 6px; '
+                f'padding: 6px 10px; background-color: #0d1117; border-left: 3px solid #1f6feb; border-radius: 4px;">'
+                f'💡 <b>功能亮點：</b>{repo["readme_highlight_zh"]}</div>'
+            )
+
+        topics_html = ""
+        if repo.get("topics"):
+            tags = "".join(
+                f'<span style="display:inline-block;background-color:#1f2937;color:#79c0ff;'
+                f'padding:1px 7px;border-radius:10px;font-size:11px;margin-right:5px;margin-top:4px;">#{t}</span>'
+                for t in repo["topics"]
+            )
+            topics_html = f'<div style="margin-top: 4px;">{tags}</div>'
 
         rows_html += f"""
         <tr style="background-color: {bg_color}; border-bottom: 1px solid #30363d;">
             <td style="padding: 16px; vertical-align: top;">
                 <div style="font-weight: bold; font-size: 16px; margin-bottom: 6px;">
                     <span style="color: #8b949e; margin-right: 6px;">#{idx}</span>
-                    <a href="{repo['link']}" style="color: #58a6ff; text-decoration: none;">{repo['full_name']}</a>
+                    <a href="{repo['link']}" style="color: #58a6ff; text-decoration: none;" target="_blank">{repo['full_name']}</a>
                     {update_badge}
                 </div>
-                <div style="font-size: 14px; color: #c9d1d9; line-height: 1.5;">{repo['desc_zh']}</div>
-                <div style="font-size: 12px; color: #8b949e; margin-top: 4px; font-style: italic;">Original: {repo['desc_en']}</div>
-                <div style="font-size: 11px; color: #6e7681; margin-top: 6px;">
-                    &#x1F374; Fork {repo.get('forks', '-')} &nbsp;|&nbsp; Fork:Star {repo.get('fork_ratio', '-')} &nbsp;|&nbsp; 建立 {repo.get('created_at', '-')}{rel_info}
+                <div style="font-size: 14px; color: #e6edf3; line-height: 1.5; font-weight: 500;">{repo['desc_zh']}</div>
+                {readme_block}
+                <div style="font-size: 12px; color: #8b949e; margin-top: 5px; font-style: italic;">Original: {repo['desc_en']}</div>
+                {topics_html}
+                <div style="font-size: 11px; color: #8b949e; margin-top: 6px;">
+                    &#x1F374; Fork {repo.get('forks', '-')} &nbsp;|&nbsp; Fork:Star {repo.get('fork_ratio', '-')} &nbsp;|&nbsp; 建立 {repo.get('created_at', '-')}{rel_info}{homepage_link}
                 </div>
             </td>
             <td style="padding: 16px; text-align: center; vertical-align: middle;">
@@ -495,7 +650,7 @@ def build_html_report(repos, date_str):
             </td>
             <td style="padding: 16px; text-align: center; vertical-align: middle; font-size: 12px; color: #c9d1d9;">
                 <div style="white-space: nowrap; font-weight: bold;">{repo.get('license_display', '-')}</div>
-                <div style="color: #6e7681; margin-top: 4px; font-size: 10px; line-height: 1.4; max-width: 130px;">{repo.get('license_note', '')}</div>
+                <div style="color: #8b949e; margin-top: 4px; font-size: 10px; line-height: 1.4; max-width: 130px;">{repo.get('license_note', '')}</div>
             </td>
         </tr>
         """
@@ -508,17 +663,17 @@ def build_html_report(repos, date_str):
         <title>GitHub 每日熱門專案 Top {len(repos)}</title>
     </head>
     <body style="background-color: #0d1117; color: #c9d1d9; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; margin: 0; padding: 20px;">
-        <div style="max-width: 900px; margin: 0 auto; background-color: #161b22; border: 1px solid #30363d; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.5);">
-            <div style="background: linear-gradient(135deg, #1f6feb 0%, #0d1117 100%); padding: 30px 20px; text-align: center; border-bottom: 1px solid #30363d;">
+        <div style="max-width: 920px; margin: 0 auto; background-color: #161b22; border: 1px solid #30363d; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.5);">
+            <div style="background: linear-gradient(135deg, #1f6feb 0%, #0d1117 100%); padding: 28px 20px; text-align: center; border-bottom: 1px solid #30363d;">
                 <h1 style="color: #ffffff; margin: 0; font-size: 26px; letter-spacing: 1px;">🚀 GitHub 每日熱門專案 Top {len(repos)}</h1>
-                <p style="color: #8b949e; margin: 10px 0 0 0; font-size: 14px;">資料日期: {date_str} (每日 06:43 自動推送｜7 天內不重複・有更新再推)</p>
+                <p style="color: #c9d1d9; margin: 10px 0 0 0; font-size: 14px;">資料日期: {date_str} (每日 06:43 自動推送｜7 天內不重複・有更新再推)</p>
             </div>
 
             <div style="overflow-x: auto;">
                 <table style="width: 100%; border-collapse: collapse; text-align: left;">
                     <thead>
                         <tr style="background-color: #161b22; border-bottom: 2px solid #30363d; color: #8b949e; font-size: 13px; text-transform: uppercase;">
-                            <th style="padding: 12px 16px;">Repository 專案資訊</th>
+                            <th style="padding: 12px 16px;">Repository 專案資訊與繁中亮點</th>
                             <th style="padding: 12px 16px; text-align: center;">主要語言</th>
                             <th style="padding: 12px 16px; text-align: center;">今日新增</th>
                             <th style="padding: 12px 16px; text-align: center;">總星星數</th>
@@ -531,8 +686,8 @@ def build_html_report(repos, date_str):
                 </table>
             </div>
 
-            <div style="background-color: #0d1117; padding: 20px; text-align: center; font-size: 12px; color: #8b949e; border-top: 1px solid #30363d;">
-                <p style="margin: 0 0 8px 0;">本郵件由 GitHub Actions 雲端容器自動爬網、7 天去重與繁體中文翻譯生成，電腦未開機亦準時發送。</p>
+            <div style="background-color: #0d1117; padding: 18px; text-align: center; font-size: 12px; color: #8b949e; border-top: 1px solid #30363d;">
+                <p style="margin: 0;">本郵件由 GitHub Actions 雲端容器自動爬網、README 亮點擷取、7 天去重與繁體中文翻譯生成，電腦未開機亦準時發送。</p>
             </div>
         </div>
     </body>
@@ -541,24 +696,27 @@ def build_html_report(repos, date_str):
     return html
 
 
-def _attempt_smtp_send(server_host, port, use_ssl, sender, password, recipients, msg_str):
-    """
-    單次 SMTP 寄信嘗試。
-    注意：Python 內建 smtplib.login() 在 AUTH PLAIN 收到 535 BadCredentials 後，
-    Gmail 會直接關閉連線，而 smtplib.login() 接著嘗試 AUTH LOGIN 會拋出
-    SMTPServerDisconnected("Connection unexpectedly closed") 掩蓋真正的 535 密碼錯誤。
-    因此這裡直接使用 auth_plain 並明確捕獲 535，讓錯誤訊息一目了然。
-    """
+def _resolve_ipv4_host(server_host):
+    try:
+        infos = socket.getaddrinfo(server_host, None, socket.AF_INET, socket.SOCK_STREAM)
+        if infos:
+            return infos[0][4][0]
+    except Exception:
+        pass
+    return server_host
+
+
+def _attempt_smtp_send(server_host, port, use_ssl, sender, password, recipients, msg_str, force_ipv4=False):
+    connect_host = _resolve_ipv4_host(server_host) if force_ipv4 else server_host
     if use_ssl:
-        server = smtplib.SMTP_SSL(server_host, port, timeout=30)
+        server = smtplib.SMTP_SSL(connect_host, port, timeout=30)
     else:
-        server = smtplib.SMTP(server_host, port, timeout=30)
+        server = smtplib.SMTP(connect_host, port, timeout=30)
     try:
         server.ehlo()
         if not use_ssl:
             server.starttls()
             server.ehlo()
-        # 僅執行單次 AUTH PLAIN，避免 Gmail 在 535 後斷線被二次 AUTH LOGIN 蓋掉真正錯誤
         code, resp = server.docmd(
             "AUTH",
             "PLAIN " + smtplib.encode_base64(f"\0{sender}\0{password}".encode("utf-8"), eol=""),
@@ -577,10 +735,9 @@ def _attempt_smtp_send(server_host, port, use_ssl, sender, password, recipients,
             pass
 
 
-def send_email(config, html_content, date_str):
+def send_email(config, plain_content, html_content, date_str):
     sender = config.get("sender_email", "").strip().replace('"', "").replace("'", "")
     recipient = config.get("recipient_email", "")
-    # 移除應用程式密碼中間可能包含的空白字元
     password = re.sub(r"\s+", "", config.get("smtp_password", "").strip())
 
     if not sender or not password or sender == "your-email@gmail.com":
@@ -597,6 +754,7 @@ def send_email(config, html_content, date_str):
     msg["Subject"] = f"🚀 GitHub 每日熱門專案 Top {TOP_N} [{date_str}]"
     msg["From"] = f"GitHub Trending Robot <{sender}>"
     msg["To"] = ", ".join(recipients)
+    msg.attach(MIMEText(plain_content, "plain", "utf-8"))
     msg.attach(MIMEText(html_content, "html", "utf-8"))
     msg_str = msg.as_string()
 
@@ -604,19 +762,28 @@ def send_email(config, html_content, date_str):
     max_retries = int(os.environ.get("SMTP_MAX_RETRIES", "12"))
     base_delay = int(os.environ.get("SMTP_RETRY_DELAY", "15"))
 
-    # 交替使用 465 (SSL) 與 587 (STARTTLS) 重試直到成功寄出為止
-    endpoints = [(465, True), (587, False)]
+    # 交替嘗試 SSL:465 / STARTTLS:587 以及預設 DNS / 強制 IPv4
+    endpoints = [
+        (465, True, False),
+        (587, False, False),
+        (465, True, True),
+        (587, False, True),
+    ]
 
     for attempt in range(1, max_retries + 1):
-        port, use_ssl = endpoints[(attempt - 1) % len(endpoints)]
-        proto_label = "SSL:465" if use_ssl else "STARTTLS:587"
+        port, use_ssl, force_ipv4 = endpoints[(attempt - 1) % len(endpoints)]
+        proto_label = f"{'SSL' if use_ssl else 'STARTTLS'}:{port}{'/IPv4' if force_ipv4 else ''}"
         try:
             log(f"[SMTP] Sending attempt {attempt}/{max_retries} via {server_host} ({proto_label}) to {recipients}...")
-            _attempt_smtp_send(server_host, port, use_ssl, sender, password, recipients, msg_str)
+            _attempt_smtp_send(server_host, port, use_ssl, sender, password, recipients, msg_str, force_ipv4=force_ipv4)
             log(f"[SUCCESS] Email sent successfully to {recipients} on attempt {attempt}!")
             return True
         except smtplib.SMTPAuthenticationError as auth_err:
-            err_msg = auth_err.smtp_error.decode("utf-8", errors="ignore") if isinstance(auth_err.smtp_error, bytes) else str(auth_err.smtp_error)
+            err_msg = (
+                auth_err.smtp_error.decode("utf-8", errors="ignore")
+                if isinstance(auth_err.smtp_error, bytes)
+                else str(auth_err.smtp_error)
+            )
             log(
                 f"[FATAL AUTH ERROR] Gmail 拒絕登入 (HTTP/SMTP {auth_err.smtp_code}): {err_msg}\n"
                 "👉 原因：GitHub Secrets 中的 SMTP_PASSWORD (Gmail 16 位應用程式密碼) 已失效或被撤銷。\n"
@@ -651,13 +818,16 @@ def main():
 
     log("Fetching GitHub daily trending repositories...")
     candidates = fetch_github_trending(since="daily")
-    if len(candidates) < TOP_N * 2:
-        log("Fetching weekly trending as supplemental pool for 7-day deduplication...")
-        weekly = fetch_github_trending(since="weekly")
+    for fallback_since in ("weekly", "monthly"):
+        if len(candidates) >= TOP_N * 3:
+            break
+        log(f"Fetching {fallback_since} trending as supplemental pool for 7-day deduplication...")
+        extra = fetch_github_trending(since=fallback_since)
         existing = {r["full_name"] for r in candidates}
-        for w in weekly:
-            if w["full_name"] not in existing:
-                candidates.append(w)
+        for item in extra:
+            if item["full_name"] not in existing:
+                candidates.append(item)
+                existing.add(item["full_name"])
 
     if not candidates:
         log("No repositories crawled. Exiting.")
@@ -670,8 +840,9 @@ def main():
     for i, repo in enumerate(repos):
         log(f"Translating ({i+1}/{len(repos)}): {repo['full_name']}...")
         repo["desc_zh"] = translate_to_zh_tw(repo["desc_en"])
+        if repo.get("readme_en"):
+            repo["readme_highlight_zh"] = translate_to_zh_tw(repo["readme_en"])
 
-    # Archive to folder
     if archive_dir:
         try:
             os.makedirs(archive_dir, exist_ok=True)
@@ -683,6 +854,7 @@ def main():
         except Exception as e:
             log(f"Failed to archive: {e}")
 
+    plain_content = build_plain_text_report(repos, date_str)
     html_content = build_html_report(repos, date_str)
 
     script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -694,7 +866,7 @@ def main():
     except Exception:
         pass
 
-    email_status = send_email(config, html_content, date_str)
+    email_status = send_email(config, plain_content, html_content, date_str)
     if email_status:
         save_history(history_file, history, repos, date_str)
         log("Job completed successfully.")
