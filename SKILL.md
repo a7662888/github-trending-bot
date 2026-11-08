@@ -15,7 +15,7 @@ description: 每日爬取 GitHub 熱門專案 Top 10（7 天內不重複、有�
   1. **`SKILL.md`**：本說明文件。
   2. **`github_trending_daily.py`**：核心 Python 爬蟲、7 天去重、更新偵測、繁中翻譯與 SMTP 重試寄信程式。
   3. **`history.json`**：紀錄最近 30 天已寄送過的專案、星數與 Release 版本，供 7 天去重與更新比對使用。
-  4. **`.github/workflows/daily_trending.yml`**：GitHub Actions 每日排程（UTC 22:43 = 台灣時間 06:43，電腦未開機照常執行）。
+  4. **`.github/workflows/github_trending.yml`**：GitHub Actions 每日排程（UTC 22:43 = 台灣時間 06:43，電腦未開機照常執行）。
   5. **`archive/`**：每日產生的 Markdown 歷史歸檔報告。
 
 ## ⚙️ GitHub Secrets 設定（`a7662888/github-trending-bot`）
