@@ -2,15 +2,15 @@ name: Daily GitHub Trending Email
 
 on:
   schedule:
-    # 7:00 AM Taiwan time (UTC+8) is 23:00 UTC (previous day)
-    - cron: '0 23 * * *'
-  workflow_dispatch: # Allows manual trigger from GitHub UI
+    # 台灣時間每日上午 06:43 (UTC+8) = 前一日 22:43 UTC
+    - cron: '43 22 * * *'
+  workflow_dispatch: # 支援手動於 GitHub Actions 網頁點擊 Run workflow 立即測試
 
 jobs:
   run-bot:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # Allows committing archive files back to the repository
+      contents: write # 允許將每日報告 archive 與 7 天去重紀錄 history.json 寫回倉庫
 
     steps:
       - name: Checkout Repository
@@ -28,32 +28,34 @@ jobs:
 
       - name: Run GitHub Trending Daily Crawler
         env:
+          PYTHONUNBUFFERED: "1"
           SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
           SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
           RECIPIENT_EMAIL: ${{ secrets.RECIPIENT_EMAIL }}
-          # Actions runner 走共享 IP，未授權 GitHub API 為 60 req/hr/IP，
-          # 補授權與 fork 欄位的 15 次查詢會被 403。此 token 由 Actions 自動提供，
-          # 無須另設 secret，額度 1000 req/hr。
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TOP_N: "10"
+          DEDUP_DAYS: "7"
+          SMTP_MAX_RETRIES: "12"
+          SMTP_RETRY_DELAY: "15"
         run: |
           python github_trending_daily.py
 
-      - name: Commit and Push Archive Files
+      - name: Commit and Push Archive & History Files
+        if: always()
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          
-          # Check if there are changes in the archive folder
-          if [ -d "archive" ]; then
-            git add archive/
-            if ! git diff --quiet && ! git diff --staged --quiet; then
-              git commit -m "Auto-archive GitHub trending report for $(date +'%Y-%m-%d')"
-              git checkout -- .
-              git pull --rebase origin main
-              git push origin main
-            else
-              echo "No new archive files to commit."
-            fi
+
+          git add archive/ 2>/dev/null || true
+          if [ -f "history.json" ]; then
+            git add history.json
+          fi
+
+          if ! git diff --staged --quiet; then
+            git commit -m "Auto-archive GitHub trending report for $(TZ=Asia/Taipei date +'%Y-%m-%d')"
+            git checkout -- .
+            git pull --rebase origin main
+            git push origin main
           else
-            echo "No archive folder found."
+            echo "No new archive or history files to commit."
           fi
