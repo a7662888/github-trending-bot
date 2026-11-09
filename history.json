@@ -1,5 +1,26 @@
 {
   "records": {
+    "Donchitos/Claude-Code-Game-Studios": {
+      "desc_en": "Turn Claude Code into a full game dev studio — 49 AI agents, 72 workflow skills, and a complete coordination system mirroring real studio hierarchy.",
+      "pushed_at": "2026-10-19T02:43:42Z",
+      "release_tag": "v1.2.0",
+      "sent_date": "2026-11-09",
+      "stars_int": 37034
+    },
+    "NVIDIA/auto-ontology": {
+      "desc_en": "Auto Ontology is a Python framework for building semantic, graph-based reasoning layers over data. It enables deterministic query generation, better context retrieval, and more explainable AI for LLM and agent workflows.",
+      "pushed_at": "2026-11-07T21:54:29Z",
+      "release_tag": "",
+      "sent_date": "2026-11-09",
+      "stars_int": 10433
+    },
+    "anthropics/claude-quickstarts": {
+      "desc_en": "A collection of projects designed to help developers quickly get started with building deployable applications using the Claude API",
+      "pushed_at": "2026-11-06T19:37:57Z",
+      "release_tag": "",
+      "sent_date": "2026-11-09",
+      "stars_int": 19459
+    },
     "anthropics/skills": {
       "desc_en": "Public repository for Agent Skills",
       "pushed_at": "2026-11-06T22:32:32Z",
@@ -21,6 +42,20 @@
       "sent_date": "2026-11-08",
       "stars_int": 66030
     },
+    "dsx-ai-factory/nvke": {
+      "desc_en": "NVIDIA Kubernetes Engine (NVKE). A management plane for GPU Kubernetes on bare metal.",
+      "pushed_at": "2026-11-07T02:09:56Z",
+      "release_tag": "v0.23.1",
+      "sent_date": "2026-11-09",
+      "stars_int": 871
+    },
+    "google-deepmind/mujoco": {
+      "desc_en": "Multi-Joint dynamics with Contact. A general purpose physics simulator.",
+      "pushed_at": "2026-11-08T23:35:03Z",
+      "release_tag": "4.0.0",
+      "sent_date": "2026-11-09",
+      "stars_int": 16446
+    },
     "google/skills": {
       "desc_en": "Agent Skills for Google products and technologies",
       "pushed_at": "2026-11-07T14:41:39Z",
@@ -35,19 +70,26 @@
       "sent_date": "2026-11-08",
       "stars_int": 317921
     },
+    "max-sixty/worktrunk": {
+      "desc_en": "Worktrunk is a CLI for Git worktree management, designed for parallel AI agent workflows",
+      "pushed_at": "2026-11-08T08:27:09Z",
+      "release_tag": "v0.81.0",
+      "sent_date": "2026-11-09",
+      "stars_int": 12133
+    },
     "meta/astryx": {
       "desc_en": "An open source design system that's fully customizable and agent ready",
-      "pushed_at": "2026-11-08T06:19:35Z",
+      "pushed_at": "2026-11-09T01:54:25Z",
       "release_tag": "v0.7.11",
-      "sent_date": "2026-11-08",
-      "stars_int": 14749
+      "sent_date": "2026-11-09",
+      "stars_int": 16962
     },
     "milind-soni/OpenMausBot": {
       "desc_en": "Open-source Grok Bot alternative with a virtual machine that bots can use",
-      "pushed_at": "2026-11-08T06:21:38Z",
-      "release_tag": "v0.1.148",
-      "sent_date": "2026-11-08",
-      "stars_int": 17290
+      "pushed_at": "2026-11-08T21:59:04Z",
+      "release_tag": "v0.1.149",
+      "sent_date": "2026-11-09",
+      "stars_int": 18337
     },
     "prometheus/prometheus": {
       "desc_en": "The Prometheus monitoring system and time series database.",
@@ -56,12 +98,26 @@
       "sent_date": "2026-11-08",
       "stars_int": 67487
     },
+    "ranxianglei/billion-context": {
+      "desc_en": "A context-compression plugin for month-long single sessions (billions of tokens) ,small context windows (a 100K context is enough) and token savings (5x fewer tokens) .上下文压缩插件，月级长会话会话， 兼顾小窗口(100k上下文足矣)省token(省5倍token) . billion-context is all you need",
+      "pushed_at": "2026-11-09T01:46:31Z",
+      "release_tag": "v0.1.213",
+      "sent_date": "2026-11-09",
+      "stars_int": 5194
+    },
     "sherlock-project/sherlock": {
       "desc_en": "Hunt down social media accounts by username across social networks",
       "pushed_at": "2026-11-08T05:13:22Z",
       "release_tag": "v0.16.2",
       "sent_date": "2026-11-08",
       "stars_int": 101063
+    },
+    "thedotmack/claude-mem": {
+      "desc_en": "Persistent Context Across Sessions for Every Agent –  Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
+      "pushed_at": "2026-11-09T01:11:02Z",
+      "release_tag": "v15.12.1",
+      "sent_date": "2026-11-09",
+      "stars_int": 114930
     },
     "vercel-labs/agent-browser": {
       "desc_en": "Browser automation CLI for AI agents",
