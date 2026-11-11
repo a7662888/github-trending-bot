@@ -9,10 +9,10 @@
     },
     "NVIDIA/auto-ontology": {
       "desc_en": "Auto Ontology is a Python framework for building semantic, graph-based reasoning layers over data. It enables deterministic query generation, better context retrieval, and more explainable AI for LLM and agent workflows.",
-      "pushed_at": "2026-11-09T23:51:56Z",
+      "pushed_at": "2026-11-10T19:31:47Z",
       "release_tag": "",
-      "sent_date": "2026-11-10",
-      "stars_int": 11104
+      "sent_date": "2026-11-11",
+      "stars_int": 11480
     },
     "ZhuLinsen/daily_stock_analysis": {
       "desc_en": "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。  LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.",
@@ -20,6 +20,13 @@
       "release_tag": "v3.34.0",
       "sent_date": "2026-11-10",
       "stars_int": 69090
+    },
+    "addyosmani/agent-skills": {
+      "desc_en": "Production-grade engineering skills for AI coding agents.",
+      "pushed_at": "2026-11-01T19:24:49Z",
+      "release_tag": "0.6.15",
+      "sent_date": "2026-11-11",
+      "stars_int": 115218
     },
     "anthropics/claude-quickstarts": {
       "desc_en": "A collection of projects designed to help developers quickly get started with building deployable applications using the Claude API",
@@ -79,17 +86,17 @@
     },
     "homeassistant-ai/ha-mcp": {
       "desc_en": "Configure and automate Home Assistant with Claude, ChatGPT, and other AI assistants.",
-      "pushed_at": "2026-11-10T03:52:31Z",
+      "pushed_at": "2026-11-11T00:27:16Z",
       "release_tag": "v9.1.2",
-      "sent_date": "2026-11-10",
-      "stars_int": 6091
+      "sent_date": "2026-11-11",
+      "stars_int": 6706
     },
     "mattpocock/skills": {
       "desc_en": "Skills for Real Engineers. Straight from my .agents directory.",
-      "pushed_at": "2026-11-05T10:40:01Z",
+      "pushed_at": "2026-11-09T14:03:07Z",
       "release_tag": "v1.3.2",
-      "sent_date": "2026-11-08",
-      "stars_int": 317921
+      "sent_date": "2026-11-11",
+      "stars_int": 320994
     },
     "max-sixty/worktrunk": {
       "desc_en": "Worktrunk is a CLI for Git worktree management, designed for parallel AI agent workflows",
@@ -100,10 +107,10 @@
     },
     "meta/astryx": {
       "desc_en": "An open source design system that's fully customizable and agent ready",
-      "pushed_at": "2026-11-10T04:13:18Z",
-      "release_tag": "v0.7.11",
-      "sent_date": "2026-11-10",
-      "stars_int": 20552
+      "pushed_at": "2026-11-11T02:11:25Z",
+      "release_tag": "v0.7.13",
+      "sent_date": "2026-11-11",
+      "stars_int": 23016
     },
     "milind-soni/OpenMausBot": {
       "desc_en": "Open-source Grok Bot alternative with a virtual machine that bots can use",
@@ -121,10 +128,10 @@
     },
     "ranxianglei/billion-context": {
       "desc_en": "A context-compression plugin for month-long single sessions (billions of tokens) ,small context windows (a 100K context is enough) and token savings (5x fewer tokens) .上下文压缩插件，月级长会话会话， 兼顾小窗口(100k上下文足矣)省token(省5倍token) . billion-context is all you need",
-      "pushed_at": "2026-11-09T01:46:31Z",
+      "pushed_at": "2026-11-11T02:06:10Z",
       "release_tag": "v0.1.213",
-      "sent_date": "2026-11-09",
-      "stars_int": 5194
+      "sent_date": "2026-11-11",
+      "stars_int": 6362
     },
     "ruvnet/RuView": {
       "desc_en": "π RuView turns commodity WiFi signals into real-time spatial intelligence, vital sign monitoring, and presence detection — all without a single pixel of video.",
@@ -135,10 +142,10 @@
     },
     "sherlock-project/sherlock": {
       "desc_en": "Hunt down social media accounts by username across social networks",
-      "pushed_at": "2026-11-09T05:14:34Z",
+      "pushed_at": "2026-11-10T05:13:55Z",
       "release_tag": "v0.16.2",
-      "sent_date": "2026-11-10",
-      "stars_int": 107471
+      "sent_date": "2026-11-11",
+      "stars_int": 109070
     },
     "thedotmack/claude-mem": {
       "desc_en": "Persistent Context Across Sessions for Every Agent –  Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
@@ -147,12 +154,26 @@
       "sent_date": "2026-11-09",
       "stars_int": 114930
     },
+    "tokio-rs/topcoat": {
+      "desc_en": "A batteries-included framework for building web apps",
+      "pushed_at": "2026-11-10T18:32:12Z",
+      "release_tag": "v0.12.1",
+      "sent_date": "2026-11-11",
+      "stars_int": 6860
+    },
     "vercel-labs/agent-browser": {
       "desc_en": "Browser automation CLI for AI agents",
-      "pushed_at": "2026-11-10T01:45:24Z",
+      "pushed_at": "2026-11-11T00:34:33Z",
       "release_tag": "v0.42.0",
-      "sent_date": "2026-11-10",
-      "stars_int": 48621
+      "sent_date": "2026-11-11",
+      "stars_int": 49265
+    },
+    "we-promise/sure": {
+      "desc_en": "The personal finance app for everyone (by everyone)",
+      "pushed_at": "2026-11-11T02:10:35Z",
+      "release_tag": "v0.7.6",
+      "sent_date": "2026-11-11",
+      "stars_int": 12024
     }
   }
 }
