@@ -7,12 +7,26 @@
       "sent_date": "2026-11-09",
       "stars_int": 37034
     },
+    "GoogleChrome/modern-web-guidance-src": {
+      "desc_en": "No description",
+      "pushed_at": "2026-11-12T02:15:53Z",
+      "release_tag": "",
+      "sent_date": "2026-11-12",
+      "stars_int": 1869
+    },
     "NVIDIA/auto-ontology": {
       "desc_en": "Auto Ontology is a Python framework for building semantic, graph-based reasoning layers over data. It enables deterministic query generation, better context retrieval, and more explainable AI for LLM and agent workflows.",
-      "pushed_at": "2026-11-10T19:31:47Z",
+      "pushed_at": "2026-11-11T14:31:18Z",
       "release_tag": "",
-      "sent_date": "2026-11-11",
-      "stars_int": 11480
+      "sent_date": "2026-11-12",
+      "stars_int": 11903
+    },
+    "TheAlgorithms/Java": {
+      "desc_en": "All Algorithms implemented in Java",
+      "pushed_at": "2026-11-11T21:56:41Z",
+      "release_tag": "",
+      "sent_date": "2026-11-12",
+      "stars_int": 67081
     },
     "ZhuLinsen/daily_stock_analysis": {
       "desc_en": "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。  LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.",
@@ -86,10 +100,10 @@
     },
     "homeassistant-ai/ha-mcp": {
       "desc_en": "Configure and automate Home Assistant with Claude, ChatGPT, and other AI assistants.",
-      "pushed_at": "2026-11-11T00:27:16Z",
-      "release_tag": "v9.1.2",
-      "sent_date": "2026-11-11",
-      "stars_int": 6706
+      "pushed_at": "2026-11-12T02:44:58Z",
+      "release_tag": "v9.2.0",
+      "sent_date": "2026-11-12",
+      "stars_int": 7441
     },
     "mattpocock/skills": {
       "desc_en": "Skills for Real Engineers. Straight from my .agents directory.",
@@ -107,10 +121,10 @@
     },
     "meta/astryx": {
       "desc_en": "An open source design system that's fully customizable and agent ready",
-      "pushed_at": "2026-11-11T02:11:25Z",
-      "release_tag": "v0.7.13",
-      "sent_date": "2026-11-11",
-      "stars_int": 23016
+      "pushed_at": "2026-11-12T03:19:03Z",
+      "release_tag": "v0.7.14",
+      "sent_date": "2026-11-12",
+      "stars_int": 25215
     },
     "milind-soni/OpenMausBot": {
       "desc_en": "Open-source Grok Bot alternative with a virtual machine that bots can use",
@@ -118,6 +132,13 @@
       "release_tag": "v0.1.151",
       "sent_date": "2026-11-10",
       "stars_int": 19925
+    },
+    "openai/codex-security": {
+      "desc_en": "OpenAI's Codex Security CLI and TypeScript SDK for finding, validating, and fixing security vulnerabilities. npm: https://www.npmjs.com/package/@openai/codex-security",
+      "pushed_at": "2026-11-12T02:23:04Z",
+      "release_tag": "npm-v0.10.0",
+      "sent_date": "2026-11-12",
+      "stars_int": 11830
     },
     "prometheus/prometheus": {
       "desc_en": "The Prometheus monitoring system and time series database.",
@@ -139,6 +160,13 @@
       "release_tag": "ruview-harness-v0.9.2",
       "sent_date": "2026-11-10",
       "stars_int": 103572
+    },
+    "shadcn/improve": {
+      "desc_en": "Use your most capable model to audit your codebase and write plans for cheaper models to execute.",
+      "pushed_at": "2026-09-12T11:29:28Z",
+      "release_tag": "",
+      "sent_date": "2026-11-12",
+      "stars_int": 11012
     },
     "sherlock-project/sherlock": {
       "desc_en": "Hunt down social media accounts by username across social networks",
@@ -163,17 +191,24 @@
     },
     "vercel-labs/agent-browser": {
       "desc_en": "Browser automation CLI for AI agents",
-      "pushed_at": "2026-11-11T00:34:33Z",
+      "pushed_at": "2026-11-12T02:52:28Z",
       "release_tag": "v0.42.0",
-      "sent_date": "2026-11-11",
-      "stars_int": 49265
+      "sent_date": "2026-11-12",
+      "stars_int": 49952
+    },
+    "vercel-labs/agent-desktop": {
+      "desc_en": "Computer use CLI for AI agents",
+      "pushed_at": "2026-11-11T06:09:45Z",
+      "release_tag": "v1.2.0",
+      "sent_date": "2026-11-12",
+      "stars_int": 22199
     },
     "we-promise/sure": {
       "desc_en": "The personal finance app for everyone (by everyone)",
-      "pushed_at": "2026-11-11T02:10:35Z",
+      "pushed_at": "2026-11-12T02:46:00Z",
       "release_tag": "v0.7.6",
-      "sent_date": "2026-11-11",
-      "stars_int": 12024
+      "sent_date": "2026-11-12",
+      "stars_int": 13056
     }
   }
 }
