@@ -1,5 +1,12 @@
 {
   "records": {
+    "CopilotKit/OpenBot": {
+      "desc_en": "Open-source AI coworkers that each get a computer of their own: a browser, files and tools, with every action decided before it happens and recorded after. Bring any AG-UI agent.",
+      "pushed_at": "2026-11-13T02:46:21Z",
+      "release_tag": "v1.0.2",
+      "sent_date": "2026-11-13",
+      "stars_int": 11677
+    },
     "Donchitos/Claude-Code-Game-Studios": {
       "desc_en": "Turn Claude Code into a full game dev studio — 49 AI agents, 72 workflow skills, and a complete coordination system mirroring real studio hierarchy.",
       "pushed_at": "2026-10-19T02:43:42Z",
@@ -8,11 +15,11 @@
       "stars_int": 37034
     },
     "GoogleChrome/modern-web-guidance-src": {
-      "desc_en": "No description",
-      "pushed_at": "2026-11-12T02:15:53Z",
+      "desc_en": "Keep your coding agent up to date with the latest web best practices",
+      "pushed_at": "2026-11-13T02:33:51Z",
       "release_tag": "",
-      "sent_date": "2026-11-12",
-      "stars_int": 1869
+      "sent_date": "2026-11-13",
+      "stars_int": 3218
     },
     "NVIDIA/auto-ontology": {
       "desc_en": "Auto Ontology is a Python framework for building semantic, graph-based reasoning layers over data. It enables deterministic query generation, better context retrieval, and more explainable AI for LLM and agent workflows.",
@@ -20,6 +27,13 @@
       "release_tag": "",
       "sent_date": "2026-11-12",
       "stars_int": 11903
+    },
+    "QwenLM/qwen-code": {
+      "desc_en": "An open-source AI coding agent that lives in your terminal.",
+      "pushed_at": "2026-11-13T02:24:06Z",
+      "release_tag": "sdk-typescript-v0.1.33",
+      "sent_date": "2026-11-13",
+      "stars_int": 29870
     },
     "TheAlgorithms/Java": {
       "desc_en": "All Algorithms implemented in Java",
@@ -55,6 +69,13 @@
       "release_tag": "",
       "sent_date": "2026-11-08",
       "stars_int": 188933
+    },
+    "ashhart/TensorFold": {
+      "desc_en": "LLM Inference Engine for Metal, CUDA and Vulkan.",
+      "pushed_at": "2026-11-13T02:49:45Z",
+      "release_tag": "v1.2.7",
+      "sent_date": "2026-11-13",
+      "stars_int": 1968
     },
     "astral-sh/ruff": {
       "desc_en": "An extremely fast Python linter and code formatter, written in Rust.",
@@ -121,10 +142,10 @@
     },
     "meta/astryx": {
       "desc_en": "An open source design system that's fully customizable and agent ready",
-      "pushed_at": "2026-11-12T03:19:03Z",
-      "release_tag": "v0.7.14",
-      "sent_date": "2026-11-12",
-      "stars_int": 25215
+      "pushed_at": "2026-11-13T02:52:39Z",
+      "release_tag": "v0.7.15",
+      "sent_date": "2026-11-13",
+      "stars_int": 26667
     },
     "milind-soni/OpenMausBot": {
       "desc_en": "Open-source Grok Bot alternative with a virtual machine that bots can use",
@@ -133,12 +154,33 @@
       "sent_date": "2026-11-10",
       "stars_int": 19925
     },
+    "nodejs/node": {
+      "desc_en": "Node.js JavaScript runtime ✨🐢🚀✨",
+      "pushed_at": "2026-11-13T01:20:19Z",
+      "release_tag": "v27.0.0-alpha.0.1.0",
+      "sent_date": "2026-11-13",
+      "stars_int": 123613
+    },
+    "nvm-sh/nvm": {
+      "desc_en": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.",
+      "pushed_at": "2026-11-12T05:50:45Z",
+      "release_tag": "v0.41.0",
+      "sent_date": "2026-11-13",
+      "stars_int": 96027
+    },
     "openai/codex-security": {
       "desc_en": "OpenAI's Codex Security CLI and TypeScript SDK for finding, validating, and fixing security vulnerabilities. npm: https://www.npmjs.com/package/@openai/codex-security",
-      "pushed_at": "2026-11-12T02:23:04Z",
+      "pushed_at": "2026-11-13T01:12:48Z",
       "release_tag": "npm-v0.10.0",
-      "sent_date": "2026-11-12",
-      "stars_int": 11830
+      "sent_date": "2026-11-13",
+      "stars_int": 12512
+    },
+    "pookjw/HermesEnabler": {
+      "desc_en": "Enable Hermès Watch Faces on any Apple Watch devices",
+      "pushed_at": "2026-11-13T01:55:40Z",
+      "release_tag": "1.5.3",
+      "sent_date": "2026-11-13",
+      "stars_int": 1578
     },
     "prometheus/prometheus": {
       "desc_en": "The Prometheus monitoring system and time series database.",
@@ -205,10 +247,10 @@
     },
     "we-promise/sure": {
       "desc_en": "The personal finance app for everyone (by everyone)",
-      "pushed_at": "2026-11-12T02:46:00Z",
-      "release_tag": "v0.7.6",
-      "sent_date": "2026-11-12",
-      "stars_int": 13056
+      "pushed_at": "2026-11-12T23:09:43Z",
+      "release_tag": "v0.7.6-hotfix.1",
+      "sent_date": "2026-11-13",
+      "stars_int": 14002
     }
   }
 }
