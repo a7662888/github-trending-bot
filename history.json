@@ -16,10 +16,17 @@
     },
     "GoogleChrome/modern-web-guidance-src": {
       "desc_en": "Keep your coding agent up to date with the latest web best practices",
-      "pushed_at": "2026-11-13T02:33:51Z",
+      "pushed_at": "2026-11-14T02:08:33Z",
       "release_tag": "",
-      "sent_date": "2026-11-13",
-      "stars_int": 3218
+      "sent_date": "2026-11-14",
+      "stars_int": 4938
+    },
+    "Likely7/Veyra-NRVideo": {
+      "desc_en": "Bring PS5 GTA6 to 120FPS with DLSS 5. An advanced Windows video player and capture enhancement tool featuring real-time preview for videos, images, and capture card sources. Combine AI-powered Super Resolution, DLSS5 image enhancement, and Frame Generation to deliver a next-generation visual experience.",
+      "pushed_at": "2026-11-11T16:43:44Z",
+      "release_tag": "v2.1.5",
+      "sent_date": "2026-11-14",
+      "stars_int": 1645
     },
     "NVIDIA/auto-ontology": {
       "desc_en": "Auto Ontology is a Python framework for building semantic, graph-based reasoning layers over data. It enables deterministic query generation, better context retrieval, and more explainable AI for LLM and agent workflows.",
@@ -56,6 +63,13 @@
       "sent_date": "2026-11-11",
       "stars_int": 115218
     },
+    "alibaba/open-code-review": {
+      "desc_en": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+      "pushed_at": "2026-11-14T01:29:46Z",
+      "release_tag": "v1.13.9",
+      "sent_date": "2026-11-14",
+      "stars_int": 50691
+    },
     "anthropics/claude-quickstarts": {
       "desc_en": "A collection of projects designed to help developers quickly get started with building deployable applications using the Claude API",
       "pushed_at": "2026-11-06T19:37:57Z",
@@ -83,6 +97,20 @@
       "release_tag": "0.17.4",
       "sent_date": "2026-11-08",
       "stars_int": 51027
+    },
+    "backnotprop/plannotator": {
+      "desc_en": "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click.",
+      "pushed_at": "2026-11-14T02:39:27Z",
+      "release_tag": "v0.28.64",
+      "sent_date": "2026-11-14",
+      "stars_int": 10494
+    },
+    "block/buzz": {
+      "desc_en": "A hive mind communication platform",
+      "pushed_at": "2026-11-14T02:28:22Z",
+      "release_tag": "desktop-v0.5.30",
+      "sent_date": "2026-11-14",
+      "stars_int": 37313
     },
     "cloudflare/security-audit-skill": {
       "desc_en": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
@@ -125,6 +153,13 @@
       "release_tag": "v9.2.0",
       "sent_date": "2026-11-12",
       "stars_int": 7441
+    },
+    "louislam/uptime-kuma": {
+      "desc_en": "A fancy self-hosted monitoring tool",
+      "pushed_at": "2026-11-14T00:04:41Z",
+      "release_tag": "2.5.11",
+      "sent_date": "2026-11-14",
+      "stars_int": 93888
     },
     "mattpocock/skills": {
       "desc_en": "Skills for Real Engineers. Straight from my .agents directory.",
@@ -170,10 +205,10 @@
     },
     "openai/codex-security": {
       "desc_en": "OpenAI's Codex Security CLI and TypeScript SDK for finding, validating, and fixing security vulnerabilities. npm: https://www.npmjs.com/package/@openai/codex-security",
-      "pushed_at": "2026-11-13T01:12:48Z",
+      "pushed_at": "2026-11-14T02:38:56Z",
       "release_tag": "npm-v0.10.0",
-      "sent_date": "2026-11-13",
-      "stars_int": 12512
+      "sent_date": "2026-11-14",
+      "stars_int": 13170
     },
     "pookjw/HermesEnabler": {
       "desc_en": "Enable Hermès Watch Faces on any Apple Watch devices",
@@ -217,6 +252,13 @@
       "sent_date": "2026-11-11",
       "stars_int": 109070
     },
+    "tailscale/tailcat": {
+      "desc_en": "like netcat, but over Tailscale's data plane, without Tailscale's control plane",
+      "pushed_at": "2026-11-05T15:10:23Z",
+      "release_tag": "v0.7.0",
+      "sent_date": "2026-11-14",
+      "stars_int": 9491
+    },
     "thedotmack/claude-mem": {
       "desc_en": "Persistent Context Across Sessions for Every Agent –  Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
       "pushed_at": "2026-11-09T01:11:02Z",
@@ -230,6 +272,13 @@
       "release_tag": "v0.12.1",
       "sent_date": "2026-11-11",
       "stars_int": 6860
+    },
+    "tradermonty/claude-trading-skills": {
+      "desc_en": "Claude Code skills for equity investors and traders — market analysis, technical charting, economic calendars, screeners, and trading strategy development.",
+      "pushed_at": "2026-11-14T02:05:41Z",
+      "release_tag": "",
+      "sent_date": "2026-11-14",
+      "stars_int": 4211
     },
     "vercel-labs/agent-browser": {
       "desc_en": "Browser automation CLI for AI agents",
@@ -247,10 +296,10 @@
     },
     "we-promise/sure": {
       "desc_en": "The personal finance app for everyone (by everyone)",
-      "pushed_at": "2026-11-12T23:09:43Z",
+      "pushed_at": "2026-11-14T02:18:39Z",
       "release_tag": "v0.7.6-hotfix.1",
-      "sent_date": "2026-11-13",
-      "stars_int": 14002
+      "sent_date": "2026-11-14",
+      "stars_int": 14790
     }
   }
 }
