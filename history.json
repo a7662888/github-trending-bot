@@ -23,10 +23,10 @@
     },
     "GoogleChrome/modern-web-guidance-src": {
       "desc_en": "Keep your coding agent up to date with the latest web best practices",
-      "pushed_at": "2026-11-14T14:28:09Z",
+      "pushed_at": "2026-11-15T12:09:36Z",
       "release_tag": "",
-      "sent_date": "2026-11-15",
-      "stars_int": 6332
+      "sent_date": "2026-11-16",
+      "stars_int": 7111
     },
     "JuliusBrussee/caveman": {
       "desc_en": "🪨 why use many token when few token do trick. Viral skill + proxy for coding agents that cuts 65% of tokens by talking like a caveman.",
@@ -41,6 +41,13 @@
       "release_tag": "v2.1.5",
       "sent_date": "2026-11-14",
       "stars_int": 1645
+    },
+    "NVIDIA/SkillEvaluator": {
+      "desc_en": "Multi-tier framework for evaluating AI agent skills with quality gates, semantic overlap detection, synthetic evaluation dataset generation, and live agent evaluation that measures how skills affect agent behavior.",
+      "pushed_at": "2026-11-15T23:12:16Z",
+      "release_tag": "v0.9.0",
+      "sent_date": "2026-11-16",
+      "stars_int": 1634
     },
     "NVIDIA/auto-ontology": {
       "desc_en": "Auto Ontology is a Python framework for building semantic, graph-based reasoning layers over data. It enables deterministic query generation, better context retrieval, and more explainable AI for LLM and agent workflows.",
@@ -72,10 +79,10 @@
     },
     "ZhuLinsen/daily_stock_analysis": {
       "desc_en": "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。  LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.",
-      "pushed_at": "2026-11-09T14:14:52Z",
+      "pushed_at": "2026-11-15T15:47:25Z",
       "release_tag": "v3.34.0",
-      "sent_date": "2026-11-10",
-      "stars_int": 69090
+      "sent_date": "2026-11-16",
+      "stars_int": 72494
     },
     "addyosmani/agent-skills": {
       "desc_en": "Production-grade engineering skills for AI coding agents.",
@@ -107,10 +114,10 @@
     },
     "anthropics/skills": {
       "desc_en": "Public repository for Agent Skills",
-      "pushed_at": "2026-11-06T22:32:32Z",
+      "pushed_at": "2026-11-14T21:52:49Z",
       "release_tag": "",
-      "sent_date": "2026-11-08",
-      "stars_int": 188933
+      "sent_date": "2026-11-16",
+      "stars_int": 195338
     },
     "ashhart/TensorFold": {
       "desc_en": "LLM Inference Engine for Metal, CUDA and Vulkan.",
@@ -161,6 +168,13 @@
       "sent_date": "2026-11-09",
       "stars_int": 871
     },
+    "elementalsouls/Claude-BugHunter": {
+      "desc_en": "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
+      "pushed_at": "2026-11-15T11:59:53Z",
+      "release_tag": "v2.1",
+      "sent_date": "2026-11-16",
+      "stars_int": 6382
+    },
     "garrytan/gbrain": {
       "desc_en": "Garry's Opinionated OpenClaw/Hermes Agent Brain",
       "pushed_at": "2026-11-10T04:13:43Z",
@@ -168,12 +182,26 @@
       "sent_date": "2026-11-10",
       "stars_int": 32250
     },
+    "ggml-org/ggml": {
+      "desc_en": "Tensor library for machine learning",
+      "pushed_at": "2026-11-13T08:34:20Z",
+      "release_tag": "v1.0.0",
+      "sent_date": "2026-11-16",
+      "stars_int": 15894
+    },
     "google-deepmind/mujoco": {
       "desc_en": "Multi-Joint dynamics with Contact. A general purpose physics simulator.",
       "pushed_at": "2026-11-10T01:29:18Z",
       "release_tag": "4.0.0",
       "sent_date": "2026-11-10",
       "stars_int": 17001
+    },
+    "google-labs-code/stitch-skills": {
+      "desc_en": "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.",
+      "pushed_at": "2026-08-17T20:20:23Z",
+      "release_tag": "v1.0",
+      "sent_date": "2026-11-16",
+      "stars_int": 9266
     },
     "google/skills": {
       "desc_en": "Agent Skills for Google products and technologies",
@@ -187,6 +215,13 @@
       "pushed_at": "",
       "release_tag": "",
       "sent_date": "2026-11-15",
+      "stars_int": 0
+    },
+    "hf:model:Edge0/Edge0-145B-q3k": {
+      "desc_en": "",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-16",
       "stars_int": 0
     },
     "hf:model:NousResearch/Arete-27B": {
@@ -203,6 +238,20 @@
       "sent_date": "2026-11-15",
       "stars_int": 0
     },
+    "hf:model:Qwen/Qwen3.8-Flash-Next": {
+      "desc_en": "",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-16",
+      "stars_int": 0
+    },
+    "hf:model:deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+      "desc_en": "",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-16",
+      "stars_int": 0
+    },
     "hf:model:meituan-longcat/LongCat-2.5": {
       "desc_en": "",
       "pushed_at": "",
@@ -217,6 +266,27 @@
       "sent_date": "2026-11-15",
       "stars_int": 0
     },
+    "hf:model:thinkingmachines/Inkling-2-Small": {
+      "desc_en": "",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-16",
+      "stars_int": 0
+    },
+    "hf:model:unsloth/Qwen3.8-27B-GGUF": {
+      "desc_en": "",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-16",
+      "stars_int": 0
+    },
+    "hf:paper:2607.13920": {
+      "desc_en": "A dynamic stress-testing framework shows that search agents often answer confidently despite unreliable retrieved evidence and may rely on memorized knowledge when documents are factually wrong.",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-16",
+      "stars_int": 0
+    },
     "hf:paper:2608.22237": {
       "desc_en": "Web-facing AI agents repeatedly access webpages, documents, repositories, and tool responses, yet reading interfaces often expose entire objects when only sparse evidence is needed. This over-reading increases token and latency costs and can dilute relevant evidence. We present SparseRead, a reusabl",
       "pushed_at": "",
@@ -224,11 +294,25 @@
       "sent_date": "2026-11-15",
       "stars_int": 0
     },
+    "hf:paper:2611.08219": {
+      "desc_en": "A real-source data synthesis framework trains a 4B agent on 4k task instances with supervised fine-tuning and rubric-based reinforcement learning, improving realistic productivity work and file-grounded reasoning over larger models.",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-16",
+      "stars_int": 0
+    },
     "hf:paper:2611.08318": {
       "desc_en": "Exposing benchmark success criteria to self-improving embodied coding agents can raise measured success under those criteria without improving instructed-task completion, and the advantage weakens under slight criteria changes and transfers poorly across tasks, while instruction-faithful criteria better reflect instructed-task performance.",
       "pushed_at": "",
       "release_tag": "",
       "sent_date": "2026-11-15",
+      "stars_int": 0
+    },
+    "hf:paper:2611.10439": {
+      "desc_en": "MixUA distills lessons from independent user-agent trajectories and assigns them to appropriate scopes to balance cross-user and cross-agent learning with privacy, evaluated by CrossLearnBench.",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-16",
       "stars_int": 0
     },
     "hf:paper:2611.12304": {
@@ -245,6 +329,20 @@
       "sent_date": "2026-11-15",
       "stars_int": 0
     },
+    "hf:paper:2611.16409": {
+      "desc_en": "Language-model agents trained with reinforcement learning can improve by learning to create and curate experience artifacts that help future rollouts, not just by optimizing actions from scalar rewards.",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-16",
+      "stars_int": 0
+    },
+    "hf:paper:2611.16961": {
+      "desc_en": "A hybrid decision model routes between implicit single-forward-pass answering and full autoregressive reasoning via a self-routing block trained with calibrated decision policy optimization, reducing token and latency costs while preserving accuracy.",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-16",
+      "stars_int": 0
+    },
     "hf:paper:2611.17167": {
       "desc_en": "A decision model that acts poorly can still teach reinforcement learning policies effectively by judging complete action trajectories, improving success on ALFWorld and WebShop.",
       "pushed_at": "",
@@ -259,11 +357,39 @@
       "sent_date": "2026-11-15",
       "stars_int": 0
     },
+    "hf:space:Alissonerdx/charactersheet-lora-demo": {
+      "desc_en": "Multi-view character sheet from one image (FLUX.2 LoRA)",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-16",
+      "stars_int": 0
+    },
+    "hf:space:JCisHERE/wan2-2-i2v-v3": {
+      "desc_en": "",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-16",
+      "stars_int": 0
+    },
+    "hf:space:RioShiina/ImageGen": {
+      "desc_en": "Multi-task image generator with dynamic, chainable workflows",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-16",
+      "stars_int": 0
+    },
     "hf:space:aet256/Qwen-Image-Edit-Rapid-AIO-Loras-Experimental": {
       "desc_en": "Demo of the Collection of Qwen Image Edit LoRAs",
       "pushed_at": "",
       "release_tag": "",
       "sent_date": "2026-11-15",
+      "stars_int": 0
+    },
+    "hf:space:dream2589632147/Dream-wan2-2-fp8da-aoti-preview-2": {
+      "desc_en": "Fast Wan 2.2 image-to-video with first/last frames",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-16",
       "stars_int": 0
     },
     "hf:space:hugging-apps/mirage-vision": {
@@ -285,6 +411,13 @@
       "pushed_at": "",
       "release_tag": "",
       "sent_date": "2026-11-15",
+      "stars_int": 0
+    },
+    "hf:space:trellis-community/TRELLIS": {
+      "desc_en": "Scalable and Versatile 3D Generation from images",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-16",
       "stars_int": 0
     },
     "homeassistant-ai/ha-mcp": {
@@ -317,10 +450,10 @@
     },
     "meta/astryx": {
       "desc_en": "An open source design system that's fully customizable and agent ready",
-      "pushed_at": "2026-11-13T02:52:39Z",
-      "release_tag": "v0.7.15",
-      "sent_date": "2026-11-13",
-      "stars_int": 26667
+      "pushed_at": "2026-11-15T23:20:55Z",
+      "release_tag": "v0.7.16",
+      "sent_date": "2026-11-16",
+      "stars_int": 28821
     },
     "milind-soni/OpenMausBot": {
       "desc_en": "Open-source Grok Bot alternative with a virtual machine that bots can use",
@@ -387,10 +520,10 @@
     },
     "sherlock-project/sherlock": {
       "desc_en": "Hunt down social media accounts by username across social networks",
-      "pushed_at": "2026-11-10T05:13:55Z",
+      "pushed_at": "2026-11-15T05:13:15Z",
       "release_tag": "v0.16.2",
-      "sent_date": "2026-11-11",
-      "stars_int": 109070
+      "sent_date": "2026-11-16",
+      "stars_int": 112463
     },
     "tailscale/tailcat": {
       "desc_en": "like netcat, but over Tailscale's data plane, without Tailscale's control plane",
@@ -422,10 +555,10 @@
     },
     "vercel-labs/agent-browser": {
       "desc_en": "Browser automation CLI for AI agents",
-      "pushed_at": "2026-11-12T02:52:28Z",
-      "release_tag": "v0.42.0",
-      "sent_date": "2026-11-12",
-      "stars_int": 49952
+      "pushed_at": "2026-11-15T12:43:23Z",
+      "release_tag": "v0.43.0",
+      "sent_date": "2026-11-16",
+      "stars_int": 51599
     },
     "vercel-labs/agent-desktop": {
       "desc_en": "Computer use CLI for AI agents",
