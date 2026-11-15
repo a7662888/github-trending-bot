@@ -13,10 +13,12 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 import requests
 from bs4 import BeautifulSoup
+from hf_trending import agent_tags, fetch_hf_sections
 
 TAIPEI_TZ = datetime.timezone(datetime.timedelta(hours=8))
 TOP_N = int(os.environ.get("TOP_N", "10"))
 DEDUP_DAYS = int(os.environ.get("DEDUP_DAYS", "7"))
+DRY_RUN = os.environ.get("DRY_RUN") == "1"  # 本機測試：不寄信、不寫 archive 與 history
 BROWSER_UA = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
     "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
@@ -173,6 +175,17 @@ TW_TERM_MAP = [
     ("程序", "程式"),
     ("標記", "Token"),
     ("座席", "Agent"),
+    # 機器翻譯常見誤譯（2026-11-15 由實際報告抓到）；須排在上面通用替換之後
+    ("法學碩士", "LLM"),
+    ("代幣", "Token"),
+    ("令牌", "Token"),
+    ("克勞德程式碼", "Claude Code"),
+    ("克勞德", "Claude"),
+    ("代理商", "Agent"),
+    ("編碼劑", "寫程式代理"),
+    ("線束", "harness"),
+    ("擁抱臉", "Hugging Face"),
+    ("拉取請求", "PR"),
 ]
 
 
@@ -391,6 +404,7 @@ def fetch_readme_summary_en(full_name, headers):
                 continue
             s = re.sub(r"!\[[^\]]*\]\([^)]*\)", "", s)
             s = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", s)
+            s = re.sub(r"https?://\S+", " ", s)  # 只剩附件網址的行不算亮點
             s = re.sub(r"[*_`~•·|]+", " ", s)
             s = re.sub(r"\s+", " ", s).strip()
             if len(s) >= 30 and len(re.findall(r"[A-Za-z\u4e00-\u9fff]{2,}", s)) >= 5:
@@ -544,11 +558,41 @@ def select_top_repos_with_dedup(candidates, history, today_str, top_n=TOP_N):
     return selected
 
 
-def build_markdown_report(repos, date_str):
+def agent_summary_line(repos, hf):
+    n_gh = sum(1 for r in repos if r.get("agent_tags"))
+    n_hf = sum(len(v) for v in (hf or {}).values())
+    return f"🤖 Agent 雷達：GitHub {n_gh}/{len(repos)} 個與 Agent 應用相關｜Hugging Face 精選 {n_hf} 項"
+
+
+def build_hf_markdown(hf):
+    if not hf or not any(hf.values()):
+        return ""
+    md = "\n\n## 🤗 Hugging Face 每日熱門（Agent 應用精選）\n"
+    if hf.get("spaces"):
+        md += "\n### 🔌 可直接接上 Agent 的 Space（MCP server）\n\n| Space | 繁中說明 | ❤️ | 熱度 |\n| :--- | :--- | :---: | :---: |\n"
+        for s in hf["spaces"]:
+            md += f"| [{s['title']}]({s['link']})<br>`{s['id']}` | {s.get('desc_zh') or '-'} | {s['likes']:,} | {s['trending']:g} |\n"
+    if hf.get("models"):
+        md += "\n### 🛠️ 熱門模型（可呼叫工具優先）\n\n| 模型 | 用途 | 參數量 | 授權 | 標籤 | ❤️ |\n| :--- | :---: | :---: | :---: | :--- | :---: |\n"
+        for m in hf["models"]:
+            hint = f"<br>💻 {m['local_hint']}" if m.get("local_hint") else ""
+            md += (f"| [{m['id']}]({m['link']}) | {m['pipeline']} | {m['params']}{hint} | {m['license']} "
+                   f"| {' '.join(m['agent_tags'])} | {m['likes']:,} |\n")
+    if hf.get("papers"):
+        md += "\n### 📄 每日論文（Agent／醫學相關，依讚數排序）\n\n| 論文 | 繁中重點 | 標籤 | 👍 |\n| :--- | :--- | :--- | :---: |\n"
+        for p in hf["papers"]:
+            md += (f"| [{p['title']}]({p['link']})<br>[arXiv:{p['id']}]({p['arxiv']}) | {p.get('desc_zh') or '-'} "
+                   f"| {' '.join(p['agent_tags'])} | {p['upvotes']} |\n")
+    md += "\n> 已排除無審查／去安全對齊模型、換臉與深偽、成人內容。參數量與本機可否試跑為估計值。\n"
+    return md
+
+
+def build_markdown_report(repos, date_str, hf=None):
     md = f"""---
-title: "GitHub 每日熱門專案 Top {len(repos)} [{date_str}]"
+title: "GitHub＋Hugging Face 每日熱門 [{date_str}]"
 tags:
   - github
+  - huggingface
   - trending
   - ai-generated
 date: {date_str}
@@ -556,12 +600,14 @@ date: {date_str}
 
 # 🚀 GitHub 每日熱門專案報告 Top {len(repos)} ({date_str})
 
+{agent_summary_line(repos, hf)}
+
 | # | 專案名稱 (連結) | 開發語言 | 本日新增星星 | 總星星數 | Fork | Fork:Star | 授權 | 建立日期 | 繁體中文專案摘要 |
 | :---: | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
 """
     for idx, repo in enumerate(repos, 1):
         update_tag = f" 🔄 *({repo['update_reason']})*" if repo.get("update_reason") else ""
-        full_zh = repo["desc_zh"]
+        full_zh = (" ".join(f"`{t}`" for t in repo["agent_tags"]) + "<br>" if repo.get("agent_tags") else "") + repo["desc_zh"]
         if repo.get("readme_highlight_zh") and repo["readme_highlight_zh"] != repo["desc_zh"]:
             full_zh += f"<br>💡 **功能亮點**：{repo['readme_highlight_zh']}"
         md += (
@@ -572,20 +618,24 @@ date: {date_str}
             f"| {full_zh} |\n"
         )
 
-    md += "\n\n---\n*本報告由 GitHub Actions 雲端排程自動產生（每日 06:43・7 天內不重複・有更新再推送）。*"
+    md += build_hf_markdown(hf)
+    md += "\n\n---\n*本報告由 GitHub Actions 雲端排程自動產生（每日清晨・7 天內不重複・有更新再推送）。*"
     return md
 
 
-def build_plain_text_report(repos, date_str):
+def build_plain_text_report(repos, date_str, hf=None):
     lines = [
-        f"🚀 GitHub 每日熱門專案 Top {len(repos)} ({date_str})",
-        "每日 06:43 自動推送｜7 天內不重複・有更新再推",
+        f"🚀 GitHub＋Hugging Face 每日熱門 ({date_str})",
+        "每日清晨自動推送｜7 天內不重複・有更新再推",
+        agent_summary_line(repos, hf),
         "=" * 60,
         "",
     ]
     for idx, repo in enumerate(repos, 1):
         upd = f" [🔄 {repo['update_reason']}]" if repo.get("update_reason") else ""
         lines.append(f"#{idx} {repo['full_name']}{upd}")
+        if repo.get("agent_tags"):
+            lines.append("🤖 " + " ".join(repo["agent_tags"]))
         lines.append(f"🔗 連結：{repo['link']}")
         lines.append(f"📝 繁中說明：{repo['desc_zh']}")
         if repo.get("readme_highlight_zh") and repo["readme_highlight_zh"] != repo["desc_zh"]:
@@ -594,10 +644,67 @@ def build_plain_text_report(repos, date_str):
             f"📊 語言：{repo['lang']} | 今日 +{repo['stars_today']} ★ | 總星數 {repo['stars_total']} | 授權 {repo.get('license_display', '-')}"
         )
         lines.append("-" * 60)
+    if hf and any(hf.values()):
+        lines += ["", "🤗 Hugging Face 每日熱門（Agent 應用精選）", "=" * 60]
+        for s in hf.get("spaces", []):
+            lines.append(f"🔌 Space｜{s['title']}（{s['id']}）：{s.get('desc_zh') or '-'}\n   {s['link']}")
+        for m in hf.get("models", []):
+            hint = f"｜{m['local_hint']}" if m.get("local_hint") else ""
+            lines.append(f"🛠️ 模型｜{m['id']}｜{m['pipeline']}｜{m['params']}{hint}｜授權 {m['license']}\n   {m['link']}")
+        for p in hf.get("papers", []):
+            lines.append(f"📄 論文｜{p['title']}（👍{p['upvotes']}）\n   {p.get('desc_zh') or '-'}\n   {p['link']}")
     return "\n".join(lines)
 
 
-def build_html_report(repos, date_str):
+def build_hf_html(hf):
+    if not hf or not any(hf.values()):
+        return ""
+    esc = html.escape
+    cell = "padding: 12px 16px; vertical-align: top; border-bottom: 1px solid #30363d;"
+
+    def tags_html(tags):
+        return "".join(
+            f'<span style="display:inline-block;background-color:#2d1f4e;color:#d2a8ff;padding:1px 7px;'
+            f'border-radius:10px;font-size:11px;margin-right:4px;">{esc(t)}</span>' for t in tags)
+
+    def section(title, rows):
+        if not rows:
+            return ""
+        return (f'<div style="padding: 14px 16px 6px; color: #ffd33d; font-weight: bold; font-size: 15px;">{title}</div>'
+                f'<table style="width:100%; border-collapse: collapse;">{rows}</table>')
+
+    spaces = "".join(
+        f'<tr><td style="{cell}"><a href="{esc(s["link"])}" style="color:#58a6ff;text-decoration:none;font-weight:bold;">{esc(s["title"])}</a>'
+        f'<span style="color:#8b949e;font-size:11px;"> {esc(s["id"])}</span>'
+        f'<div style="color:#e6edf3;font-size:13px;margin-top:4px;">{esc(s.get("desc_zh") or "")}</div></td>'
+        f'<td style="{cell} text-align:center; color:#e3b341; white-space:nowrap;">❤️ {s["likes"]:,}</td></tr>'
+        for s in hf.get("spaces", []))
+    models = "".join(
+        f'<tr><td style="{cell}"><a href="{esc(m["link"])}" style="color:#58a6ff;text-decoration:none;font-weight:bold;">{esc(m["id"])}</a>'
+        f'<div style="margin-top:4px;">{tags_html(m["agent_tags"])}</div>'
+        f'<div style="color:#8b949e;font-size:12px;margin-top:4px;">{esc(m["pipeline"])}｜{esc(m["params"])}｜授權 {esc(m["license"])}'
+        + (f'<br>💻 {esc(m["local_hint"])}' if m.get("local_hint") else "") + '</div></td>'
+        f'<td style="{cell} text-align:center; color:#e3b341; white-space:nowrap;">❤️ {m["likes"]:,}</td></tr>'
+        for m in hf.get("models", []))
+    papers = "".join(
+        f'<tr><td style="{cell}"><a href="{esc(p["link"])}" style="color:#58a6ff;text-decoration:none;font-weight:bold;">{esc(p["title"])}</a>'
+        f'<div style="margin-top:4px;">{tags_html(p["agent_tags"])}</div>'
+        f'<div style="color:#e6edf3;font-size:13px;margin-top:4px;">{esc(p.get("desc_zh") or "")}</div>'
+        f'<div style="font-size:11px;margin-top:4px;"><a href="{esc(p["arxiv"])}" style="color:#8b949e;">arXiv:{esc(p["id"])}</a></div></td>'
+        f'<td style="{cell} text-align:center; color:#3fb950; white-space:nowrap;">👍 {p["upvotes"]}</td></tr>'
+        for p in hf.get("papers", []))
+
+    return (
+        '<div style="border-top: 2px solid #30363d; background: linear-gradient(135deg, #3a2a00 0%, #161b22 100%); padding: 18px 20px;">'
+        '<h2 style="color:#ffd33d; margin:0; font-size:20px;">🤗 Hugging Face 每日熱門（Agent 應用精選）</h2></div>'
+        + section("🔌 可直接接上 Agent 的 Space（MCP server）", spaces)
+        + section("🛠️ 熱門模型（可呼叫工具優先）", models)
+        + section("📄 每日論文（Agent／醫學相關，依讚數排序）", papers)
+        + '<div style="padding: 10px 16px; font-size: 11px; color: #8b949e;">已排除無審查／去安全對齊模型、換臉與深偽、成人內容；參數量與本機可否試跑為估計值。</div>'
+    )
+
+
+def build_html_report(repos, date_str, hf=None):
     rows_html = ""
     for idx, repo in enumerate(repos, 1):
         bg_color = "#1e222b" if idx % 2 == 1 else "#161b22"
@@ -643,6 +750,15 @@ def build_html_report(repos, date_str):
                 f'💡 <b>功能亮點：</b>{repo["readme_highlight_zh"]}</div>'
             )
 
+        agent_html = ""
+        if repo.get("agent_tags"):
+            agent_html = "".join(
+                f'<span style="display:inline-block;background-color:#2d1f4e;color:#d2a8ff;'
+                f'padding:2px 8px;border-radius:10px;font-size:11px;margin-right:5px;margin-bottom:4px;">{t}</span>'
+                for t in repo["agent_tags"]
+            )
+            agent_html = f'<div style="margin-bottom: 4px;">{agent_html}</div>'
+
         topics_html = ""
         if repo.get("topics"):
             tags = "".join(
@@ -660,6 +776,7 @@ def build_html_report(repos, date_str):
                     <a href="{repo['link']}" style="color: #58a6ff; text-decoration: none;" target="_blank">{repo['full_name']}</a>
                     {update_badge}
                 </div>
+                {agent_html}
                 <div style="font-size: 14px; color: #e6edf3; line-height: 1.5; font-weight: 500;">{repo['desc_zh']}</div>
                 {readme_block}
                 <div style="font-size: 12px; color: #8b949e; margin-top: 5px; font-style: italic;">Original: {repo['desc_en']}</div>
@@ -691,13 +808,14 @@ def build_html_report(repos, date_str):
     <html>
     <head>
         <meta charset="utf-8">
-        <title>GitHub 每日熱門專案 Top {len(repos)}</title>
+        <title>GitHub＋Hugging Face 每日熱門</title>
     </head>
     <body style="background-color: #0d1117; color: #c9d1d9; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; margin: 0; padding: 20px;">
         <div style="max-width: 920px; margin: 0 auto; background-color: #161b22; border: 1px solid #30363d; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.5);">
             <div style="background: linear-gradient(135deg, #1f6feb 0%, #0d1117 100%); padding: 28px 20px; text-align: center; border-bottom: 1px solid #30363d;">
-                <h1 style="color: #ffffff; margin: 0; font-size: 26px; letter-spacing: 1px;">🚀 GitHub 每日熱門專案 Top {len(repos)}</h1>
-                <p style="color: #c9d1d9; margin: 10px 0 0 0; font-size: 14px;">資料日期: {date_str} (每日 06:43 自動推送｜7 天內不重複・有更新再推)</p>
+                <h1 style="color: #ffffff; margin: 0; font-size: 26px; letter-spacing: 1px;">🚀 GitHub＋🤗 Hugging Face 每日熱門</h1>
+                <p style="color: #c9d1d9; margin: 10px 0 0 0; font-size: 14px;">資料日期: {date_str} (每日清晨自動推送｜7 天內不重複・有更新再推)</p>
+                <p style="color: #d2a8ff; margin: 8px 0 0 0; font-size: 13px;">{agent_summary_line(repos, hf)}</p>
             </div>
 
             <div style="overflow-x: auto;">
@@ -717,8 +835,10 @@ def build_html_report(repos, date_str):
                 </table>
             </div>
 
+            {build_hf_html(hf)}
+
             <div style="background-color: #0d1117; padding: 18px; text-align: center; font-size: 12px; color: #8b949e; border-top: 1px solid #30363d;">
-                <p style="margin: 0;">本郵件由 GitHub Actions 雲端容器自動爬網、README 亮點擷取、7 天去重與繁體中文翻譯生成，電腦未開機亦準時發送。</p>
+                <p style="margin: 0;">本郵件由 GitHub Actions 雲端容器自動爬取 GitHub Trending 與 Hugging Face 公開 API、README 亮點擷取、Agent 用途標註、7 天去重與繁體中文翻譯生成，電腦未開機亦照常發送。</p>
             </div>
         </div>
     </body>
@@ -782,7 +902,7 @@ def send_email(config, plain_content, html_content, date_str):
             recipients.append(r_clean)
 
     msg = MIMEMultipart("alternative")
-    msg["Subject"] = f"🚀 GitHub 每日熱門專案 Top {TOP_N} [{date_str}]"
+    msg["Subject"] = f"🚀 GitHub＋🤗 HF 每日熱門（Agent 精選） [{date_str}]"
     msg["From"] = f"GitHub Trending Robot <{sender}>"
     msg["To"] = ", ".join(recipients)
     msg.attach(MIMEText(plain_content, "plain", "utf-8"))
@@ -872,20 +992,28 @@ def main():
         repo["desc_zh"] = translate_to_zh_tw(repo["desc_en"])
         if repo.get("readme_en"):
             repo["readme_highlight_zh"] = translate_to_zh_tw(repo["readme_en"])
+        repo["agent_tags"] = agent_tags(repo["desc_en"], repo.get("readme_en", ""), " ".join(repo.get("topics") or []))
 
-    if archive_dir:
+    log("Fetching Hugging Face trending (spaces / models / daily papers)...")
+    hf = fetch_hf_sections(history, now_taipei.date())
+    for item in hf["spaces"] + hf["papers"]:
+        if item.get("desc_en"):
+            item["desc_zh"] = translate_to_zh_tw(item["desc_en"])
+    log(f"HF picks: {', '.join(f'{k} {len(v)}' for k, v in hf.items())}")
+
+    if archive_dir and not DRY_RUN:
         try:
             os.makedirs(archive_dir, exist_ok=True)
             archive_path = os.path.join(archive_dir, f"github-trending-{date_str}.md")
-            md_content = build_markdown_report(repos, date_str)
+            md_content = build_markdown_report(repos, date_str, hf)
             with open(archive_path, "w", encoding="utf-8") as f:
                 f.write(md_content)
             log(f"Archived report: {archive_path}")
         except Exception as e:
             log(f"Failed to archive: {e}")
 
-    plain_content = build_plain_text_report(repos, date_str)
-    html_content = build_html_report(repos, date_str)
+    plain_content = build_plain_text_report(repos, date_str, hf)
+    html_content = build_html_report(repos, date_str, hf)
 
     script_dir = os.path.dirname(os.path.abspath(__file__))
     preview_path = os.path.join(script_dir, "preview.html")
@@ -896,9 +1024,15 @@ def main():
     except Exception:
         pass
 
+    if DRY_RUN:
+        with open(os.path.join(script_dir, "preview.md"), "w", encoding="utf-8") as f:
+            f.write(build_markdown_report(repos, date_str, hf))
+        log("DRY_RUN=1: skipped archive, email and history update (preview.html / preview.md written).")
+        return
+
     email_status = send_email(config, plain_content, html_content, date_str)
     if email_status:
-        save_history(history_file, history, repos, date_str)
+        save_history(history_file, history, repos + hf["spaces"] + hf["models"] + hf["papers"], date_str)
         log("Job completed successfully.")
     else:
         log("Job completed without sending email.")

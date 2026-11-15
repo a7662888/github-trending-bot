@@ -2,8 +2,9 @@ name: Daily GitHub Trending Email
 
 on:
   schedule:
-    # 台灣時間每日上午 06:43 (UTC+8) = 前一日 22:43 UTC
-    - cron: '43 22 * * *'
+    # 台灣時間 03:13 (UTC+8) = 前一日 19:13 UTC。
+    # 原訂 06:43 時，GitHub 排程實際延遲 3–5 小時（2026-11 實測多在 10:00–12:00 才寄出），提前觸發讓信約在清晨送達。
+    - cron: '13 19 * * *'
   workflow_dispatch: # 支援手動於 GitHub Actions 網頁點擊 Run workflow 立即測試
 
 env:
