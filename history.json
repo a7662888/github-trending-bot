@@ -1,5 +1,12 @@
 {
   "records": {
+    "ChromeDevTools/chrome-devtools-mcp": {
+      "desc_en": "Chrome DevTools for coding agents",
+      "pushed_at": "2026-11-15T01:05:52Z",
+      "release_tag": "chrome-devtools-mcp-v1.13.0",
+      "sent_date": "2026-11-15",
+      "stars_int": 56337
+    },
     "CopilotKit/OpenBot": {
       "desc_en": "Open-source AI coworkers that each get a computer of their own: a browser, files and tools, with every action decided before it happens and recorded after. Bring any AG-UI agent.",
       "pushed_at": "2026-11-13T02:46:21Z",
@@ -16,10 +23,17 @@
     },
     "GoogleChrome/modern-web-guidance-src": {
       "desc_en": "Keep your coding agent up to date with the latest web best practices",
-      "pushed_at": "2026-11-14T02:08:33Z",
+      "pushed_at": "2026-11-14T14:28:09Z",
       "release_tag": "",
-      "sent_date": "2026-11-14",
-      "stars_int": 4938
+      "sent_date": "2026-11-15",
+      "stars_int": 6099
+    },
+    "JuliusBrussee/caveman": {
+      "desc_en": "🪨 why use many token when few token do trick. Viral skill + proxy for coding agents that cuts 65% of tokens by talking like a caveman.",
+      "pushed_at": "2026-11-14T07:52:12Z",
+      "release_tag": "v4.1.0",
+      "sent_date": "2026-11-15",
+      "stars_int": 120095
     },
     "Likely7/Veyra-NRVideo": {
       "desc_en": "Bring PS5 GTA6 to 120FPS with DLSS 5. An advanced Windows video player and capture enhancement tool featuring real-time preview for videos, images, and capture card sources. Combine AI-powered Super Resolution, DLSS5 image enhancement, and Frame Generation to deliver a next-generation visual experience.",
@@ -42,6 +56,13 @@
       "sent_date": "2026-11-13",
       "stars_int": 29870
     },
+    "Tencent/LoopForge": {
+      "desc_en": "Self-hosted workflows for coding-agent delivery. Orchestrate CodeBuddy, Codex and Claude Code with scripts and human approval gates. Includes Local workflows for coding assistants.",
+      "pushed_at": "2026-11-15T01:23:35Z",
+      "release_tag": "v0.3.8",
+      "sent_date": "2026-11-15",
+      "stars_int": 932
+    },
     "TheAlgorithms/Java": {
       "desc_en": "All Algorithms implemented in Java",
       "pushed_at": "2026-11-11T21:56:41Z",
@@ -62,6 +83,13 @@
       "release_tag": "0.6.15",
       "sent_date": "2026-11-11",
       "stars_int": 115218
+    },
+    "ag-ui-protocol/ag-ui": {
+      "desc_en": "AG-UI: the Agent-User Interaction Protocol. Bring Agents into Frontend Applications.",
+      "pushed_at": "2026-11-14T16:02:06Z",
+      "release_tag": "release/2026-11-13",
+      "sent_date": "2026-11-15",
+      "stars_int": 17389
     },
     "alibaba/open-code-review": {
       "desc_en": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
@@ -86,10 +114,10 @@
     },
     "ashhart/TensorFold": {
       "desc_en": "LLM Inference Engine for Metal, CUDA and Vulkan.",
-      "pushed_at": "2026-11-13T02:49:45Z",
-      "release_tag": "v1.2.7",
-      "sent_date": "2026-11-13",
-      "stars_int": 1968
+      "pushed_at": "2026-11-15T01:56:39Z",
+      "release_tag": "v1.2.9",
+      "sent_date": "2026-11-15",
+      "stars_int": 2171
     },
     "astral-sh/ruff": {
       "desc_en": "An extremely fast Python linter and code formatter, written in Rust.",
@@ -100,10 +128,10 @@
     },
     "backnotprop/plannotator": {
       "desc_en": "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click.",
-      "pushed_at": "2026-11-14T02:39:27Z",
-      "release_tag": "v0.28.64",
-      "sent_date": "2026-11-14",
-      "stars_int": 10494
+      "pushed_at": "2026-11-15T01:59:57Z",
+      "release_tag": "v0.28.65",
+      "sent_date": "2026-11-15",
+      "stars_int": 11169
     },
     "block/buzz": {
       "desc_en": "A hive mind communication platform",
@@ -118,6 +146,13 @@
       "release_tag": "",
       "sent_date": "2026-11-08",
       "stars_int": 66030
+    },
+    "dream-num/univer": {
+      "desc_en": "Build your own AI office with Univer Office SDK. Bring editing, calculation, collaboration, and file processing into your product for people and AI agents. Built on an extensible open-source core.",
+      "pushed_at": "2026-11-14T17:23:40Z",
+      "release_tag": "v1.5.0",
+      "sent_date": "2026-11-15",
+      "stars_int": 24525
     },
     "dsx-ai-factory/nvke": {
       "desc_en": "NVIDIA Kubernetes Engine (NVKE). A management plane for GPU Kubernetes on bare metal.",
@@ -275,10 +310,10 @@
     },
     "tradermonty/claude-trading-skills": {
       "desc_en": "Claude Code skills for equity investors and traders — market analysis, technical charting, economic calendars, screeners, and trading strategy development.",
-      "pushed_at": "2026-11-14T02:05:41Z",
+      "pushed_at": "2026-11-15T01:32:38Z",
       "release_tag": "",
-      "sent_date": "2026-11-14",
-      "stars_int": 4211
+      "sent_date": "2026-11-15",
+      "stars_int": 4859
     },
     "vercel-labs/agent-browser": {
       "desc_en": "Browser automation CLI for AI agents",
@@ -296,10 +331,10 @@
     },
     "we-promise/sure": {
       "desc_en": "The personal finance app for everyone (by everyone)",
-      "pushed_at": "2026-11-14T02:18:39Z",
+      "pushed_at": "2026-11-15T01:04:59Z",
       "release_tag": "v0.7.6-hotfix.1",
-      "sent_date": "2026-11-14",
-      "stars_int": 14790
+      "sent_date": "2026-11-15",
+      "stars_int": 15342
     }
   }
 }
