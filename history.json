@@ -2,10 +2,10 @@
   "records": {
     "ChromeDevTools/chrome-devtools-mcp": {
       "desc_en": "Chrome DevTools for coding agents",
-      "pushed_at": "2026-11-15T01:05:52Z",
+      "pushed_at": "2026-11-15T03:06:25Z",
       "release_tag": "chrome-devtools-mcp-v1.13.0",
       "sent_date": "2026-11-15",
-      "stars_int": 56337
+      "stars_int": 56484
     },
     "CopilotKit/OpenBot": {
       "desc_en": "Open-source AI coworkers that each get a computer of their own: a browser, files and tools, with every action decided before it happens and recorded after. Bring any AG-UI agent.",
@@ -26,14 +26,14 @@
       "pushed_at": "2026-11-14T14:28:09Z",
       "release_tag": "",
       "sent_date": "2026-11-15",
-      "stars_int": 6099
+      "stars_int": 6332
     },
     "JuliusBrussee/caveman": {
       "desc_en": "🪨 why use many token when few token do trick. Viral skill + proxy for coding agents that cuts 65% of tokens by talking like a caveman.",
-      "pushed_at": "2026-11-14T07:52:12Z",
+      "pushed_at": "2026-11-15T07:19:16Z",
       "release_tag": "v4.1.0",
       "sent_date": "2026-11-15",
-      "stars_int": 120095
+      "stars_int": 120194
     },
     "Likely7/Veyra-NRVideo": {
       "desc_en": "Bring PS5 GTA6 to 120FPS with DLSS 5. An advanced Windows video player and capture enhancement tool featuring real-time preview for videos, images, and capture card sources. Combine AI-powered Super Resolution, DLSS5 image enhancement, and Frame Generation to deliver a next-generation visual experience.",
@@ -51,10 +51,10 @@
     },
     "QwenLM/qwen-code": {
       "desc_en": "An open-source AI coding agent that lives in your terminal.",
-      "pushed_at": "2026-11-13T02:24:06Z",
-      "release_tag": "sdk-typescript-v0.1.33",
-      "sent_date": "2026-11-13",
-      "stars_int": 29870
+      "pushed_at": "2026-11-15T07:39:51Z",
+      "release_tag": "v0.27.4",
+      "sent_date": "2026-11-15",
+      "stars_int": 30430
     },
     "Tencent/LoopForge": {
       "desc_en": "Self-hosted workflows for coding-agent delivery. Orchestrate CodeBuddy, Codex and Claude Code with scripts and human approval gates. Includes Local workflows for coding assistants.",
@@ -86,17 +86,17 @@
     },
     "ag-ui-protocol/ag-ui": {
       "desc_en": "AG-UI: the Agent-User Interaction Protocol. Bring Agents into Frontend Applications.",
-      "pushed_at": "2026-11-14T16:02:06Z",
+      "pushed_at": "2026-11-15T02:26:33Z",
       "release_tag": "release/2026-11-13",
       "sent_date": "2026-11-15",
-      "stars_int": 17389
+      "stars_int": 17476
     },
     "alibaba/open-code-review": {
       "desc_en": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
-      "pushed_at": "2026-11-14T01:29:46Z",
-      "release_tag": "v1.13.9",
-      "sent_date": "2026-11-14",
-      "stars_int": 50691
+      "pushed_at": "2026-11-15T02:41:14Z",
+      "release_tag": "v1.13.10",
+      "sent_date": "2026-11-15",
+      "stars_int": 51593
     },
     "anthropics/claude-quickstarts": {
       "desc_en": "A collection of projects designed to help developers quickly get started with building deployable applications using the Claude API",
@@ -114,10 +114,10 @@
     },
     "ashhart/TensorFold": {
       "desc_en": "LLM Inference Engine for Metal, CUDA and Vulkan.",
-      "pushed_at": "2026-11-15T01:56:39Z",
+      "pushed_at": "2026-11-15T04:07:33Z",
       "release_tag": "v1.2.9",
       "sent_date": "2026-11-15",
-      "stars_int": 2171
+      "stars_int": 2208
     },
     "astral-sh/ruff": {
       "desc_en": "An extremely fast Python linter and code formatter, written in Rust.",
@@ -128,10 +128,10 @@
     },
     "backnotprop/plannotator": {
       "desc_en": "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click.",
-      "pushed_at": "2026-11-15T01:59:57Z",
+      "pushed_at": "2026-11-15T07:33:52Z",
       "release_tag": "v0.28.65",
       "sent_date": "2026-11-15",
-      "stars_int": 11169
+      "stars_int": 11382
     },
     "block/buzz": {
       "desc_en": "A hive mind communication platform",
@@ -149,10 +149,10 @@
     },
     "dream-num/univer": {
       "desc_en": "Build your own AI office with Univer Office SDK. Bring editing, calculation, collaboration, and file processing into your product for people and AI agents. Built on an extensible open-source core.",
-      "pushed_at": "2026-11-14T17:23:40Z",
+      "pushed_at": "2026-11-15T03:11:29Z",
       "release_tag": "v1.5.0",
       "sent_date": "2026-11-15",
-      "stars_int": 24525
+      "stars_int": 25107
     },
     "dsx-ai-factory/nvke": {
       "desc_en": "NVIDIA Kubernetes Engine (NVKE). A management plane for GPU Kubernetes on bare metal.",
@@ -181,6 +181,111 @@
       "release_tag": "",
       "sent_date": "2026-11-08",
       "stars_int": 23523
+    },
+    "hf:model:Edge0/Edge0-145B-NVFP4": {
+      "desc_en": "",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-15",
+      "stars_int": 0
+    },
+    "hf:model:NousResearch/Arete-27B": {
+      "desc_en": "",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-15",
+      "stars_int": 0
+    },
+    "hf:model:Qwen/Qwen3.8-27B": {
+      "desc_en": "",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-15",
+      "stars_int": 0
+    },
+    "hf:model:meituan-longcat/LongCat-2.5": {
+      "desc_en": "",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-15",
+      "stars_int": 0
+    },
+    "hf:model:moonshotai/Kimi-K3.1-Pro": {
+      "desc_en": "",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-15",
+      "stars_int": 0
+    },
+    "hf:paper:2608.22237": {
+      "desc_en": "Web-facing AI agents repeatedly access webpages, documents, repositories, and tool responses, yet reading interfaces often expose entire objects when only sparse evidence is needed. This over-reading increases token and latency costs and can dilute relevant evidence. We present SparseRead, a reusabl",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-15",
+      "stars_int": 0
+    },
+    "hf:paper:2611.08318": {
+      "desc_en": "Exposing benchmark success criteria to self-improving embodied coding agents can raise measured success under those criteria without improving instructed-task completion, and the advantage weakens under slight criteria changes and transfers poorly across tasks, while instruction-faithful criteria better reflect instructed-task performance.",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-15",
+      "stars_int": 0
+    },
+    "hf:paper:2611.12304": {
+      "desc_en": "Agentic workloads are a major source of LLM inference demand. Existing prefill--decode (PD) disaggregated serving systems offer limited flexibility for runtime adaptation of compute allocation and KV cache management, and rely on coarse signals that only partly capture the diverse and dynamic agent ",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-15",
+      "stars_int": 0
+    },
+    "hf:paper:2611.13410": {
+      "desc_en": "Low-bit quantized LLM agents can recover much of their task success through closed-loop guidance from a full-precision teacher, followed by unassisted student training on corrected and reference turns.",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-15",
+      "stars_int": 0
+    },
+    "hf:paper:2611.17167": {
+      "desc_en": "A decision model that acts poorly can still teach reinforcement learning policies effectively by judging complete action trajectories, improving success on ALFWorld and WebShop.",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-15",
+      "stars_int": 0
+    },
+    "hf:space:0ppxnhximxr/snapref": {
+      "desc_en": "SnapRef v2a, multiple references and your choice of style",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-15",
+      "stars_int": 0
+    },
+    "hf:space:aet256/Qwen-Image-Edit-Rapid-AIO-Loras-Experimental": {
+      "desc_en": "Demo of the Collection of Qwen Image Edit LoRAs",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-15",
+      "stars_int": 0
+    },
+    "hf:space:hugging-apps/mirage-vision": {
+      "desc_en": "22 MB vision model - description, boxes, masks, OCR, forms",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-15",
+      "stars_int": 0
+    },
+    "hf:space:kulkas2pintu/wan777": {
+      "desc_en": "generate a video from an image with a text prompt",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-15",
+      "stars_int": 0
+    },
+    "hf:space:linoyts/qwen-image-2-1-realtime": {
+      "desc_en": "Real-time t2i & editing with a Qwen-Image-2.1 2-step LoRA",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-15",
+      "stars_int": 0
     },
     "homeassistant-ai/ha-mcp": {
       "desc_en": "Configure and automate Home Assistant with Claude, ChatGPT, and other AI assistants.",
@@ -310,10 +415,10 @@
     },
     "tradermonty/claude-trading-skills": {
       "desc_en": "Claude Code skills for equity investors and traders — market analysis, technical charting, economic calendars, screeners, and trading strategy development.",
-      "pushed_at": "2026-11-15T01:32:38Z",
+      "pushed_at": "2026-11-15T06:37:46Z",
       "release_tag": "",
       "sent_date": "2026-11-15",
-      "stars_int": 4859
+      "stars_int": 5026
     },
     "vercel-labs/agent-browser": {
       "desc_en": "Browser automation CLI for AI agents",
