@@ -14,6 +14,13 @@
       "sent_date": "2026-11-13",
       "stars_int": 11677
     },
+    "DeanChensj/jiangshan-map": {
+      "desc_en": "江山时序 · 中国历史交互地图时间轴 (403 BCE – Present) | Interactive Historical Atlas of China across 18 dynasties, 198 territory snapshots, ancient-to-modern place genealogy & classical poetry routes",
+      "pushed_at": "2026-11-16T11:59:10Z",
+      "release_tag": "v1.3.0",
+      "sent_date": "2026-11-17",
+      "stars_int": 6893
+    },
     "Donchitos/Claude-Code-Game-Studios": {
       "desc_en": "Turn Claude Code into a full game dev studio — 49 AI agents, 72 workflow skills, and a complete coordination system mirroring real studio hierarchy.",
       "pushed_at": "2026-10-19T02:43:42Z",
@@ -43,11 +50,11 @@
       "stars_int": 1645
     },
     "NVIDIA/SkillEvaluator": {
-      "desc_en": "Multi-tier framework for evaluating AI agent skills with quality gates, semantic overlap detection, synthetic evaluation dataset generation, and live agent evaluation that measures how skills affect agent behavior.",
-      "pushed_at": "2026-11-15T23:12:16Z",
+      "desc_en": "Multi-tier framework for evaluating AI agent skills and plugins with quality gates, semantic overlap detection, synthetic evaluation dataset generation, and live agent evaluation that measures how skills affect agent behavior.",
+      "pushed_at": "2026-11-17T02:23:02Z",
       "release_tag": "v0.9.0",
-      "sent_date": "2026-11-16",
-      "stars_int": 1634
+      "sent_date": "2026-11-17",
+      "stars_int": 2779
     },
     "NVIDIA/auto-ontology": {
       "desc_en": "Auto Ontology is a Python framework for building semantic, graph-based reasoning layers over data. It enables deterministic query generation, better context retrieval, and more explainable AI for LLM and agent workflows.",
@@ -93,17 +100,17 @@
     },
     "ag-ui-protocol/ag-ui": {
       "desc_en": "AG-UI: the Agent-User Interaction Protocol. Bring Agents into Frontend Applications.",
-      "pushed_at": "2026-11-15T02:26:33Z",
+      "pushed_at": "2026-11-16T19:12:15Z",
       "release_tag": "release/2026-11-13",
-      "sent_date": "2026-11-15",
-      "stars_int": 17476
+      "sent_date": "2026-11-17",
+      "stars_int": 19127
     },
     "alibaba/open-code-review": {
       "desc_en": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
-      "pushed_at": "2026-11-15T02:41:14Z",
+      "pushed_at": "2026-11-16T12:12:40Z",
       "release_tag": "v1.13.10",
-      "sent_date": "2026-11-15",
-      "stars_int": 51593
+      "sent_date": "2026-11-17",
+      "stars_int": 53005
     },
     "anthropics/claude-quickstarts": {
       "desc_en": "A collection of projects designed to help developers quickly get started with building deployable applications using the Claude API",
@@ -135,10 +142,10 @@
     },
     "backnotprop/plannotator": {
       "desc_en": "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click.",
-      "pushed_at": "2026-11-15T07:33:52Z",
-      "release_tag": "v0.28.65",
-      "sent_date": "2026-11-15",
-      "stars_int": 11382
+      "pushed_at": "2026-11-17T02:21:29Z",
+      "release_tag": "v0.28.66",
+      "sent_date": "2026-11-17",
+      "stars_int": 12627
     },
     "block/buzz": {
       "desc_en": "A hive mind communication platform",
@@ -156,10 +163,10 @@
     },
     "dream-num/univer": {
       "desc_en": "Build your own AI office with Univer Office SDK. Bring editing, calculation, collaboration, and file processing into your product for people and AI agents. Built on an extensible open-source core.",
-      "pushed_at": "2026-11-15T03:11:29Z",
-      "release_tag": "v1.5.0",
-      "sent_date": "2026-11-15",
-      "stars_int": 25107
+      "pushed_at": "2026-11-17T01:52:10Z",
+      "release_tag": "v1.5.2",
+      "sent_date": "2026-11-17",
+      "stars_int": 27852
     },
     "dsx-ai-factory/nvke": {
       "desc_en": "NVIDIA Kubernetes Engine (NVKE). A management plane for GPU Kubernetes on bare metal.",
@@ -182,6 +189,13 @@
       "sent_date": "2026-11-10",
       "stars_int": 32250
     },
+    "getarcaneapp/arcane": {
+      "desc_en": "Modern Docker Management, Designed for Everyone",
+      "pushed_at": "2026-11-17T02:28:05Z",
+      "release_tag": "v3.0.1",
+      "sent_date": "2026-11-17",
+      "stars_int": 8789
+    },
     "ggml-org/ggml": {
       "desc_en": "Tensor library for machine learning",
       "pushed_at": "2026-11-13T08:34:20Z",
@@ -203,12 +217,26 @@
       "sent_date": "2026-11-16",
       "stars_int": 9266
     },
+    "google-research/paper-orchestra": {
+      "desc_en": "PaperOrchestra is a multi-agent framework for automated AI research paper writing.",
+      "pushed_at": "2026-11-15T18:08:08Z",
+      "release_tag": "",
+      "sent_date": "2026-11-17",
+      "stars_int": 1604
+    },
     "google/skills": {
       "desc_en": "Agent Skills for Google products and technologies",
       "pushed_at": "2026-11-07T14:41:39Z",
       "release_tag": "",
       "sent_date": "2026-11-08",
       "stars_int": 23523
+    },
+    "hf:model:ConceptCountry/qwen-concept-27b": {
+      "desc_en": "",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-17",
+      "stars_int": 0
     },
     "hf:model:Edge0/Edge0-145B-NVFP4": {
       "desc_en": "",
@@ -222,6 +250,27 @@
       "pushed_at": "",
       "release_tag": "",
       "sent_date": "2026-11-16",
+      "stars_int": 0
+    },
+    "hf:model:ISTA-DASLab/Qwen3.8-27B-GSQ-RCO-GGUF": {
+      "desc_en": "",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-17",
+      "stars_int": 0
+    },
+    "hf:model:KRAFTON/Raon-1-nano": {
+      "desc_en": "",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-17",
+      "stars_int": 0
+    },
+    "hf:model:LiquidAI/LFM3-1.7B": {
+      "desc_en": "",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-17",
       "stars_int": 0
     },
     "hf:model:NousResearch/Arete-27B": {
@@ -257,6 +306,13 @@
       "pushed_at": "",
       "release_tag": "",
       "sent_date": "2026-11-15",
+      "stars_int": 0
+    },
+    "hf:model:meta-llama/Meta-Llama-3-8B-Instruct": {
+      "desc_en": "",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-17",
       "stars_int": 0
     },
     "hf:model:moonshotai/Kimi-K3.1-Pro": {
@@ -315,6 +371,13 @@
       "sent_date": "2026-11-16",
       "stars_int": 0
     },
+    "hf:paper:2611.12068": {
+      "desc_en": "MIRIX-2.0 is a multi-agent memory system for LLM agents that achieves high accuracy and efficiency across QA and procedural benchmarks without fine-tuning.",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-17",
+      "stars_int": 0
+    },
     "hf:paper:2611.12304": {
       "desc_en": "Agentic workloads are a major source of LLM inference demand. Existing prefill--decode (PD) disaggregated serving systems offer limited flexibility for runtime adaptation of compute allocation and KV cache management, and rely on coarse signals that only partly capture the diverse and dynamic agent ",
       "pushed_at": "",
@@ -327,6 +390,20 @@
       "pushed_at": "",
       "release_tag": "",
       "sent_date": "2026-11-15",
+      "stars_int": 0
+    },
+    "hf:paper:2611.13509": {
+      "desc_en": "Mobile AI Factory is an agentic system that automatically builds task- and phone-specific fine-tuned quantized small language models, using an orchestrator LLM, real device measurements, and adaptive search to match or outperform larger models with much less GPU time.",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-17",
+      "stars_int": 0
+    },
+    "hf:paper:2611.15789": {
+      "desc_en": "Controllable real-world video generation models can condition on a rendered graybox proxy video, which fixes layout, motion and camera. Coding agents can build such videos by reconstructing a 4D scene in Blender, yet no benchmark checks both these videos and the long, multi-shot scenes behind them. ",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-17",
       "stars_int": 0
     },
     "hf:paper:2611.16409": {
@@ -348,6 +425,20 @@
       "pushed_at": "",
       "release_tag": "",
       "sent_date": "2026-11-15",
+      "stars_int": 0
+    },
+    "hf:paper:2611.18359": {
+      "desc_en": "Agentic robotics, centered on an Embodied System 2 formed by a foundation model and embodied harness, requires a shared evaluation framework and research roadmap to achieve reliable physical autonomy.",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-17",
+      "stars_int": 0
+    },
+    "hf:paper:2611.18397": {
+      "desc_en": "Gamer is a generalist agent framework that integrates perception, memory, and multi-step reasoning, trained through continued pre-training, sparse-thinking instruction tuning, and multi-turn reinforcement learning to interact efficiently in 2D and 3D environments.",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-17",
       "stars_int": 0
     },
     "hf:space:0ppxnhximxr/snapref": {
@@ -399,6 +490,13 @@
       "sent_date": "2026-11-15",
       "stars_int": 0
     },
+    "hf:space:kulkas2pintu/QWEN_EDIT_IMAGE": {
+      "desc_en": "AnyPose pose still with a strong pose-reference lock",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-17",
+      "stars_int": 0
+    },
     "hf:space:kulkas2pintu/wan777": {
       "desc_en": "generate a video from an image with a text prompt",
       "pushed_at": "",
@@ -411,6 +509,13 @@
       "pushed_at": "",
       "release_tag": "",
       "sent_date": "2026-11-15",
+      "stars_int": 0
+    },
+    "hf:space:r3gm/wan2-2-fp8da-aoti-preview": {
+      "desc_en": "generate a video from an image with a text prompt",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-17",
       "stars_int": 0
     },
     "hf:space:trellis-community/TRELLIS": {
@@ -461,6 +566,13 @@
       "release_tag": "v0.1.151",
       "sent_date": "2026-11-10",
       "stars_int": 19925
+    },
+    "mvanhorn/last30days-skill": {
+      "desc_en": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+      "pushed_at": "2026-11-17T02:19:14Z",
+      "release_tag": "v4.3.0",
+      "sent_date": "2026-11-17",
+      "stars_int": 68183
     },
     "nodejs/node": {
       "desc_en": "Node.js JavaScript runtime ✨🐢🚀✨",
@@ -548,10 +660,10 @@
     },
     "tradermonty/claude-trading-skills": {
       "desc_en": "Claude Code skills for equity investors and traders — market analysis, technical charting, economic calendars, screeners, and trading strategy development.",
-      "pushed_at": "2026-11-15T06:37:46Z",
+      "pushed_at": "2026-11-16T23:23:52Z",
       "release_tag": "",
-      "sent_date": "2026-11-15",
-      "stars_int": 5026
+      "sent_date": "2026-11-17",
+      "stars_int": 6366
     },
     "vercel-labs/agent-browser": {
       "desc_en": "Browser automation CLI for AI agents",
