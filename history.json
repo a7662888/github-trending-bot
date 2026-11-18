@@ -72,10 +72,10 @@
     },
     "Tencent/LoopForge": {
       "desc_en": "Self-hosted workflows for coding-agent delivery. Orchestrate CodeBuddy, Codex and Claude Code with scripts and human approval gates. Includes Local workflows for coding assistants.",
-      "pushed_at": "2026-11-15T01:23:35Z",
-      "release_tag": "v0.3.8",
-      "sent_date": "2026-11-15",
-      "stars_int": 932
+      "pushed_at": "2026-11-17T17:57:53Z",
+      "release_tag": "v0.4.0",
+      "sent_date": "2026-11-18",
+      "stars_int": 3193
     },
     "TheAlgorithms/Java": {
       "desc_en": "All Algorithms implemented in Java",
@@ -100,17 +100,17 @@
     },
     "ag-ui-protocol/ag-ui": {
       "desc_en": "AG-UI: the Agent-User Interaction Protocol. Bring Agents into Frontend Applications.",
-      "pushed_at": "2026-11-16T19:12:15Z",
-      "release_tag": "release/2026-11-13",
-      "sent_date": "2026-11-17",
-      "stars_int": 19127
+      "pushed_at": "2026-11-17T21:27:09Z",
+      "release_tag": "release/2026-11-17",
+      "sent_date": "2026-11-18",
+      "stars_int": 20016
     },
     "alibaba/open-code-review": {
       "desc_en": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
-      "pushed_at": "2026-11-16T12:12:40Z",
-      "release_tag": "v1.13.10",
-      "sent_date": "2026-11-17",
-      "stars_int": 53005
+      "pushed_at": "2026-11-17T12:46:22Z",
+      "release_tag": "v1.13.11",
+      "sent_date": "2026-11-18",
+      "stars_int": 53756
     },
     "anthropics/claude-quickstarts": {
       "desc_en": "A collection of projects designed to help developers quickly get started with building deployable applications using the Claude API",
@@ -142,10 +142,10 @@
     },
     "backnotprop/plannotator": {
       "desc_en": "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click.",
-      "pushed_at": "2026-11-17T02:21:29Z",
-      "release_tag": "v0.28.66",
-      "sent_date": "2026-11-17",
-      "stars_int": 12627
+      "pushed_at": "2026-11-18T01:29:34Z",
+      "release_tag": "v0.28.67",
+      "sent_date": "2026-11-18",
+      "stars_int": 13076
     },
     "block/buzz": {
       "desc_en": "A hive mind communication platform",
@@ -160,6 +160,13 @@
       "release_tag": "",
       "sent_date": "2026-11-08",
       "stars_int": 66030
+    },
+    "cursor/plugins": {
+      "desc_en": "Cursor plugin specification and official plugins",
+      "pushed_at": "2026-11-17T22:49:29Z",
+      "release_tag": "",
+      "sent_date": "2026-11-18",
+      "stars_int": 16913
     },
     "dream-num/univer": {
       "desc_en": "Build your own AI office with Univer Office SDK. Bring editing, calculation, collaboration, and file processing into your product for people and AI agents. Built on an extensible open-source core.",
@@ -177,10 +184,10 @@
     },
     "elementalsouls/Claude-BugHunter": {
       "desc_en": "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
-      "pushed_at": "2026-11-15T11:59:53Z",
+      "pushed_at": "2026-11-17T13:33:22Z",
       "release_tag": "v2.1",
-      "sent_date": "2026-11-16",
-      "stars_int": 6382
+      "sent_date": "2026-11-18",
+      "stars_int": 9367
     },
     "garrytan/gbrain": {
       "desc_en": "Garry's Opinionated OpenClaw/Hermes Agent Brain",
@@ -191,10 +198,10 @@
     },
     "getarcaneapp/arcane": {
       "desc_en": "Modern Docker Management, Designed for Everyone",
-      "pushed_at": "2026-11-17T02:28:05Z",
+      "pushed_at": "2026-11-18T01:18:25Z",
       "release_tag": "v3.0.1",
-      "sent_date": "2026-11-17",
-      "stars_int": 8789
+      "sent_date": "2026-11-18",
+      "stars_int": 9348
     },
     "ggml-org/ggml": {
       "desc_en": "Tensor library for machine learning",
@@ -238,6 +245,13 @@
       "sent_date": "2026-11-17",
       "stars_int": 0
     },
+    "hf:model:Edge0/Edge0-120B-NVFP4": {
+      "desc_en": "",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-18",
+      "stars_int": 0
+    },
     "hf:model:Edge0/Edge0-145B-NVFP4": {
       "desc_en": "",
       "pushed_at": "",
@@ -257,6 +271,13 @@
       "pushed_at": "",
       "release_tag": "",
       "sent_date": "2026-11-17",
+      "stars_int": 0
+    },
+    "hf:model:KORMo-VL/KORMo-Web-11B": {
+      "desc_en": "",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-18",
       "stars_int": 0
     },
     "hf:model:KRAFTON/Raon-1-nano": {
@@ -301,6 +322,13 @@
       "sent_date": "2026-11-16",
       "stars_int": 0
     },
+    "hf:model:maxwell-model/Maxwell-V1-Flash": {
+      "desc_en": "",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-18",
+      "stars_int": 0
+    },
     "hf:model:meituan-longcat/LongCat-2.5": {
       "desc_en": "",
       "pushed_at": "",
@@ -320,6 +348,20 @@
       "pushed_at": "",
       "release_tag": "",
       "sent_date": "2026-11-15",
+      "stars_int": 0
+    },
+    "hf:model:nvidia/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB": {
+      "desc_en": "",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-18",
+      "stars_int": 0
+    },
+    "hf:model:sensenova/SenseNova-Loop-9B": {
+      "desc_en": "",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-18",
       "stars_int": 0
     },
     "hf:model:thinkingmachines/Inkling-2-Small": {
@@ -348,6 +390,13 @@
       "pushed_at": "",
       "release_tag": "",
       "sent_date": "2026-11-15",
+      "stars_int": 0
+    },
+    "hf:paper:2611.07222": {
+      "desc_en": "Tool-using agents act on email, files, and payments, so an instruction hidden in a web page or a shared document can make an agent send data or money to an attacker. Many runtime defenses put a language model on the decision that lets an action through, so the decision depends on a model that may re",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-18",
       "stars_int": 0
     },
     "hf:paper:2611.08219": {
@@ -427,6 +476,13 @@
       "sent_date": "2026-11-15",
       "stars_int": 0
     },
+    "hf:paper:2611.17814": {
+      "desc_en": "With the rapid advancement of Large Language Models (LLMs), an increasing number of users are turning to LLM-powered agents for conversational shopping in e-commerce. However, the user needs continue to change as new product categories, procurement scenarios, and feature requests emerge. At the same",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-18",
+      "stars_int": 0
+    },
     "hf:paper:2611.18359": {
       "desc_en": "Agentic robotics, centered on an Embodied System 2 formed by a foundation model and embodied harness, requires a shared evaluation framework and research roadmap to achieve reliable physical autonomy.",
       "pushed_at": "",
@@ -439,6 +495,27 @@
       "pushed_at": "",
       "release_tag": "",
       "sent_date": "2026-11-17",
+      "stars_int": 0
+    },
+    "hf:paper:2611.20218": {
+      "desc_en": "A benchmark of realistic software engineering assignments reveals that current coding agents struggle to track requirements from clarification through implementation, verification, and handoff, completing few tasks despite partial test success.",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-18",
+      "stars_int": 0
+    },
+    "hf:paper:2611.20882": {
+      "desc_en": "Application optimization requires coding agents to discover useful changes and coordinate them across a complete program while preserving the required computation. We introduce Accelerate Bench, a benchmark of 32 CPU optimization tasks adapted from scientific applications and supercomputing competit",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-18",
+      "stars_int": 0
+    },
+    "hf:paper:2611.21218": {
+      "desc_en": "InclusionMed is an open medical AI evaluation initiative that audits and reproduces benchmarks across healthcare roles and capabilities, revealing that model rankings and inference costs vary by context and motivating broader, context-specific evaluation.",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-18",
       "stars_int": 0
     },
     "hf:space:0ppxnhximxr/snapref": {
@@ -483,6 +560,13 @@
       "sent_date": "2026-11-16",
       "stars_int": 0
     },
+    "hf:space:hugging-apps/haru-4b": {
+      "desc_en": "Full-duplex speech-to-speech dialogue with Haru-4B",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-18",
+      "stars_int": 0
+    },
     "hf:space:hugging-apps/mirage-vision": {
       "desc_en": "22 MB vision model - description, boxes, masks, OCR, forms",
       "pushed_at": "",
@@ -490,11 +574,25 @@
       "sent_date": "2026-11-15",
       "stars_int": 0
     },
+    "hf:space:hugging-apps/open-vision-banana": {
+      "desc_en": "Generative visual perception — segment, depth, normals",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-18",
+      "stars_int": 0
+    },
     "hf:space:kulkas2pintu/QWEN_EDIT_IMAGE": {
       "desc_en": "AnyPose pose still with a strong pose-reference lock",
       "pushed_at": "",
       "release_tag": "",
       "sent_date": "2026-11-17",
+      "stars_int": 0
+    },
+    "hf:space:kulkas2pintu/kv-i2v": {
+      "desc_en": "Wan 2.2 image-to-clip with KV adapters",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-18",
       "stars_int": 0
     },
     "hf:space:kulkas2pintu/wan777": {
@@ -569,10 +667,10 @@
     },
     "mvanhorn/last30days-skill": {
       "desc_en": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
-      "pushed_at": "2026-11-17T02:19:14Z",
-      "release_tag": "v4.3.0",
-      "sent_date": "2026-11-17",
-      "stars_int": 68183
+      "pushed_at": "2026-11-17T22:37:11Z",
+      "release_tag": "v4.3.2",
+      "sent_date": "2026-11-18",
+      "stars_int": 69103
     },
     "nodejs/node": {
       "desc_en": "Node.js JavaScript runtime ✨🐢🚀✨",
@@ -587,6 +685,13 @@
       "release_tag": "v0.41.0",
       "sent_date": "2026-11-13",
       "stars_int": 96027
+    },
+    "obra/superpowers": {
+      "desc_en": "An agentic skills framework & software development methodology that works.",
+      "pushed_at": "2026-11-03T23:24:58Z",
+      "release_tag": "v7.0.2",
+      "sent_date": "2026-11-18",
+      "stars_int": 319354
     },
     "openai/codex-security": {
       "desc_en": "OpenAI's Codex Security CLI and TypeScript SDK for finding, validating, and fixing security vulnerabilities. npm: https://www.npmjs.com/package/@openai/codex-security",
@@ -636,6 +741,13 @@
       "release_tag": "v0.16.2",
       "sent_date": "2026-11-16",
       "stars_int": 112463
+    },
+    "sveltejs/svelte": {
+      "desc_en": "web development for the rest of us",
+      "pushed_at": "2026-11-17T21:54:43Z",
+      "release_tag": "svelte@5.57.3",
+      "sent_date": "2026-11-18",
+      "stars_int": 89612
     },
     "tailscale/tailcat": {
       "desc_en": "like netcat, but over Tailscale's data plane, without Tailscale's control plane",
