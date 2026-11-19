@@ -35,6 +35,13 @@
       "sent_date": "2026-11-16",
       "stars_int": 7111
     },
+    "HKUDS/CLI-Anything": {
+      "desc_en": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
+      "pushed_at": "2026-09-22T02:01:29Z",
+      "release_tag": "v0.4.0",
+      "sent_date": "2026-11-19",
+      "stars_int": 59750
+    },
     "JuliusBrussee/caveman": {
       "desc_en": "🪨 why use many token when few token do trick. Viral skill + proxy for coding agents that cuts 65% of tokens by talking like a caveman.",
       "pushed_at": "2026-11-15T07:19:16Z",
@@ -51,10 +58,10 @@
     },
     "NVIDIA/SkillEvaluator": {
       "desc_en": "Multi-tier framework for evaluating AI agent skills and plugins with quality gates, semantic overlap detection, synthetic evaluation dataset generation, and live agent evaluation that measures how skills affect agent behavior.",
-      "pushed_at": "2026-11-17T02:23:02Z",
-      "release_tag": "v0.9.0",
-      "sent_date": "2026-11-17",
-      "stars_int": 2779
+      "pushed_at": "2026-11-18T21:04:10Z",
+      "release_tag": "v1.0.1",
+      "sent_date": "2026-11-19",
+      "stars_int": 3726
     },
     "NVIDIA/auto-ontology": {
       "desc_en": "Auto Ontology is a Python framework for building semantic, graph-based reasoning layers over data. It enables deterministic query generation, better context retrieval, and more explainable AI for LLM and agent workflows.",
@@ -98,6 +105,13 @@
       "sent_date": "2026-11-11",
       "stars_int": 115218
     },
+    "affaan-m/ECC": {
+      "desc_en": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+      "pushed_at": "2026-11-17T06:41:46Z",
+      "release_tag": "v2.2.3",
+      "sent_date": "2026-11-19",
+      "stars_int": 306521
+    },
     "ag-ui-protocol/ag-ui": {
       "desc_en": "AG-UI: the Agent-User Interaction Protocol. Bring Agents into Frontend Applications.",
       "pushed_at": "2026-11-17T21:27:09Z",
@@ -126,6 +140,13 @@
       "sent_date": "2026-11-16",
       "stars_int": 195338
     },
+    "appwrite/appwrite": {
+      "desc_en": "The open-source cloud for agents & devs. Including Auth, Databases, Storage, Functions, Messaging, Hosting, Realtime, WAF and more",
+      "pushed_at": "2026-11-18T23:45:09Z",
+      "release_tag": "2.7.3",
+      "sent_date": "2026-11-19",
+      "stars_int": 58229
+    },
     "ashhart/TensorFold": {
       "desc_en": "LLM Inference Engine for Metal, CUDA and Vulkan.",
       "pushed_at": "2026-11-15T04:07:33Z",
@@ -139,6 +160,13 @@
       "release_tag": "0.17.4",
       "sent_date": "2026-11-08",
       "stars_int": 51027
+    },
+    "astral-sh/uv": {
+      "desc_en": "An extremely fast Python package and project manager, written in Rust.",
+      "pushed_at": "2026-11-19T00:24:53Z",
+      "release_tag": "0.13.9",
+      "sent_date": "2026-11-19",
+      "stars_int": 92222
     },
     "backnotprop/plannotator": {
       "desc_en": "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click.",
@@ -198,10 +226,10 @@
     },
     "getarcaneapp/arcane": {
       "desc_en": "Modern Docker Management, Designed for Everyone",
-      "pushed_at": "2026-11-18T01:18:25Z",
-      "release_tag": "v3.0.1",
-      "sent_date": "2026-11-18",
-      "stars_int": 9348
+      "pushed_at": "2026-11-19T00:09:31Z",
+      "release_tag": "v3.1.0",
+      "sent_date": "2026-11-19",
+      "stars_int": 9810
     },
     "ggml-org/ggml": {
       "desc_en": "Tensor library for machine learning",
@@ -228,8 +256,8 @@
       "desc_en": "PaperOrchestra is a multi-agent framework for automated AI research paper writing.",
       "pushed_at": "2026-11-15T18:08:08Z",
       "release_tag": "",
-      "sent_date": "2026-11-17",
-      "stars_int": 1604
+      "sent_date": "2026-11-19",
+      "stars_int": 4295
     },
     "google/skills": {
       "desc_en": "Agent Skills for Google products and technologies",
@@ -264,6 +292,13 @@
       "pushed_at": "",
       "release_tag": "",
       "sent_date": "2026-11-16",
+      "stars_int": 0
+    },
+    "hf:model:HuggingFaceTB/SmolVLM2-256M-Video-Instruct": {
+      "desc_en": "",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-19",
       "stars_int": 0
     },
     "hf:model:ISTA-DASLab/Qwen3.8-27B-GSQ-RCO-GGUF": {
@@ -322,6 +357,13 @@
       "sent_date": "2026-11-16",
       "stars_int": 0
     },
+    "hf:model:harness-hub/Qwen3.8-27B-pi-adapted": {
+      "desc_en": "",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-19",
+      "stars_int": 0
+    },
     "hf:model:maxwell-model/Maxwell-V1-Flash": {
       "desc_en": "",
       "pushed_at": "",
@@ -334,6 +376,13 @@
       "pushed_at": "",
       "release_tag": "",
       "sent_date": "2026-11-15",
+      "stars_int": 0
+    },
+    "hf:model:meta-llama/Llama-3.1-8B-Instruct": {
+      "desc_en": "",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-19",
       "stars_int": 0
     },
     "hf:model:meta-llama/Meta-Llama-3-8B-Instruct": {
@@ -357,11 +406,25 @@
       "sent_date": "2026-11-18",
       "stars_int": 0
     },
+    "hf:model:nvidia/Qwen3.5-4B-Qwen3.8-27B-Draft": {
+      "desc_en": "",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-19",
+      "stars_int": 0
+    },
     "hf:model:sensenova/SenseNova-Loop-9B": {
       "desc_en": "",
       "pushed_at": "",
       "release_tag": "",
       "sent_date": "2026-11-18",
+      "stars_int": 0
+    },
+    "hf:model:tencent/Hy4-flash": {
+      "desc_en": "",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-19",
       "stars_int": 0
     },
     "hf:model:thinkingmachines/Inkling-2-Small": {
@@ -448,6 +511,13 @@
       "sent_date": "2026-11-17",
       "stars_int": 0
     },
+    "hf:paper:2611.15348": {
+      "desc_en": "A comprehensive benchmark evaluates time-series classification methods on a large clinical breath dataset under realistic temporal splits, showing that sensor drift lowers performance and recurrent models are most consistent across diseases.",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-19",
+      "stars_int": 0
+    },
     "hf:paper:2611.15789": {
       "desc_en": "Controllable real-world video generation models can condition on a rendered graybox proxy video, which fixes layout, motion and camera. Coding agents can build such videos by reconstructing a 4D scene in Blender, yet no benchmark checks both these videos and the long, multi-shot scenes behind them. ",
       "pushed_at": "",
@@ -474,6 +544,13 @@
       "pushed_at": "",
       "release_tag": "",
       "sent_date": "2026-11-15",
+      "stars_int": 0
+    },
+    "hf:paper:2611.17621": {
+      "desc_en": "AscendGYM provides a benchmark for assessing kernel optimization capabilities on Ascend NPUs using real-workload test cases, two evaluation modes, and a Speedup-Token Score that balances speedup against token cost.",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-19",
       "stars_int": 0
     },
     "hf:paper:2611.17814": {
@@ -518,6 +595,27 @@
       "sent_date": "2026-11-18",
       "stars_int": 0
     },
+    "hf:paper:2611.21392": {
+      "desc_en": "VideoNexus separates detailed video perception from evidence-driven planning and reasoning, using perception sub-agents to return compact temporally grounded evidence and achieving higher accuracy at lower cost on long-video benchmarks.",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-19",
+      "stars_int": 0
+    },
+    "hf:paper:2611.22115": {
+      "desc_en": "We present Xing 4, a series of large language models that extends the TeleChat lineage through coordinated advances in model architecture and training infrastructure on Ascend. This report describes the design principles and systems engineering behind the series, spanning architecture selection, lar",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-19",
+      "stars_int": 0
+    },
+    "hf:paper:2611.22275": {
+      "desc_en": "A decentralized framework enables teams of humanoids to coordinate whole-body loco-manipulation over long horizons using low-level multi-agent post-training and a high-level vision-language planner with speech-based leader-follower synchronization.",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-19",
+      "stars_int": 0
+    },
     "hf:space:0ppxnhximxr/snapref": {
       "desc_en": "SnapRef v2a, multiple references and your choice of style",
       "pushed_at": "",
@@ -546,6 +644,13 @@
       "sent_date": "2026-11-16",
       "stars_int": 0
     },
+    "hf:space:TabArena/leaderboard": {
+      "desc_en": "Elo-ranked leaderboards for tabular ML, IID and beyond",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-19",
+      "stars_int": 0
+    },
     "hf:space:aet256/Qwen-Image-Edit-Rapid-AIO-Loras-Experimental": {
       "desc_en": "Demo of the Collection of Qwen Image Edit LoRAs",
       "pushed_at": "",
@@ -558,6 +663,13 @@
       "pushed_at": "",
       "release_tag": "",
       "sent_date": "2026-11-16",
+      "stars_int": 0
+    },
+    "hf:space:hugging-apps/aadd-audio-degradation-detection": {
+      "desc_en": "Detect 12 audio degradations in speech, every 20 ms",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-19",
       "stars_int": 0
     },
     "hf:space:hugging-apps/haru-4b": {
@@ -609,6 +721,20 @@
       "sent_date": "2026-11-15",
       "stars_int": 0
     },
+    "hf:space:mrfakename/Z-Image-Turbo": {
+      "desc_en": "",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-19",
+      "stars_int": 0
+    },
+    "hf:space:prithivMLmods/Qwen-Image-Edit-2509-LoRAs-Fast": {
+      "desc_en": "Demo of the Collection of Qwen Image Edit LoRAs",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-19",
+      "stars_int": 0
+    },
     "hf:space:r3gm/wan2-2-fp8da-aoti-preview": {
       "desc_en": "generate a video from an image with a text prompt",
       "pushed_at": "",
@@ -623,12 +749,26 @@
       "sent_date": "2026-11-16",
       "stars_int": 0
     },
+    "hf:space:zerogpu-aoti/wan2-2-fp8da-aoti-faster": {
+      "desc_en": "generate a video from an image with a text prompt",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-19",
+      "stars_int": 0
+    },
     "homeassistant-ai/ha-mcp": {
       "desc_en": "Configure and automate Home Assistant with Claude, ChatGPT, and other AI assistants.",
       "pushed_at": "2026-11-12T02:44:58Z",
       "release_tag": "v9.2.0",
       "sent_date": "2026-11-12",
       "stars_int": 7441
+    },
+    "jquery/jquery": {
+      "desc_en": "jQuery JavaScript Library",
+      "pushed_at": "2026-11-17T19:00:49Z",
+      "release_tag": "4.1.0",
+      "sent_date": "2026-11-19",
+      "stars_int": 60008
     },
     "louislam/uptime-kuma": {
       "desc_en": "A fancy self-hosted monitoring tool",
@@ -700,6 +840,13 @@
       "sent_date": "2026-11-14",
       "stars_int": 13170
     },
+    "openvinotoolkit/openvino": {
+      "desc_en": "OpenVINO™ is an open source toolkit for optimizing and deploying AI inference",
+      "pushed_at": "2026-11-19T00:55:37Z",
+      "release_tag": "2026.4.1",
+      "sent_date": "2026-11-19",
+      "stars_int": 11328
+    },
     "pookjw/HermesEnabler": {
       "desc_en": "Enable Hermès Watch Faces on any Apple Watch devices",
       "pushed_at": "2026-11-13T01:55:40Z",
@@ -744,10 +891,10 @@
     },
     "sveltejs/svelte": {
       "desc_en": "web development for the rest of us",
-      "pushed_at": "2026-11-17T21:54:43Z",
-      "release_tag": "svelte@5.57.3",
-      "sent_date": "2026-11-18",
-      "stars_int": 89612
+      "pushed_at": "2026-11-18T23:17:50Z",
+      "release_tag": "svelte@5.58.0",
+      "sent_date": "2026-11-19",
+      "stars_int": 89621
     },
     "tailscale/tailcat": {
       "desc_en": "like netcat, but over Tailscale's data plane, without Tailscale's control plane",
