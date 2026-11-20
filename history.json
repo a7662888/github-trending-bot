@@ -91,6 +91,20 @@
       "sent_date": "2026-11-12",
       "stars_int": 67081
     },
+    "Tracer-Cloud/opensre": {
+      "desc_en": "The open-source agent for CI/CD reliability.",
+      "pushed_at": "2026-11-20T00:57:26Z",
+      "release_tag": "v0.1.2026.11.20",
+      "sent_date": "2026-11-20",
+      "stars_int": 13137
+    },
+    "XiaoYouChR/Ghost-Downloader-3": {
+      "desc_en": "The only downloader you need. 下载器的集大成者。",
+      "pushed_at": "2026-11-19T16:40:50Z",
+      "release_tag": "v4.5.10",
+      "sent_date": "2026-11-20",
+      "stars_int": 12736
+    },
     "ZhuLinsen/daily_stock_analysis": {
       "desc_en": "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。  LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.",
       "pushed_at": "2026-11-15T15:47:25Z",
@@ -182,6 +196,13 @@
       "sent_date": "2026-11-14",
       "stars_int": 37313
     },
+    "cathrynlavery/diagram-design": {
+      "desc_en": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, Qoder, and Pi. 45 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+      "pushed_at": "2026-11-19T00:17:05Z",
+      "release_tag": "",
+      "sent_date": "2026-11-20",
+      "stars_int": 68642
+    },
     "cloudflare/security-audit-skill": {
       "desc_en": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
       "pushed_at": "2026-09-14T19:29:02Z",
@@ -212,10 +233,17 @@
     },
     "elementalsouls/Claude-BugHunter": {
       "desc_en": "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
-      "pushed_at": "2026-11-17T13:33:22Z",
+      "pushed_at": "2026-11-19T13:21:35Z",
       "release_tag": "v2.1",
-      "sent_date": "2026-11-18",
-      "stars_int": 9367
+      "sent_date": "2026-11-20",
+      "stars_int": 12554
+    },
+    "firecrawl/firecrawl": {
+      "desc_en": "Knowledge infrastructure to make your agents smarter. Search, scrape and 550+ data providers through one API.",
+      "pushed_at": "2026-11-20T01:11:12Z",
+      "release_tag": "v2.11.0",
+      "sent_date": "2026-11-20",
+      "stars_int": 204244
     },
     "garrytan/gbrain": {
       "desc_en": "Garry's Opinionated OpenClaw/Hermes Agent Brain",
@@ -266,6 +294,20 @@
       "sent_date": "2026-11-08",
       "stars_int": 23523
     },
+    "hf:model:AngelSlim/Hy4-flash-GGUF": {
+      "desc_en": "",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-20",
+      "stars_int": 0
+    },
+    "hf:model:Cloudflare/clairic": {
+      "desc_en": "",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-20",
+      "stars_int": 0
+    },
     "hf:model:ConceptCountry/qwen-concept-27b": {
       "desc_en": "",
       "pushed_at": "",
@@ -308,11 +350,25 @@
       "sent_date": "2026-11-17",
       "stars_int": 0
     },
+    "hf:model:Jackrong/DeepSeek-V4-Pro-Qwen3.5-9B-MTP-GGUF": {
+      "desc_en": "",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-20",
+      "stars_int": 0
+    },
     "hf:model:KORMo-VL/KORMo-Web-11B": {
       "desc_en": "",
       "pushed_at": "",
       "release_tag": "",
       "sent_date": "2026-11-18",
+      "stars_int": 0
+    },
+    "hf:model:KORMo-VL/KORMo-Web-4B": {
+      "desc_en": "",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-20",
       "stars_int": 0
     },
     "hf:model:KRAFTON/Raon-1-nano": {
@@ -348,6 +404,13 @@
       "pushed_at": "",
       "release_tag": "",
       "sent_date": "2026-11-16",
+      "stars_int": 0
+    },
+    "hf:model:RadixArk/DaisyRose-27B": {
+      "desc_en": "",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-20",
       "stars_int": 0
     },
     "hf:model:deepseek-ai/DeepSeek-V4.1-Flash-1017": {
@@ -588,6 +651,20 @@
       "sent_date": "2026-11-18",
       "stars_int": 0
     },
+    "hf:paper:2611.20992": {
+      "desc_en": "Medical image understanding with vision-language models (VLMs) typically relies on autoregressively generating reasoning and answer tokens. These unnecessary tokens make the inference cost scale with the response length and force the answer to be parsed from free-form text, incurring avoidable laten",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-20",
+      "stars_int": 0
+    },
+    "hf:paper:2611.21152": {
+      "desc_en": "RepoFactory converts real repositories into verifiable coding environments and optimizes them via an Environment Evolution Loop using proxy feedback, enabling trained coding agents to achieve strong gains on long-horizon coding and agentic benchmarks.",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-20",
+      "stars_int": 0
+    },
     "hf:paper:2611.21218": {
       "desc_en": "InclusionMed is an open medical AI evaluation initiative that audits and reproduces benchmarks across healthcare roles and capabilities, revealing that model rankings and inference costs vary by context and motivating broader, context-specific evaluation.",
       "pushed_at": "",
@@ -614,6 +691,27 @@
       "pushed_at": "",
       "release_tag": "",
       "sent_date": "2026-11-19",
+      "stars_int": 0
+    },
+    "hf:paper:2611.23068": {
+      "desc_en": "Agent evolution is often bottlenecked by noisy evaluations that cannot reliably identify better candidate artifacts or rank methods, so progress requires making true improvements detectable and accumulable.",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-20",
+      "stars_int": 0
+    },
+    "hf:paper:2611.23388": {
+      "desc_en": "Post-training quantization is the standard way to serve large language models at low cost. However, the best quantization recipe differs across models and precisions. As a result, experts must redesign it for every new model, which is time-consuming and often sub-optimal. Fortunately, an LLM agent c",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-20",
+      "stars_int": 0
+    },
+    "hf:paper:2611.24154": {
+      "desc_en": "Games are a rich testbed for visual agents, demanding perception, long-horizon planning, and precise control. However, collecting human gameplay is costly, and learning from gameplay videos requires inferring missing actions. Existing datasets also cover a limited range of games, often without expli",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-20",
       "stars_int": 0
     },
     "hf:space:0ppxnhximxr/snapref": {
@@ -658,6 +756,13 @@
       "sent_date": "2026-11-15",
       "stars_int": 0
     },
+    "hf:space:black-forest-labs/flux-3-image-klein": {
+      "desc_en": "Open weights for image editing, generation and layouts",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-20",
+      "stars_int": 0
+    },
     "hf:space:dream2589632147/Dream-wan2-2-fp8da-aoti-preview-2": {
       "desc_en": "Fast Wan 2.2 image-to-video with first/last frames",
       "pushed_at": "",
@@ -670,6 +775,13 @@
       "pushed_at": "",
       "release_tag": "",
       "sent_date": "2026-11-19",
+      "stars_int": 0
+    },
+    "hf:space:hugging-apps/clairic": {
+      "desc_en": "Cloudflare Clairic 27B typed structured extraction",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-20",
       "stars_int": 0
     },
     "hf:space:hugging-apps/haru-4b": {
@@ -742,6 +854,13 @@
       "sent_date": "2026-11-17",
       "stars_int": 0
     },
+    "hf:space:traderharikrishna/Wan_2.2_I2V_14B_Custom_Lora": {
+      "desc_en": "",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-20",
+      "stars_int": 0
+    },
     "hf:space:trellis-community/TRELLIS": {
       "desc_en": "Scalable and Versatile 3D Generation from images",
       "pushed_at": "",
@@ -762,6 +881,13 @@
       "release_tag": "v9.2.0",
       "sent_date": "2026-11-12",
       "stars_int": 7441
+    },
+    "jingyaogong/minimind": {
+      "desc_en": "🧠 两小时从 0 训出你的 64M 大模型。Train your own 64M LLM from scratch in 2 hours.",
+      "pushed_at": "2026-11-18T15:09:40Z",
+      "release_tag": "v2",
+      "sent_date": "2026-11-20",
+      "stars_int": 66882
     },
     "jquery/jquery": {
       "desc_en": "jQuery JavaScript Library",
@@ -805,12 +931,26 @@
       "sent_date": "2026-11-10",
       "stars_int": 19925
     },
+    "mjmirza/app-store-compliance": {
+      "desc_en": "Avoid common App Store and Google Play rejections. Open playbook and pre-submission guard with 117 documented rejection patterns and fixes, privacy manifest and Data safety checks, 95 tracked deadlines (EU AI Act, DSA, COPPA, age laws), and a skill for AI coding agents.",
+      "pushed_at": "2026-11-19T19:49:49Z",
+      "release_tag": "v2.4.0",
+      "sent_date": "2026-11-20",
+      "stars_int": 1855
+    },
     "mvanhorn/last30days-skill": {
       "desc_en": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
-      "pushed_at": "2026-11-17T22:37:11Z",
+      "pushed_at": "2026-11-19T08:23:36Z",
       "release_tag": "v4.3.2",
-      "sent_date": "2026-11-18",
-      "stars_int": 69103
+      "sent_date": "2026-11-20",
+      "stars_int": 70807
+    },
+    "nginx/nginx": {
+      "desc_en": "The official NGINX Open Source repository.",
+      "pushed_at": "2026-11-18T16:40:14Z",
+      "release_tag": "release-1.31.9",
+      "sent_date": "2026-11-20",
+      "stars_int": 32339
     },
     "nodejs/node": {
       "desc_en": "Node.js JavaScript runtime ✨🐢🚀✨",
@@ -909,6 +1049,13 @@
       "release_tag": "v15.12.1",
       "sent_date": "2026-11-09",
       "stars_int": 114930
+    },
+    "toeverything/AFFiNE": {
+      "desc_en": "There can be more than Notion and Miro. AFFiNE(pronounced [ə‘fain]) is a next-gen knowledge base that brings planning, sorting and creating all together. Privacy first, open-source, customizable and ready to use.",
+      "pushed_at": "2026-11-19T21:28:03Z",
+      "release_tag": "v0.27.4",
+      "sent_date": "2026-11-20",
+      "stars_int": 75182
     },
     "tokio-rs/topcoat": {
       "desc_en": "A batteries-included framework for building web apps",
