@@ -93,17 +93,17 @@
     },
     "Tracer-Cloud/opensre": {
       "desc_en": "The open-source agent for CI/CD reliability.",
-      "pushed_at": "2026-11-20T00:57:26Z",
-      "release_tag": "v0.1.2026.11.20",
-      "sent_date": "2026-11-20",
-      "stars_int": 13137
+      "pushed_at": "2026-11-21T23:47:31Z",
+      "release_tag": "v0.1.2026.11.21",
+      "sent_date": "2026-11-22",
+      "stars_int": 13981
     },
     "XiaoYouChR/Ghost-Downloader-3": {
       "desc_en": "The only downloader you need. 下载器的集大成者。",
-      "pushed_at": "2026-11-20T07:39:12Z",
+      "pushed_at": "2026-11-21T16:28:09Z",
       "release_tag": "v4.5.11",
-      "sent_date": "2026-11-21",
-      "stars_int": 13702
+      "sent_date": "2026-11-22",
+      "stars_int": 14423
     },
     "ZhuLinsen/daily_stock_analysis": {
       "desc_en": "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。  LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.",
@@ -135,10 +135,10 @@
     },
     "alibaba/open-code-review": {
       "desc_en": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
-      "pushed_at": "2026-11-20T14:59:55Z",
-      "release_tag": "v1.13.13",
-      "sent_date": "2026-11-21",
-      "stars_int": 54782
+      "pushed_at": "2026-11-21T08:41:09Z",
+      "release_tag": "v1.14.0",
+      "sent_date": "2026-11-22",
+      "stars_int": 55097
     },
     "anthropics/claude-quickstarts": {
       "desc_en": "A collection of projects designed to help developers quickly get started with building deployable applications using the Claude API",
@@ -233,17 +233,17 @@
     },
     "elementalsouls/Claude-BugHunter": {
       "desc_en": "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
-      "pushed_at": "2026-11-20T15:53:40Z",
+      "pushed_at": "2026-11-21T04:24:41Z",
       "release_tag": "v2.1",
-      "sent_date": "2026-11-21",
-      "stars_int": 14266
+      "sent_date": "2026-11-22",
+      "stars_int": 16006
     },
     "firecrawl/firecrawl": {
       "desc_en": "Knowledge infrastructure to make your agents smarter. Search, scrape and access 550+ data providers through one API.",
-      "pushed_at": "2026-11-20T23:31:41Z",
+      "pushed_at": "2026-11-21T20:10:00Z",
       "release_tag": "v2.11.0",
-      "sent_date": "2026-11-21",
-      "stars_int": 205271
+      "sent_date": "2026-11-22",
+      "stars_int": 206165
     },
     "garrytan/gbrain": {
       "desc_en": "Garry's Opinionated OpenClaw/Hermes Agent Brain",
@@ -275,10 +275,10 @@
     },
     "google-labs-code/stitch-skills": {
       "desc_en": "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.",
-      "pushed_at": "2026-08-17T20:20:23Z",
+      "pushed_at": "2026-11-20T18:08:01Z",
       "release_tag": "v1.0",
-      "sent_date": "2026-11-16",
-      "stars_int": 9266
+      "sent_date": "2026-11-22",
+      "stars_int": 11410
     },
     "google-research/paper-orchestra": {
       "desc_en": "PaperOrchestra is a multi-agent framework for automated AI research paper writing.",
@@ -399,6 +399,13 @@
       "sent_date": "2026-11-15",
       "stars_int": 0
     },
+    "hf:model:OVHaiLLM/Olala-v1.0-mini-7A1B": {
+      "desc_en": "",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-22",
+      "stars_int": 0
+    },
     "hf:model:Qwen/Qwen3.8-27B": {
       "desc_en": "",
       "pushed_at": "",
@@ -469,6 +476,13 @@
       "sent_date": "2026-11-17",
       "stars_int": 0
     },
+    "hf:model:microsoft/Aion-1.0-Instruct-2.3B": {
+      "desc_en": "",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-22",
+      "stars_int": 0
+    },
     "hf:model:moonshotai/Kimi-K3.1-Pro": {
       "desc_en": "",
       "pushed_at": "",
@@ -490,11 +504,25 @@
       "sent_date": "2026-11-19",
       "stars_int": 0
     },
+    "hf:model:peasantsmith/Hy4-Flash-Maya-GGUF": {
+      "desc_en": "",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-22",
+      "stars_int": 0
+    },
     "hf:model:sensenova/SenseNova-Loop-9B": {
       "desc_en": "",
       "pushed_at": "",
       "release_tag": "",
       "sent_date": "2026-11-18",
+      "stars_int": 0
+    },
+    "hf:model:sensenova/SenseNova-Loop-9B-GGUF": {
+      "desc_en": "",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-22",
       "stars_int": 0
     },
     "hf:model:tencent/Hy4": {
@@ -537,6 +565,13 @@
       "pushed_at": "",
       "release_tag": "",
       "sent_date": "2026-11-16",
+      "stars_int": 0
+    },
+    "hf:model:voyager-so/shot-reader-8b": {
+      "desc_en": "",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-22",
       "stars_int": 0
     },
     "hf:paper:2607.13920": {
@@ -651,6 +686,13 @@
       "sent_date": "2026-11-15",
       "stars_int": 0
     },
+    "hf:paper:2611.17460": {
+      "desc_en": "AI agents are increasingly equipped with persistence toward task completion to run delegated work autonomously for long periods, under many unstated constraints from internal documents and other people's authority. When completion requires violating a rule, the agent must decide alone, yet benchmark",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-22",
+      "stars_int": 0
+    },
     "hf:paper:2611.17621": {
       "desc_en": "AscendGYM provides a benchmark for assessing kernel optimization capabilities on Ascend NPUs using real-workload test cases, two evaluation modes, and a Speedup-Token Score that balances speedup against token cost.",
       "pushed_at": "",
@@ -749,11 +791,39 @@
       "sent_date": "2026-11-20",
       "stars_int": 0
     },
+    "hf:paper:2611.23257": {
+      "desc_en": "Large language models have reduced the effort to generate code for interactive software with graphical user interfaces (GUIs). For such software, a key testing bottleneck is reaching a deep state, one that requires a long interaction history. The cost of reaching it recurs across commits, and the GU",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-22",
+      "stars_int": 0
+    },
     "hf:paper:2611.23388": {
       "desc_en": "Post-training quantization is the standard way to serve large language models at low cost. However, the best quantization recipe differs across models and precisions. As a result, experts must redesign it for every new model, which is time-consuming and often sub-optimal. Fortunately, an LLM agent c",
       "pushed_at": "",
       "release_tag": "",
       "sent_date": "2026-11-20",
+      "stars_int": 0
+    },
+    "hf:paper:2611.23751": {
+      "desc_en": "AnyS1 converts procedural skills into shared decision points, trains a small calibrated pointer model to resolve routine choices, and falls back to a large model when uncertain, reducing cost and latency while preserving reliability.",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-22",
+      "stars_int": 0
+    },
+    "hf:paper:2611.23779": {
+      "desc_en": "A large-scale benchmark of 94 curated biomedical tabular datasets standardizes evaluation across classification, regression, and multi-target tasks and finds that foundation models lead overall while tree-based models and tuned multilayer perceptrons remain competitive under cost constraints.",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-22",
+      "stars_int": 0
+    },
+    "hf:paper:2611.24098": {
+      "desc_en": "A new benchmark and agentic workflows assess vision-language models for automatic video rough-cut, revealing current models struggle to match expert cut plans.",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-22",
       "stars_int": 0
     },
     "hf:paper:2611.24154": {
@@ -931,11 +1001,25 @@
       "sent_date": "2026-11-19",
       "stars_int": 0
     },
+    "hf:space:prithivMLmods/Qwen-Image-Edit-2511-LoRAs-Fast": {
+      "desc_en": "Demo of the Collection of Qwen Image Edit LoRAs",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-22",
+      "stars_int": 0
+    },
     "hf:space:r3gm/wan2-2-fp8da-aoti-preview": {
       "desc_en": "generate a video from an image with a text prompt",
       "pushed_at": "",
       "release_tag": "",
       "sent_date": "2026-11-17",
+      "stars_int": 0
+    },
+    "hf:space:someone-in-the-world/FireRed-ImageEdit-Japanese": {
+      "desc_en": "High-resolution 2K image editing with FireRed",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-22",
       "stars_int": 0
     },
     "hf:space:traderharikrishna/Wan_2.2_I2V_14B_Custom_Lora": {
@@ -1017,17 +1101,17 @@
     },
     "mjmirza/app-store-compliance": {
       "desc_en": "Avoid common App Store and Google Play rejections. Open playbook and pre-submission guard with 117 documented rejection patterns and fixes, privacy manifest and Data safety checks, 95 tracked deadlines (EU AI Act, DSA, COPPA, age laws), and a skill for AI coding agents.",
-      "pushed_at": "2026-11-19T19:49:49Z",
+      "pushed_at": "2026-11-21T23:44:47Z",
       "release_tag": "v2.4.0",
-      "sent_date": "2026-11-20",
-      "stars_int": 1855
+      "sent_date": "2026-11-22",
+      "stars_int": 3381
     },
     "mvanhorn/last30days-skill": {
       "desc_en": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
-      "pushed_at": "2026-11-20T05:45:47Z",
-      "release_tag": "v4.4.0",
-      "sent_date": "2026-11-21",
-      "stars_int": 71450
+      "pushed_at": "2026-11-21T21:45:04Z",
+      "release_tag": "v4.5.0",
+      "sent_date": "2026-11-22",
+      "stars_int": 71981
     },
     "nginx/nginx": {
       "desc_en": "The official NGINX Open Source repository.",
@@ -1136,10 +1220,10 @@
     },
     "toeverything/AFFiNE": {
       "desc_en": "There can be more than Notion and Miro. AFFiNE(pronounced [ə‘fain]) is a next-gen knowledge base that brings planning, sorting and creating all together. Privacy first, open-source, customizable and ready to use.",
-      "pushed_at": "2026-11-20T10:23:37Z",
+      "pushed_at": "2026-11-21T22:56:54Z",
       "release_tag": "v0.27.4",
-      "sent_date": "2026-11-21",
-      "stars_int": 75797
+      "sent_date": "2026-11-22",
+      "stars_int": 76277
     },
     "tokio-rs/topcoat": {
       "desc_en": "A batteries-included framework for building web apps",
@@ -1178,10 +1262,10 @@
     },
     "zhouxiaoka/autoclip": {
       "desc_en": "AutoClip｜一个链接，一键出片。开源 AI 视频剪辑桌面工具，将播客、访谈、课程等长视频自动剪成短视频，生成字幕、封面和发布文案，适配抖音、小红书、TikTok、Reels 与 YouTube Shorts。Open-source AI video clipping & content repurposing.",
-      "pushed_at": "2026-11-20T16:31:32Z",
+      "pushed_at": "2026-11-21T16:56:28Z",
       "release_tag": "v1.5.8",
-      "sent_date": "2026-11-21",
-      "stars_int": 12182
+      "sent_date": "2026-11-22",
+      "stars_int": 12829
     }
   }
 }
