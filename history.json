@@ -30,17 +30,17 @@
     },
     "GoogleChrome/modern-web-guidance-src": {
       "desc_en": "Keep your coding agent up to date with the latest web best practices",
-      "pushed_at": "2026-11-15T12:09:36Z",
+      "pushed_at": "2026-11-20T22:14:50Z",
       "release_tag": "",
-      "sent_date": "2026-11-16",
-      "stars_int": 7111
+      "sent_date": "2026-11-21",
+      "stars_int": 9529
     },
     "HKUDS/CLI-Anything": {
       "desc_en": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
-      "pushed_at": "2026-09-22T02:01:29Z",
+      "pushed_at": "2026-11-20T10:05:15Z",
       "release_tag": "v0.4.0",
-      "sent_date": "2026-11-19",
-      "stars_int": 59750
+      "sent_date": "2026-11-21",
+      "stars_int": 61381
     },
     "JuliusBrussee/caveman": {
       "desc_en": "🪨 why use many token when few token do trick. Viral skill + proxy for coding agents that cuts 65% of tokens by talking like a caveman.",
@@ -100,10 +100,10 @@
     },
     "XiaoYouChR/Ghost-Downloader-3": {
       "desc_en": "The only downloader you need. 下载器的集大成者。",
-      "pushed_at": "2026-11-19T16:40:50Z",
-      "release_tag": "v4.5.10",
-      "sent_date": "2026-11-20",
-      "stars_int": 12736
+      "pushed_at": "2026-11-20T07:39:12Z",
+      "release_tag": "v4.5.11",
+      "sent_date": "2026-11-21",
+      "stars_int": 13702
     },
     "ZhuLinsen/daily_stock_analysis": {
       "desc_en": "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。  LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.",
@@ -135,10 +135,10 @@
     },
     "alibaba/open-code-review": {
       "desc_en": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
-      "pushed_at": "2026-11-17T12:46:22Z",
-      "release_tag": "v1.13.11",
-      "sent_date": "2026-11-18",
-      "stars_int": 53756
+      "pushed_at": "2026-11-20T14:59:55Z",
+      "release_tag": "v1.13.13",
+      "sent_date": "2026-11-21",
+      "stars_int": 54782
     },
     "anthropics/claude-quickstarts": {
       "desc_en": "A collection of projects designed to help developers quickly get started with building deployable applications using the Claude API",
@@ -184,10 +184,10 @@
     },
     "backnotprop/plannotator": {
       "desc_en": "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click.",
-      "pushed_at": "2026-11-18T01:29:34Z",
-      "release_tag": "v0.28.67",
-      "sent_date": "2026-11-18",
-      "stars_int": 13076
+      "pushed_at": "2026-11-21T00:48:00Z",
+      "release_tag": "v0.29.1",
+      "sent_date": "2026-11-21",
+      "stars_int": 13898
     },
     "block/buzz": {
       "desc_en": "A hive mind communication platform",
@@ -233,17 +233,17 @@
     },
     "elementalsouls/Claude-BugHunter": {
       "desc_en": "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
-      "pushed_at": "2026-11-19T13:21:35Z",
+      "pushed_at": "2026-11-20T15:53:40Z",
       "release_tag": "v2.1",
-      "sent_date": "2026-11-20",
-      "stars_int": 12554
+      "sent_date": "2026-11-21",
+      "stars_int": 14266
     },
     "firecrawl/firecrawl": {
-      "desc_en": "Knowledge infrastructure to make your agents smarter. Search, scrape and 550+ data providers through one API.",
-      "pushed_at": "2026-11-20T01:11:12Z",
+      "desc_en": "Knowledge infrastructure to make your agents smarter. Search, scrape and access 550+ data providers through one API.",
+      "pushed_at": "2026-11-20T23:31:41Z",
       "release_tag": "v2.11.0",
-      "sent_date": "2026-11-20",
-      "stars_int": 204244
+      "sent_date": "2026-11-21",
+      "stars_int": 205271
     },
     "garrytan/gbrain": {
       "desc_en": "Garry's Opinionated OpenClaw/Hermes Agent Brain",
@@ -299,6 +299,13 @@
       "pushed_at": "",
       "release_tag": "",
       "sent_date": "2026-11-20",
+      "stars_int": 0
+    },
+    "hf:model:Apexintelligence-AI/Apex-35B-V1.0": {
+      "desc_en": "",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-21",
       "stars_int": 0
     },
     "hf:model:Cloudflare/clairic": {
@@ -420,6 +427,13 @@
       "sent_date": "2026-11-16",
       "stars_int": 0
     },
+    "hf:model:harness-hub/Qwen3.8-27B-opencode-adapted": {
+      "desc_en": "",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-21",
+      "stars_int": 0
+    },
     "hf:model:harness-hub/Qwen3.8-27B-pi-adapted": {
       "desc_en": "",
       "pushed_at": "",
@@ -483,6 +497,13 @@
       "sent_date": "2026-11-18",
       "stars_int": 0
     },
+    "hf:model:tencent/Hy4": {
+      "desc_en": "",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-21",
+      "stars_int": 0
+    },
     "hf:model:tencent/Hy4-flash": {
       "desc_en": "",
       "pushed_at": "",
@@ -490,11 +511,25 @@
       "sent_date": "2026-11-19",
       "stars_int": 0
     },
+    "hf:model:thinkingmachines/Inkling-2-Mini": {
+      "desc_en": "",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-21",
+      "stars_int": 0
+    },
     "hf:model:thinkingmachines/Inkling-2-Small": {
       "desc_en": "",
       "pushed_at": "",
       "release_tag": "",
       "sent_date": "2026-11-16",
+      "stars_int": 0
+    },
+    "hf:model:unsloth/Inkling-2-Mini-GGUF": {
+      "desc_en": "",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-21",
       "stars_int": 0
     },
     "hf:model:unsloth/Qwen3.8-27B-GGUF": {
@@ -572,6 +607,13 @@
       "pushed_at": "",
       "release_tag": "",
       "sent_date": "2026-11-17",
+      "stars_int": 0
+    },
+    "hf:paper:2611.14848": {
+      "desc_en": "TIDEWAY enables efficient inference of large Mixture-of-Experts models on memory-constrained consumer devices by treating host RAM and GPU VRAM as a unified memory pool with phase-aware layouts and optimized CUDA Graph execution under expert paging.",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-21",
       "stars_int": 0
     },
     "hf:paper:2611.15348": {
@@ -672,6 +714,13 @@
       "sent_date": "2026-11-18",
       "stars_int": 0
     },
+    "hf:paper:2611.21373": {
+      "desc_en": "WeVisForensics coordinates self-evolving visual and audio forensic inspector agents under a dual-timescale reinforcement learning policy to detect generated-video artifacts with localized evidence and high accuracy.",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-21",
+      "stars_int": 0
+    },
     "hf:paper:2611.21392": {
       "desc_en": "VideoNexus separates detailed video perception from evidence-driven planning and reasoning, using perception sub-agents to return compact temporally grounded evidence and achieving higher accuracy at lower cost on long-video benchmarks.",
       "pushed_at": "",
@@ -714,6 +763,27 @@
       "sent_date": "2026-11-20",
       "stars_int": 0
     },
+    "hf:paper:2611.26414": {
+      "desc_en": "ZeroVLN is a slow-fast vision-language navigation framework that avoids navigation-domain supervised fine-tuning of the VLM brain by using a semantic tool-calling interface and closed-loop reinforcement learning to coordinate a language-based brain with an action expert, improving VLN-CE performance while preserving general visual capabilities.",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-21",
+      "stars_int": 0
+    },
+    "hf:paper:2611.26444": {
+      "desc_en": "A diagnostic benchmark of 180 simulated manipulation configurations evaluates whether embodied systems can combine history-based reasoning, precise execution, and closed-loop environmental feedback, revealing that single-view competence does not transfer to composed tasks.",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-21",
+      "stars_int": 0
+    },
+    "hf:paper:2611.26595": {
+      "desc_en": "A task-adaptive agentic framework utilizes 3D proxies, physics simulation, and multi-agent coordination to enhance the structural control, physical plausibility, and visual realism of generated videos.",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-21",
+      "stars_int": 0
+    },
     "hf:space:0ppxnhximxr/snapref": {
       "desc_en": "SnapRef v2a, multiple references and your choice of style",
       "pushed_at": "",
@@ -754,6 +824,20 @@
       "pushed_at": "",
       "release_tag": "",
       "sent_date": "2026-11-15",
+      "stars_int": 0
+    },
+    "hf:space:alexnasa/Wan2.2-Animate-ZEROGPU": {
+      "desc_en": "Edit Videos with Wan 2.2",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-21",
+      "stars_int": 0
+    },
+    "hf:space:amisima/Wan_2.2_I2V_Studio": {
+      "desc_en": "NEW: LoRA size guard, CPU downloads & AI scene planning",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-21",
       "stars_int": 0
     },
     "hf:space:black-forest-labs/flux-3-image-klein": {
@@ -940,10 +1024,10 @@
     },
     "mvanhorn/last30days-skill": {
       "desc_en": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
-      "pushed_at": "2026-11-19T08:23:36Z",
-      "release_tag": "v4.3.2",
-      "sent_date": "2026-11-20",
-      "stars_int": 70807
+      "pushed_at": "2026-11-20T05:45:47Z",
+      "release_tag": "v4.4.0",
+      "sent_date": "2026-11-21",
+      "stars_int": 71450
     },
     "nginx/nginx": {
       "desc_en": "The official NGINX Open Source repository.",
@@ -1052,10 +1136,10 @@
     },
     "toeverything/AFFiNE": {
       "desc_en": "There can be more than Notion and Miro. AFFiNE(pronounced [ə‘fain]) is a next-gen knowledge base that brings planning, sorting and creating all together. Privacy first, open-source, customizable and ready to use.",
-      "pushed_at": "2026-11-19T21:28:03Z",
+      "pushed_at": "2026-11-20T10:23:37Z",
       "release_tag": "v0.27.4",
-      "sent_date": "2026-11-20",
-      "stars_int": 75182
+      "sent_date": "2026-11-21",
+      "stars_int": 75797
     },
     "tokio-rs/topcoat": {
       "desc_en": "A batteries-included framework for building web apps",
@@ -1091,6 +1175,13 @@
       "release_tag": "v0.7.6-hotfix.1",
       "sent_date": "2026-11-15",
       "stars_int": 15342
+    },
+    "zhouxiaoka/autoclip": {
+      "desc_en": "AutoClip｜一个链接，一键出片。开源 AI 视频剪辑桌面工具，将播客、访谈、课程等长视频自动剪成短视频，生成字幕、封面和发布文案，适配抖音、小红书、TikTok、Reels 与 YouTube Shorts。Open-source AI video clipping & content repurposing.",
+      "pushed_at": "2026-11-20T16:31:32Z",
+      "release_tag": "v1.5.8",
+      "sent_date": "2026-11-21",
+      "stars_int": 12182
     }
   }
 }
