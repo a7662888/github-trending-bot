@@ -93,17 +93,17 @@
     },
     "Tracer-Cloud/opensre": {
       "desc_en": "The open-source agent for CI/CD reliability.",
-      "pushed_at": "2026-11-21T23:47:31Z",
-      "release_tag": "v0.1.2026.11.21",
-      "sent_date": "2026-11-22",
-      "stars_int": 13981
+      "pushed_at": "2026-11-22T23:12:29Z",
+      "release_tag": "v0.1.2026.11.22",
+      "sent_date": "2026-11-23",
+      "stars_int": 14407
     },
     "XiaoYouChR/Ghost-Downloader-3": {
       "desc_en": "The only downloader you need. 下载器的集大成者。",
-      "pushed_at": "2026-11-21T16:28:09Z",
+      "pushed_at": "2026-11-22T15:12:09Z",
       "release_tag": "v4.5.11",
-      "sent_date": "2026-11-22",
-      "stars_int": 14423
+      "sent_date": "2026-11-23",
+      "stars_int": 15124
     },
     "ZhuLinsen/daily_stock_analysis": {
       "desc_en": "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。  LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.",
@@ -184,10 +184,10 @@
     },
     "backnotprop/plannotator": {
       "desc_en": "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click.",
-      "pushed_at": "2026-11-21T00:48:00Z",
-      "release_tag": "v0.29.1",
-      "sent_date": "2026-11-21",
-      "stars_int": 13898
+      "pushed_at": "2026-11-23T00:15:18Z",
+      "release_tag": "v0.29.2",
+      "sent_date": "2026-11-23",
+      "stars_int": 14423
     },
     "block/buzz": {
       "desc_en": "A hive mind communication platform",
@@ -198,10 +198,10 @@
     },
     "cathrynlavery/diagram-design": {
       "desc_en": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, Qoder, and Pi. 45 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
-      "pushed_at": "2026-11-19T00:17:05Z",
+      "pushed_at": "2026-11-22T01:44:54Z",
       "release_tag": "",
-      "sent_date": "2026-11-20",
-      "stars_int": 68642
+      "sent_date": "2026-11-23",
+      "stars_int": 70288
     },
     "cloudflare/security-audit-skill": {
       "desc_en": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
@@ -233,17 +233,17 @@
     },
     "elementalsouls/Claude-BugHunter": {
       "desc_en": "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
-      "pushed_at": "2026-11-21T04:24:41Z",
+      "pushed_at": "2026-11-22T12:16:00Z",
       "release_tag": "v2.1",
-      "sent_date": "2026-11-22",
-      "stars_int": 16006
+      "sent_date": "2026-11-23",
+      "stars_int": 17773
     },
     "firecrawl/firecrawl": {
       "desc_en": "Knowledge infrastructure to make your agents smarter. Search, scrape and access 550+ data providers through one API.",
-      "pushed_at": "2026-11-21T20:10:00Z",
+      "pushed_at": "2026-11-22T18:47:08Z",
       "release_tag": "v2.11.0",
-      "sent_date": "2026-11-22",
-      "stars_int": 206165
+      "sent_date": "2026-11-23",
+      "stars_int": 207019
     },
     "garrytan/gbrain": {
       "desc_en": "Garry's Opinionated OpenClaw/Hermes Agent Brain",
@@ -333,7 +333,7 @@
       "desc_en": "",
       "pushed_at": "",
       "release_tag": "",
-      "sent_date": "2026-11-15",
+      "sent_date": "2026-11-23",
       "stars_int": 0
     },
     "hf:model:Edge0/Edge0-145B-q3k": {
@@ -410,7 +410,7 @@
       "desc_en": "",
       "pushed_at": "",
       "release_tag": "",
-      "sent_date": "2026-11-15",
+      "sent_date": "2026-11-23",
       "stars_int": 0
     },
     "hf:model:Qwen/Qwen3.8-Flash-Next": {
@@ -446,6 +446,13 @@
       "pushed_at": "",
       "release_tag": "",
       "sent_date": "2026-11-19",
+      "stars_int": 0
+    },
+    "hf:model:inclusionAI/LingSante-3.1-flash": {
+      "desc_en": "",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-23",
       "stars_int": 0
     },
     "hf:model:maxwell-model/Maxwell-V1-Flash": {
@@ -487,7 +494,7 @@
       "desc_en": "",
       "pushed_at": "",
       "release_tag": "",
-      "sent_date": "2026-11-15",
+      "sent_date": "2026-11-23",
       "stars_int": 0
     },
     "hf:model:nvidia/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB": {
@@ -523,6 +530,13 @@
       "pushed_at": "",
       "release_tag": "",
       "sent_date": "2026-11-22",
+      "stars_int": 0
+    },
+    "hf:model:surogate/Surogate3.7-35B-A3B": {
+      "desc_en": "",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-23",
       "stars_int": 0
     },
     "hf:model:tencent/Hy4": {
@@ -742,6 +756,13 @@
       "sent_date": "2026-11-20",
       "stars_int": 0
     },
+    "hf:paper:2611.21053": {
+      "desc_en": "A local System 1 agent framework compiles tool schemas and requests into multiple-choice questions answered by a one-pass decision model, enabling accurate biomedical tool calls without text generation or invented content.",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-23",
+      "stars_int": 0
+    },
     "hf:paper:2611.21152": {
       "desc_en": "RepoFactory converts real repositories into verifiable coding environments and optimizes them via an Environment Evolution Loop using proxy feedback, enabling trained coding agents to achieve strong gains on long-horizon coding and agentic benchmarks.",
       "pushed_at": "",
@@ -819,6 +840,13 @@
       "sent_date": "2026-11-22",
       "stars_int": 0
     },
+    "hf:paper:2611.23875": {
+      "desc_en": "A coding agent trains an optical neural network from measurements alone by reparametrizing it with interpretable optical elements, achieving better classification and image encoding than gradient-free methods and approaching backpropagation through a calibrated model at lower cost.",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-23",
+      "stars_int": 0
+    },
     "hf:paper:2611.24098": {
       "desc_en": "A new benchmark and agentic workflows assess vision-language models for automatic video rough-cut, revealing current models struggle to match expert cut plans.",
       "pushed_at": "",
@@ -831,6 +859,20 @@
       "pushed_at": "",
       "release_tag": "",
       "sent_date": "2026-11-20",
+      "stars_int": 0
+    },
+    "hf:paper:2611.25005": {
+      "desc_en": "Inhabitant enables a language-model agent to plan and execute long-horizon human-scene interactions by specifying motions spatially, measuring deviations, and revising control, achieving high task completion on the Inhabit benchmark.",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-23",
+      "stars_int": 0
+    },
+    "hf:paper:2611.26248": {
+      "desc_en": "AI agents are increasingly expected to act as AI scientists, which requires three increasingly open abilities: carrying out a given computational workflow correctly, choosing the next measurements from a given design space, and designing their own experiments. Existing benchmarks mainly evaluate the",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-23",
       "stars_int": 0
     },
     "hf:paper:2611.26414": {
@@ -852,6 +894,13 @@
       "pushed_at": "",
       "release_tag": "",
       "sent_date": "2026-11-21",
+      "stars_int": 0
+    },
+    "hf:paper:2611.26624": {
+      "desc_en": "PlayCraft uses a vision-based player agent and a crafter agent to iteratively revise games, improving player learning gains and slopes across intelligence settings.",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-23",
       "stars_int": 0
     },
     "hf:space:0ppxnhximxr/snapref": {
@@ -893,7 +942,7 @@
       "desc_en": "Demo of the Collection of Qwen Image Edit LoRAs",
       "pushed_at": "",
       "release_tag": "",
-      "sent_date": "2026-11-15",
+      "sent_date": "2026-11-23",
       "stars_int": 0
     },
     "hf:space:alexnasa/Wan2.2-Animate-ZEROGPU": {
@@ -973,6 +1022,13 @@
       "sent_date": "2026-11-18",
       "stars_int": 0
     },
+    "hf:space:kulkas2pintu/wan222": {
+      "desc_en": "generate a video from an image with a text prompt",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-23",
+      "stars_int": 0
+    },
     "hf:space:kulkas2pintu/wan777": {
       "desc_en": "generate a video from an image with a text prompt",
       "pushed_at": "",
@@ -984,7 +1040,7 @@
       "desc_en": "Real-time t2i & editing with a Qwen-Image-2.1 2-step LoRA",
       "pushed_at": "",
       "release_tag": "",
-      "sent_date": "2026-11-15",
+      "sent_date": "2026-11-23",
       "stars_int": 0
     },
     "hf:space:mrfakename/Z-Image-Turbo": {
@@ -1100,18 +1156,18 @@
       "stars_int": 19925
     },
     "mjmirza/app-store-compliance": {
-      "desc_en": "Avoid common App Store and Google Play rejections. Open playbook and pre-submission guard with 117 documented rejection patterns and fixes, privacy manifest and Data safety checks, 95 tracked deadlines (EU AI Act, DSA, COPPA, age laws), and a skill for AI coding agents.",
-      "pushed_at": "2026-11-21T23:44:47Z",
-      "release_tag": "v2.4.0",
-      "sent_date": "2026-11-22",
-      "stars_int": 3381
+      "desc_en": "Avoid common App Store and Google Play rejections. Open playbook and pre-submission guard with 124 documented rejection patterns and fixes, privacy manifest and Data safety checks, 112 tracked deadlines (EU AI Act, DSA, COPPA, age laws), and a skill for AI coding agents.",
+      "pushed_at": "2026-11-22T17:14:36Z",
+      "release_tag": "v2.5.1",
+      "sent_date": "2026-11-23",
+      "stars_int": 3971
     },
     "mvanhorn/last30days-skill": {
       "desc_en": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
-      "pushed_at": "2026-11-21T21:45:04Z",
-      "release_tag": "v4.5.0",
-      "sent_date": "2026-11-22",
-      "stars_int": 71981
+      "pushed_at": "2026-11-22T22:19:59Z",
+      "release_tag": "v4.6.0",
+      "sent_date": "2026-11-23",
+      "stars_int": 72701
     },
     "nginx/nginx": {
       "desc_en": "The official NGINX Open Source repository.",
@@ -1220,10 +1276,10 @@
     },
     "toeverything/AFFiNE": {
       "desc_en": "There can be more than Notion and Miro. AFFiNE(pronounced [ə‘fain]) is a next-gen knowledge base that brings planning, sorting and creating all together. Privacy first, open-source, customizable and ready to use.",
-      "pushed_at": "2026-11-21T22:56:54Z",
+      "pushed_at": "2026-11-22T22:49:39Z",
       "release_tag": "v0.27.4",
-      "sent_date": "2026-11-22",
-      "stars_int": 76277
+      "sent_date": "2026-11-23",
+      "stars_int": 76812
     },
     "tokio-rs/topcoat": {
       "desc_en": "A batteries-included framework for building web apps",
@@ -1262,10 +1318,10 @@
     },
     "zhouxiaoka/autoclip": {
       "desc_en": "AutoClip｜一个链接，一键出片。开源 AI 视频剪辑桌面工具，将播客、访谈、课程等长视频自动剪成短视频，生成字幕、封面和发布文案，适配抖音、小红书、TikTok、Reels 与 YouTube Shorts。Open-source AI video clipping & content repurposing.",
-      "pushed_at": "2026-11-21T16:56:28Z",
-      "release_tag": "v1.5.8",
-      "sent_date": "2026-11-22",
-      "stars_int": 12829
+      "pushed_at": "2026-11-23T00:18:57Z",
+      "release_tag": "v1.5.9",
+      "sent_date": "2026-11-23",
+      "stars_int": 13418
     }
   }
 }
