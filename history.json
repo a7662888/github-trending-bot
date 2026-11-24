@@ -93,17 +93,17 @@
     },
     "Tracer-Cloud/opensre": {
       "desc_en": "The open-source agent for CI/CD reliability.",
-      "pushed_at": "2026-11-22T23:12:29Z",
-      "release_tag": "v0.1.2026.11.22",
-      "sent_date": "2026-11-23",
-      "stars_int": 14407
+      "pushed_at": "2026-11-24T00:50:25Z",
+      "release_tag": "v0.1.2026.11.24",
+      "sent_date": "2026-11-24",
+      "stars_int": 14884
     },
     "XiaoYouChR/Ghost-Downloader-3": {
       "desc_en": "The only downloader you need. 下载器的集大成者。",
-      "pushed_at": "2026-11-22T15:12:09Z",
+      "pushed_at": "2026-11-24T03:06:44Z",
       "release_tag": "v4.5.11",
-      "sent_date": "2026-11-23",
-      "stars_int": 15124
+      "sent_date": "2026-11-24",
+      "stars_int": 16489
     },
     "ZhuLinsen/daily_stock_analysis": {
       "desc_en": "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。  LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.",
@@ -197,11 +197,11 @@
       "stars_int": 37313
     },
     "cathrynlavery/diagram-design": {
-      "desc_en": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, Qoder, and Pi. 45 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
-      "pushed_at": "2026-11-22T01:44:54Z",
+      "desc_en": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, Qoder, and Pi. 52 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+      "pushed_at": "2026-11-23T11:00:38Z",
       "release_tag": "",
-      "sent_date": "2026-11-23",
-      "stars_int": 70288
+      "sent_date": "2026-11-24",
+      "stars_int": 71111
     },
     "cloudflare/security-audit-skill": {
       "desc_en": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
@@ -232,18 +232,18 @@
       "stars_int": 871
     },
     "elementalsouls/Claude-BugHunter": {
-      "desc_en": "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
-      "pushed_at": "2026-11-22T12:16:00Z",
+      "desc_en": "A Claude Code skill bundle for bug hunting and external red-team work - 84 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
+      "pushed_at": "2026-11-24T01:52:30Z",
       "release_tag": "v2.1",
-      "sent_date": "2026-11-23",
-      "stars_int": 17773
+      "sent_date": "2026-11-24",
+      "stars_int": 20006
     },
     "firecrawl/firecrawl": {
       "desc_en": "Knowledge infrastructure to make your agents smarter. Search, scrape and access 550+ data providers through one API.",
-      "pushed_at": "2026-11-22T18:47:08Z",
+      "pushed_at": "2026-11-24T03:35:41Z",
       "release_tag": "v2.11.0",
-      "sent_date": "2026-11-23",
-      "stars_int": 207019
+      "sent_date": "2026-11-24",
+      "stars_int": 208067
     },
     "garrytan/gbrain": {
       "desc_en": "Garry's Opinionated OpenClaw/Hermes Agent Brain",
@@ -427,11 +427,18 @@
       "sent_date": "2026-11-20",
       "stars_int": 0
     },
+    "hf:model:baidu/ERNIE-5.5-Flash-Preview": {
+      "desc_en": "",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-24",
+      "stars_int": 0
+    },
     "hf:model:deepseek-ai/DeepSeek-V4.1-Flash-1017": {
       "desc_en": "",
       "pushed_at": "",
       "release_tag": "",
-      "sent_date": "2026-11-16",
+      "sent_date": "2026-11-24",
       "stars_int": 0
     },
     "hf:model:harness-hub/Qwen3.8-27B-opencode-adapted": {
@@ -532,6 +539,13 @@
       "sent_date": "2026-11-22",
       "stars_int": 0
     },
+    "hf:model:strata-engine/Inkling-2-Mini-Strata": {
+      "desc_en": "",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-24",
+      "stars_int": 0
+    },
     "hf:model:surogate/Surogate3.7-35B-A3B": {
       "desc_en": "",
       "pushed_at": "",
@@ -564,7 +578,7 @@
       "desc_en": "",
       "pushed_at": "",
       "release_tag": "",
-      "sent_date": "2026-11-16",
+      "sent_date": "2026-11-24",
       "stars_int": 0
     },
     "hf:model:unsloth/Inkling-2-Mini-GGUF": {
@@ -578,7 +592,7 @@
       "desc_en": "",
       "pushed_at": "",
       "release_tag": "",
-      "sent_date": "2026-11-16",
+      "sent_date": "2026-11-24",
       "stars_int": 0
     },
     "hf:model:voyager-so/shot-reader-8b": {
@@ -847,6 +861,13 @@
       "sent_date": "2026-11-23",
       "stars_int": 0
     },
+    "hf:paper:2611.24025": {
+      "desc_en": "Intent contracts, in which a planner submits logged contracts and a trusted model writes tool calls, do not reduce unauthorized actions and match blind review, but complete more benign over-reach tasks than an intent-visible reviewer.",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-24",
+      "stars_int": 0
+    },
     "hf:paper:2611.24098": {
       "desc_en": "A new benchmark and agentic workflows assess vision-language models for automatic video rough-cut, revealing current models struggle to match expert cut plans.",
       "pushed_at": "",
@@ -866,6 +887,13 @@
       "pushed_at": "",
       "release_tag": "",
       "sent_date": "2026-11-23",
+      "stars_int": 0
+    },
+    "hf:paper:2611.25252": {
+      "desc_en": "Coding agents built on large language models (LLMs) now help develop many models published as general solutions. Should generality instead reside in the agent that builds a model for each new task? We examine this question in prognostics and health management (PHM), where every model must work on un",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-24",
       "stars_int": 0
     },
     "hf:paper:2611.26248": {
@@ -896,11 +924,32 @@
       "sent_date": "2026-11-21",
       "stars_int": 0
     },
+    "hf:paper:2611.26613": {
+      "desc_en": "Frontier multimodal language agents such as GPT-6 Astra have demonstrated strong capabilities in controlling robots directly via low-level numerical actions without high-level primitives. However, existing benchmarks report only episode-level success rates, which show neither how these agents succee",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-24",
+      "stars_int": 0
+    },
     "hf:paper:2611.26624": {
       "desc_en": "PlayCraft uses a vision-based player agent and a crafter agent to iteratively revise games, improving player learning gains and slopes across intelligence settings.",
       "pushed_at": "",
       "release_tag": "",
       "sent_date": "2026-11-23",
+      "stars_int": 0
+    },
+    "hf:paper:2611.28202": {
+      "desc_en": "A harness that lets multimodal foundation models emit primitive actions, open-loop macros, or closed-loop controllers improves real-time game performance and reduces API cost.",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-24",
+      "stars_int": 0
+    },
+    "hf:paper:2611.29238": {
+      "desc_en": "An open-source agentic platform and benchmark enable iterative transformation of multimodal inspirations into playable game extensions, revealing that coding agents can adapt reference content but still struggle with playable interactions and precise modifications.",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-24",
       "stars_int": 0
     },
     "hf:space:0ppxnhximxr/snapref": {
@@ -921,7 +970,7 @@
       "desc_en": "",
       "pushed_at": "",
       "release_tag": "",
-      "sent_date": "2026-11-16",
+      "sent_date": "2026-11-24",
       "stars_int": 0
     },
     "hf:space:RioShiina/ImageGen": {
@@ -1064,6 +1113,13 @@
       "sent_date": "2026-11-22",
       "stars_int": 0
     },
+    "hf:space:prithivMLmods/flux-3-image-klein-loras-fast": {
+      "desc_en": "Collection of FLUX.3 Image Klein LoRAs",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-24",
+      "stars_int": 0
+    },
     "hf:space:r3gm/wan2-2-fp8da-aoti-preview": {
       "desc_en": "generate a video from an image with a text prompt",
       "pushed_at": "",
@@ -1089,7 +1145,7 @@
       "desc_en": "Scalable and Versatile 3D Generation from images",
       "pushed_at": "",
       "release_tag": "",
-      "sent_date": "2026-11-16",
+      "sent_date": "2026-11-24",
       "stars_int": 0
     },
     "hf:space:zerogpu-aoti/wan2-2-fp8da-aoti-faster": {
@@ -1108,10 +1164,10 @@
     },
     "jingyaogong/minimind": {
       "desc_en": "🧠 两小时从 0 训出你的 64M 大模型。Train your own 64M LLM from scratch in 2 hours.",
-      "pushed_at": "2026-11-18T15:09:40Z",
+      "pushed_at": "2026-11-23T04:01:07Z",
       "release_tag": "v2",
-      "sent_date": "2026-11-20",
-      "stars_int": 66882
+      "sent_date": "2026-11-24",
+      "stars_int": 69611
     },
     "jquery/jquery": {
       "desc_en": "jQuery JavaScript Library",
@@ -1157,24 +1213,24 @@
     },
     "mjmirza/app-store-compliance": {
       "desc_en": "Avoid common App Store and Google Play rejections. Open playbook and pre-submission guard with 124 documented rejection patterns and fixes, privacy manifest and Data safety checks, 112 tracked deadlines (EU AI Act, DSA, COPPA, age laws), and a skill for AI coding agents.",
-      "pushed_at": "2026-11-22T17:14:36Z",
+      "pushed_at": "2026-11-23T12:02:07Z",
       "release_tag": "v2.5.1",
-      "sent_date": "2026-11-23",
-      "stars_int": 3971
+      "sent_date": "2026-11-24",
+      "stars_int": 5093
     },
     "mvanhorn/last30days-skill": {
       "desc_en": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
-      "pushed_at": "2026-11-22T22:19:59Z",
+      "pushed_at": "2026-11-24T04:11:28Z",
       "release_tag": "v4.6.0",
-      "sent_date": "2026-11-23",
-      "stars_int": 72701
+      "sent_date": "2026-11-24",
+      "stars_int": 73548
     },
     "nginx/nginx": {
       "desc_en": "The official NGINX Open Source repository.",
-      "pushed_at": "2026-11-18T16:40:14Z",
-      "release_tag": "release-1.31.9",
-      "sent_date": "2026-11-20",
-      "stars_int": 32339
+      "pushed_at": "2026-11-23T15:12:01Z",
+      "release_tag": "release-1.31.10",
+      "sent_date": "2026-11-24",
+      "stars_int": 33081
     },
     "nodejs/node": {
       "desc_en": "Node.js JavaScript runtime ✨🐢🚀✨",
@@ -1276,10 +1332,10 @@
     },
     "toeverything/AFFiNE": {
       "desc_en": "There can be more than Notion and Miro. AFFiNE(pronounced [ə‘fain]) is a next-gen knowledge base that brings planning, sorting and creating all together. Privacy first, open-source, customizable and ready to use.",
-      "pushed_at": "2026-11-22T22:49:39Z",
+      "pushed_at": "2026-11-24T04:16:02Z",
       "release_tag": "v0.27.4",
-      "sent_date": "2026-11-23",
-      "stars_int": 76812
+      "sent_date": "2026-11-24",
+      "stars_int": 77476
     },
     "tokio-rs/topcoat": {
       "desc_en": "A batteries-included framework for building web apps",
