@@ -30,10 +30,10 @@
     },
     "GoogleChrome/modern-web-guidance-src": {
       "desc_en": "Keep your coding agent up to date with the latest web best practices",
-      "pushed_at": "2026-11-20T22:14:50Z",
+      "pushed_at": "2026-11-24T21:38:47Z",
       "release_tag": "",
-      "sent_date": "2026-11-21",
-      "stars_int": 9529
+      "sent_date": "2026-11-25",
+      "stars_int": 10843
     },
     "HKUDS/CLI-Anything": {
       "desc_en": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
@@ -93,10 +93,10 @@
     },
     "Tracer-Cloud/opensre": {
       "desc_en": "The open-source agent for CI/CD reliability.",
-      "pushed_at": "2026-11-24T00:50:25Z",
-      "release_tag": "v0.1.2026.11.24",
-      "sent_date": "2026-11-24",
-      "stars_int": 14884
+      "pushed_at": "2026-11-25T01:27:35Z",
+      "release_tag": "v0.1.2026.11.25",
+      "sent_date": "2026-11-25",
+      "stars_int": 15217
     },
     "XiaoYouChR/Ghost-Downloader-3": {
       "desc_en": "The only downloader you need. 下载器的集大成者。",
@@ -135,10 +135,10 @@
     },
     "alibaba/open-code-review": {
       "desc_en": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
-      "pushed_at": "2026-11-21T08:41:09Z",
-      "release_tag": "v1.14.0",
-      "sent_date": "2026-11-22",
-      "stars_int": 55097
+      "pushed_at": "2026-11-24T16:19:18Z",
+      "release_tag": "v1.14.3",
+      "sent_date": "2026-11-25",
+      "stars_int": 56081
     },
     "anthropics/claude-quickstarts": {
       "desc_en": "A collection of projects designed to help developers quickly get started with building deployable applications using the Claude API",
@@ -184,10 +184,10 @@
     },
     "backnotprop/plannotator": {
       "desc_en": "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click.",
-      "pushed_at": "2026-11-23T00:15:18Z",
-      "release_tag": "v0.29.2",
-      "sent_date": "2026-11-23",
-      "stars_int": 14423
+      "pushed_at": "2026-11-25T02:55:24Z",
+      "release_tag": "v0.29.3",
+      "sent_date": "2026-11-25",
+      "stars_int": 14915
     },
     "block/buzz": {
       "desc_en": "A hive mind communication platform",
@@ -198,10 +198,10 @@
     },
     "cathrynlavery/diagram-design": {
       "desc_en": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, Qoder, and Pi. 52 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
-      "pushed_at": "2026-11-23T11:00:38Z",
+      "pushed_at": "2026-11-25T00:32:59Z",
       "release_tag": "",
-      "sent_date": "2026-11-24",
-      "stars_int": 71111
+      "sent_date": "2026-11-25",
+      "stars_int": 72168
     },
     "cloudflare/security-audit-skill": {
       "desc_en": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
@@ -240,10 +240,10 @@
     },
     "firecrawl/firecrawl": {
       "desc_en": "Knowledge infrastructure to make your agents smarter. Search, scrape and access 550+ data providers through one API.",
-      "pushed_at": "2026-11-24T03:35:41Z",
+      "pushed_at": "2026-11-25T02:22:23Z",
       "release_tag": "v2.11.0",
-      "sent_date": "2026-11-24",
-      "stars_int": 208067
+      "sent_date": "2026-11-25",
+      "stars_int": 209025
     },
     "garrytan/gbrain": {
       "desc_en": "Garry's Opinionated OpenClaw/Hermes Agent Brain",
@@ -293,6 +293,13 @@
       "release_tag": "",
       "sent_date": "2026-11-08",
       "stars_int": 23523
+    },
+    "hf:model:Aleph-Alpha/Kolibri-1.1": {
+      "desc_en": "",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-25",
+      "stars_int": 0
     },
     "hf:model:AngelSlim/Hy4-flash-GGUF": {
       "desc_en": "",
@@ -392,6 +399,13 @@
       "sent_date": "2026-11-17",
       "stars_int": 0
     },
+    "hf:model:MemTensor/MemT-1.0-Pro": {
+      "desc_en": "",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-25",
+      "stars_int": 0
+    },
     "hf:model:NousResearch/Arete-27B": {
       "desc_en": "",
       "pushed_at": "",
@@ -455,6 +469,13 @@
       "sent_date": "2026-11-19",
       "stars_int": 0
     },
+    "hf:model:inclusionAI/LingSante-3.1-air-VL": {
+      "desc_en": "",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-25",
+      "stars_int": 0
+    },
     "hf:model:inclusionAI/LingSante-3.1-flash": {
       "desc_en": "",
       "pushed_at": "",
@@ -504,6 +525,13 @@
       "sent_date": "2026-11-23",
       "stars_int": 0
     },
+    "hf:model:nari-labs/Qwen3.8-27B-NariQ-GGUF": {
+      "desc_en": "",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-25",
+      "stars_int": 0
+    },
     "hf:model:nvidia/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB": {
       "desc_en": "",
       "pushed_at": "",
@@ -523,6 +551,13 @@
       "pushed_at": "",
       "release_tag": "",
       "sent_date": "2026-11-22",
+      "stars_int": 0
+    },
+    "hf:model:prism-ml/Ternary-Bonsai-2.5-27B-GGUF": {
+      "desc_en": "",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-25",
       "stars_int": 0
     },
     "hf:model:sensenova/SenseNova-Loop-9B": {
@@ -649,6 +684,13 @@
       "pushed_at": "",
       "release_tag": "",
       "sent_date": "2026-11-17",
+      "stars_int": 0
+    },
+    "hf:paper:2611.12164": {
+      "desc_en": "A code localizer is trained with scores from a frozen fixer via weighted supervised fine-tuning, improving bug localization and patch success for a small coding agent without tests or reinforcement learning.",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-25",
       "stars_int": 0
     },
     "hf:paper:2611.12304": {
@@ -952,6 +994,34 @@
       "sent_date": "2026-11-24",
       "stars_int": 0
     },
+    "hf:paper:2611.30013": {
+      "desc_en": "A new benchmark evaluates rigging and motion generation across six 3D morphology categories, compares specialized, video-based, and agent-driven paradigms, and proposes an agentic framework that writes compact parametric skeleton and motion programs executed deterministically for reliable control.",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-25",
+      "stars_int": 0
+    },
+    "hf:paper:2611.30989": {
+      "desc_en": "WorldLeague benchmarks 13 AI systems on 60 simulated robot tasks spanning exploration, rearrangement, and adaptation, measuring progress and success to compare autonomous physical goal achievement.",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-25",
+      "stars_int": 0
+    },
+    "hf:paper:2611.31201": {
+      "desc_en": "A systematic framework shows that frontier multimodal models can serve as robot policies when harnessed with interfaces favoring native visual reasoning and tool use, achieving high success in simulated and real manipulation tasks.",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-25",
+      "stars_int": 0
+    },
+    "hf:paper:2611.31358": {
+      "desc_en": "Visual creation demands expressive imagery together with precise control over text, layout, and structure. We introduce Nemotron-Labs-VisualCreation, an agentic framework that connects these capabilities through Pixel as Code. Raster images are represented by learned discrete visual tokens, while st",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-25",
+      "stars_int": 0
+    },
     "hf:space:0ppxnhximxr/snapref": {
       "desc_en": "SnapRef v2a, multiple references and your choice of style",
       "pushed_at": "",
@@ -1061,7 +1131,7 @@
       "desc_en": "AnyPose pose still with a strong pose-reference lock",
       "pushed_at": "",
       "release_tag": "",
-      "sent_date": "2026-11-17",
+      "sent_date": "2026-11-25",
       "stars_int": 0
     },
     "hf:space:kulkas2pintu/kv-i2v": {
@@ -1124,7 +1194,7 @@
       "desc_en": "generate a video from an image with a text prompt",
       "pushed_at": "",
       "release_tag": "",
-      "sent_date": "2026-11-17",
+      "sent_date": "2026-11-25",
       "stars_int": 0
     },
     "hf:space:someone-in-the-world/FireRed-ImageEdit-Japanese": {
@@ -1213,10 +1283,10 @@
     },
     "mjmirza/app-store-compliance": {
       "desc_en": "Avoid common App Store and Google Play rejections. Open playbook and pre-submission guard with 124 documented rejection patterns and fixes, privacy manifest and Data safety checks, 112 tracked deadlines (EU AI Act, DSA, COPPA, age laws), and a skill for AI coding agents.",
-      "pushed_at": "2026-11-23T12:02:07Z",
+      "pushed_at": "2026-11-25T02:52:27Z",
       "release_tag": "v2.5.1",
-      "sent_date": "2026-11-24",
-      "stars_int": 5093
+      "sent_date": "2026-11-25",
+      "stars_int": 5926
     },
     "mvanhorn/last30days-skill": {
       "desc_en": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
@@ -1248,10 +1318,10 @@
     },
     "obra/superpowers": {
       "desc_en": "An agentic skills framework & software development methodology that works.",
-      "pushed_at": "2026-11-03T23:24:58Z",
+      "pushed_at": "2026-11-24T23:59:04Z",
       "release_tag": "v7.0.2",
-      "sent_date": "2026-11-18",
-      "stars_int": 319354
+      "sent_date": "2026-11-25",
+      "stars_int": 325897
     },
     "openai/codex-security": {
       "desc_en": "OpenAI's Codex Security CLI and TypeScript SDK for finding, validating, and fixing security vulnerabilities. npm: https://www.npmjs.com/package/@openai/codex-security",
@@ -1332,10 +1402,10 @@
     },
     "toeverything/AFFiNE": {
       "desc_en": "There can be more than Notion and Miro. AFFiNE(pronounced [ə‘fain]) is a next-gen knowledge base that brings planning, sorting and creating all together. Privacy first, open-source, customizable and ready to use.",
-      "pushed_at": "2026-11-24T04:16:02Z",
+      "pushed_at": "2026-11-25T02:51:24Z",
       "release_tag": "v0.27.4",
-      "sent_date": "2026-11-24",
-      "stars_int": 77476
+      "sent_date": "2026-11-25",
+      "stars_int": 78040
     },
     "tokio-rs/topcoat": {
       "desc_en": "A batteries-included framework for building web apps",
@@ -1374,10 +1444,10 @@
     },
     "zhouxiaoka/autoclip": {
       "desc_en": "AutoClip｜一个链接，一键出片。开源 AI 视频剪辑桌面工具，将播客、访谈、课程等长视频自动剪成短视频，生成字幕、封面和发布文案，适配抖音、小红书、TikTok、Reels 与 YouTube Shorts。Open-source AI video clipping & content repurposing.",
-      "pushed_at": "2026-11-23T00:18:57Z",
-      "release_tag": "v1.5.9",
-      "sent_date": "2026-11-23",
-      "stars_int": 13418
+      "pushed_at": "2026-11-25T01:20:51Z",
+      "release_tag": "v1.6.0",
+      "sent_date": "2026-11-25",
+      "stars_int": 15463
     }
   }
 }
