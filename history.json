@@ -93,17 +93,17 @@
     },
     "Tracer-Cloud/opensre": {
       "desc_en": "The open-source agent for CI/CD reliability.",
-      "pushed_at": "2026-11-25T01:27:35Z",
-      "release_tag": "v0.1.2026.11.25",
-      "sent_date": "2026-11-25",
-      "stars_int": 15217
+      "pushed_at": "2026-11-26T00:55:37Z",
+      "release_tag": "v0.1.2026.11.26",
+      "sent_date": "2026-11-26",
+      "stars_int": 15541
     },
     "XiaoYouChR/Ghost-Downloader-3": {
       "desc_en": "The only downloader you need. 下载器的集大成者。",
-      "pushed_at": "2026-11-24T03:06:44Z",
-      "release_tag": "v4.5.11",
-      "sent_date": "2026-11-24",
-      "stars_int": 16489
+      "pushed_at": "2026-11-25T13:11:40Z",
+      "release_tag": "v4.6",
+      "sent_date": "2026-11-26",
+      "stars_int": 18304
     },
     "ZhuLinsen/daily_stock_analysis": {
       "desc_en": "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。  LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.",
@@ -184,10 +184,10 @@
     },
     "backnotprop/plannotator": {
       "desc_en": "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click.",
-      "pushed_at": "2026-11-25T02:55:24Z",
-      "release_tag": "v0.29.3",
-      "sent_date": "2026-11-25",
-      "stars_int": 14915
+      "pushed_at": "2026-11-26T02:07:57Z",
+      "release_tag": "v0.29.4",
+      "sent_date": "2026-11-26",
+      "stars_int": 15094
     },
     "block/buzz": {
       "desc_en": "A hive mind communication platform",
@@ -212,10 +212,10 @@
     },
     "cursor/plugins": {
       "desc_en": "Cursor plugin specification and official plugins",
-      "pushed_at": "2026-11-17T22:49:29Z",
+      "pushed_at": "2026-11-25T23:42:15Z",
       "release_tag": "",
-      "sent_date": "2026-11-18",
-      "stars_int": 16913
+      "sent_date": "2026-11-26",
+      "stars_int": 19551
     },
     "dream-num/univer": {
       "desc_en": "Build your own AI office with Univer Office SDK. Bring editing, calculation, collaboration, and file processing into your product for people and AI agents. Built on an extensible open-source core.",
@@ -232,18 +232,18 @@
       "stars_int": 871
     },
     "elementalsouls/Claude-BugHunter": {
-      "desc_en": "A Claude Code skill bundle for bug hunting and external red-team work - 84 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
-      "pushed_at": "2026-11-24T01:52:30Z",
+      "desc_en": "A Claude Code skill bundle for bug hunting and external red-team work - 85 skills, 16 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
+      "pushed_at": "2026-11-25T23:28:39Z",
       "release_tag": "v2.1",
-      "sent_date": "2026-11-24",
-      "stars_int": 20006
+      "sent_date": "2026-11-26",
+      "stars_int": 23098
     },
     "firecrawl/firecrawl": {
       "desc_en": "Knowledge infrastructure to make your agents smarter. Search, scrape and access 550+ data providers through one API.",
-      "pushed_at": "2026-11-25T02:22:23Z",
+      "pushed_at": "2026-11-26T01:55:36Z",
       "release_tag": "v2.11.0",
-      "sent_date": "2026-11-25",
-      "stars_int": 209025
+      "sent_date": "2026-11-26",
+      "stars_int": 210103
     },
     "garrytan/gbrain": {
       "desc_en": "Garry's Opinionated OpenClaw/Hermes Agent Brain",
@@ -385,6 +385,13 @@
       "sent_date": "2026-11-20",
       "stars_int": 0
     },
+    "hf:model:KRAFTON/Raon-1-mini": {
+      "desc_en": "",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-26",
+      "stars_int": 0
+    },
     "hf:model:KRAFTON/Raon-1-nano": {
       "desc_en": "",
       "pushed_at": "",
@@ -483,6 +490,13 @@
       "sent_date": "2026-11-23",
       "stars_int": 0
     },
+    "hf:model:llamaindex/OCRia-1": {
+      "desc_en": "",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-26",
+      "stars_int": 0
+    },
     "hf:model:maxwell-model/Maxwell-V1-Flash": {
       "desc_en": "",
       "pushed_at": "",
@@ -518,6 +532,13 @@
       "sent_date": "2026-11-22",
       "stars_int": 0
     },
+    "hf:model:mlx-community/Inkling-2-Mini-oQ4e-mtp": {
+      "desc_en": "",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-26",
+      "stars_int": 0
+    },
     "hf:model:moonshotai/Kimi-K3.1-Pro": {
       "desc_en": "",
       "pushed_at": "",
@@ -536,7 +557,7 @@
       "desc_en": "",
       "pushed_at": "",
       "release_tag": "",
-      "sent_date": "2026-11-18",
+      "sent_date": "2026-11-26",
       "stars_int": 0
     },
     "hf:model:nvidia/Qwen3.5-4B-Qwen3.8-27B-Draft": {
@@ -564,7 +585,7 @@
       "desc_en": "",
       "pushed_at": "",
       "release_tag": "",
-      "sent_date": "2026-11-18",
+      "sent_date": "2026-11-26",
       "stars_int": 0
     },
     "hf:model:sensenova/SenseNova-Loop-9B-GGUF": {
@@ -987,6 +1008,13 @@
       "sent_date": "2026-11-24",
       "stars_int": 0
     },
+    "hf:paper:2611.28947": {
+      "desc_en": "NightWatch adds a lightweight streaming watcher to vision-language computer-use agents to keep perception synchronized with dynamic interfaces, reducing latency and wasted time while maintaining or improving task success.",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-26",
+      "stars_int": 0
+    },
     "hf:paper:2611.29238": {
       "desc_en": "An open-source agentic platform and benchmark enable iterative transformation of multimodal inspirations into playable game extensions, revealing that coding agents can adapt reference content but still struggle with playable interactions and precise modifications.",
       "pushed_at": "",
@@ -999,6 +1027,20 @@
       "pushed_at": "",
       "release_tag": "",
       "sent_date": "2026-11-25",
+      "stars_int": 0
+    },
+    "hf:paper:2611.30254": {
+      "desc_en": "Innata-0 is a native embodied world system that co-designs a world-action model and an agent to enable reliable long-horizon physical behaviors through integrated understanding, prediction, action generation, memory, verification, and recovery.",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-26",
+      "stars_int": 0
+    },
+    "hf:paper:2611.30962": {
+      "desc_en": "CUA-SEE is a closed-loop evaluation environment that co-evolves tasks and executable verifiers to adaptively measure computer-use agents’ capabilities, boundaries, and progress reliability.",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-26",
       "stars_int": 0
     },
     "hf:paper:2611.30989": {
@@ -1015,11 +1057,25 @@
       "sent_date": "2026-11-25",
       "stars_int": 0
     },
+    "hf:paper:2611.31205": {
+      "desc_en": "Coding agents can construct and revise robot behavior during execution, but using one agent for the whole robot can delay otherwise independent work. We introduce Asynchronous Coding Agents as Policy (ACAP), an asynchronous framework that organizes one robot as a team of persistent agents. Each memb",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-26",
+      "stars_int": 0
+    },
     "hf:paper:2611.31358": {
       "desc_en": "Visual creation demands expressive imagery together with precise control over text, layout, and structure. We introduce Nemotron-Labs-VisualCreation, an agentic framework that connects these capabilities through Pixel as Code. Raster images are represented by learned discrete visual tokens, while st",
       "pushed_at": "",
       "release_tag": "",
       "sent_date": "2026-11-25",
+      "stars_int": 0
+    },
+    "hf:paper:2611.32884": {
+      "desc_en": "A reinforcement learning method rewards agents for delaying commitment until their inferred posterior over answers is sufficiently narrow, improving evidence-based answering across vision-language benchmarks.",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-26",
       "stars_int": 0
     },
     "hf:space:0ppxnhximxr/snapref": {
@@ -1125,6 +1181,13 @@
       "pushed_at": "",
       "release_tag": "",
       "sent_date": "2026-11-18",
+      "stars_int": 0
+    },
+    "hf:space:ivannm/Qwen-Image-Edit-2509-LoRAs-Fast2-copy": {
+      "desc_en": "Demo of the Collection of Qwen Image Editing LoRAs",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-26",
       "stars_int": 0
     },
     "hf:space:kulkas2pintu/QWEN_EDIT_IMAGE": {
@@ -1282,18 +1345,18 @@
       "stars_int": 19925
     },
     "mjmirza/app-store-compliance": {
-      "desc_en": "Avoid common App Store and Google Play rejections. Open playbook and pre-submission guard with 124 documented rejection patterns and fixes, privacy manifest and Data safety checks, 112 tracked deadlines (EU AI Act, DSA, COPPA, age laws), and a skill for AI coding agents.",
-      "pushed_at": "2026-11-25T02:52:27Z",
-      "release_tag": "v2.5.1",
-      "sent_date": "2026-11-25",
-      "stars_int": 5926
+      "desc_en": "Avoid common App Store and Google Play rejections. Open playbook and pre-submission guard with 124 documented rejection patterns and fixes, privacy manifest and Data safety checks, 114 tracked deadlines (EU AI Act, DSA, COPPA, age laws), and a skill for AI coding agents.",
+      "pushed_at": "2026-11-26T01:52:17Z",
+      "release_tag": "v2.5.2",
+      "sent_date": "2026-11-26",
+      "stars_int": 6513
     },
     "mvanhorn/last30days-skill": {
       "desc_en": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
-      "pushed_at": "2026-11-24T04:11:28Z",
+      "pushed_at": "2026-11-25T17:59:27Z",
       "release_tag": "v4.6.0",
-      "sent_date": "2026-11-24",
-      "stars_int": 73548
+      "sent_date": "2026-11-26",
+      "stars_int": 75142
     },
     "nginx/nginx": {
       "desc_en": "The official NGINX Open Source repository.",
@@ -1402,10 +1465,10 @@
     },
     "toeverything/AFFiNE": {
       "desc_en": "There can be more than Notion and Miro. AFFiNE(pronounced [ə‘fain]) is a next-gen knowledge base that brings planning, sorting and creating all together. Privacy first, open-source, customizable and ready to use.",
-      "pushed_at": "2026-11-25T02:51:24Z",
+      "pushed_at": "2026-11-26T01:50:43Z",
       "release_tag": "v0.27.4",
-      "sent_date": "2026-11-25",
-      "stars_int": 78040
+      "sent_date": "2026-11-26",
+      "stars_int": 78521
     },
     "tokio-rs/topcoat": {
       "desc_en": "A batteries-included framework for building web apps",
@@ -1444,10 +1507,10 @@
     },
     "zhouxiaoka/autoclip": {
       "desc_en": "AutoClip｜一个链接，一键出片。开源 AI 视频剪辑桌面工具，将播客、访谈、课程等长视频自动剪成短视频，生成字幕、封面和发布文案，适配抖音、小红书、TikTok、Reels 与 YouTube Shorts。Open-source AI video clipping & content repurposing.",
-      "pushed_at": "2026-11-25T01:20:51Z",
-      "release_tag": "v1.6.0",
-      "sent_date": "2026-11-25",
-      "stars_int": 15463
+      "pushed_at": "2026-11-26T02:12:39Z",
+      "release_tag": "v1.6.1",
+      "sent_date": "2026-11-26",
+      "stars_int": 16215
     }
   }
 }
