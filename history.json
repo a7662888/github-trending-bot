@@ -93,10 +93,10 @@
     },
     "Tracer-Cloud/opensre": {
       "desc_en": "The open-source agent for CI/CD reliability.",
-      "pushed_at": "2026-11-26T00:55:37Z",
-      "release_tag": "v0.1.2026.11.26",
-      "sent_date": "2026-11-26",
-      "stars_int": 15541
+      "pushed_at": "2026-11-27T00:57:58Z",
+      "release_tag": "v0.1.2026.11.27",
+      "sent_date": "2026-11-27",
+      "stars_int": 15842
     },
     "XiaoYouChR/Ghost-Downloader-3": {
       "desc_en": "The only downloader you need. 下载器的集大成者。",
@@ -198,10 +198,10 @@
     },
     "cathrynlavery/diagram-design": {
       "desc_en": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, Qoder, and Pi. 52 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
-      "pushed_at": "2026-11-25T00:32:59Z",
+      "pushed_at": "2026-11-26T19:48:58Z",
       "release_tag": "",
-      "sent_date": "2026-11-25",
-      "stars_int": 72168
+      "sent_date": "2026-11-27",
+      "stars_int": 73892
     },
     "cloudflare/security-audit-skill": {
       "desc_en": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
@@ -233,17 +233,17 @@
     },
     "elementalsouls/Claude-BugHunter": {
       "desc_en": "A Claude Code skill bundle for bug hunting and external red-team work - 85 skills, 16 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
-      "pushed_at": "2026-11-25T23:28:39Z",
+      "pushed_at": "2026-11-27T01:39:27Z",
       "release_tag": "v2.1",
-      "sent_date": "2026-11-26",
-      "stars_int": 23098
+      "sent_date": "2026-11-27",
+      "stars_int": 24689
     },
     "firecrawl/firecrawl": {
       "desc_en": "Knowledge infrastructure to make your agents smarter. Search, scrape and access 550+ data providers through one API.",
-      "pushed_at": "2026-11-26T01:55:36Z",
+      "pushed_at": "2026-11-27T00:15:09Z",
       "release_tag": "v2.11.0",
-      "sent_date": "2026-11-26",
-      "stars_int": 210103
+      "sent_date": "2026-11-27",
+      "stars_int": 210993
     },
     "garrytan/gbrain": {
       "desc_en": "Garry's Opinionated OpenClaw/Hermes Agent Brain",
@@ -357,6 +357,13 @@
       "sent_date": "2026-11-19",
       "stars_int": 0
     },
+    "hf:model:ISTA-DASLab/Inkling-2-Mini-GSQ-RCO-GGUF": {
+      "desc_en": "",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-27",
+      "stars_int": 0
+    },
     "hf:model:ISTA-DASLab/Qwen3.8-27B-GSQ-RCO-GGUF": {
       "desc_en": "",
       "pushed_at": "",
@@ -448,6 +455,20 @@
       "sent_date": "2026-11-20",
       "stars_int": 0
     },
+    "hf:model:ai-sage/GigaChat4-37B-A4B": {
+      "desc_en": "",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-27",
+      "stars_int": 0
+    },
+    "hf:model:ai-sage/GigaChat4-708B-A41B": {
+      "desc_en": "",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-27",
+      "stars_int": 0
+    },
     "hf:model:baidu/ERNIE-5.5-Flash-Preview": {
       "desc_en": "",
       "pushed_at": "",
@@ -473,7 +494,7 @@
       "desc_en": "",
       "pushed_at": "",
       "release_tag": "",
-      "sent_date": "2026-11-19",
+      "sent_date": "2026-11-27",
       "stars_int": 0
     },
     "hf:model:inclusionAI/LingSante-3.1-air-VL": {
@@ -620,7 +641,7 @@
       "desc_en": "",
       "pushed_at": "",
       "release_tag": "",
-      "sent_date": "2026-11-19",
+      "sent_date": "2026-11-27",
       "stars_int": 0
     },
     "hf:model:thinkingmachines/Inkling-2-Mini": {
@@ -1071,11 +1092,46 @@
       "sent_date": "2026-11-25",
       "stars_int": 0
     },
+    "hf:paper:2611.32649": {
+      "desc_en": "An online benchmark evaluates in-context learning across computer-use and robot-use agent tasks, revealing large gaps between digital and physical performance and between recognizing rules and acting on them.",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-27",
+      "stars_int": 0
+    },
     "hf:paper:2611.32884": {
       "desc_en": "A reinforcement learning method rewards agents for delaying commitment until their inferred posterior over answers is sufficiently narrow, improving evidence-based answering across vision-language benchmarks.",
       "pushed_at": "",
       "release_tag": "",
       "sent_date": "2026-11-26",
+      "stars_int": 0
+    },
+    "hf:paper:2611.33010": {
+      "desc_en": "A new benchmark shows that many robot manipulation policies perform worse when mirrors are present, often because they confuse reflections with real objects rather than simply colliding with the mirror.",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-27",
+      "stars_int": 0
+    },
+    "hf:paper:2611.33144": {
+      "desc_en": "A framework enables coding agents to develop dexterous manipulation policies without demonstrations by exploring and distilling successful attempts into a program, then refining it for strong simulated and real-world results.",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-27",
+      "stars_int": 0
+    },
+    "hf:paper:2611.33457": {
+      "desc_en": "Play2Evolve uses AI agents to iteratively playtest, diagnose, and improve generated games through initialization, refinement, and evolution stages, enhancing functionality, visuals, and gameplay quality.",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-27",
+      "stars_int": 0
+    },
+    "hf:paper:2611.34575": {
+      "desc_en": "Establishing effective scaling laws for medical multimodal large language models (MLLMs) remains a persistent and fundamental challenge. Our systematic evaluation shows that existing medical MLLMs tend to underperform frontier general-purpose MLLMs across a range of medical tasks, while scaling mode",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-27",
       "stars_int": 0
     },
     "hf:space:0ppxnhximxr/snapref": {
@@ -1103,14 +1159,14 @@
       "desc_en": "Multi-task image generator with dynamic, chainable workflows",
       "pushed_at": "",
       "release_tag": "",
-      "sent_date": "2026-11-16",
+      "sent_date": "2026-11-27",
       "stars_int": 0
     },
     "hf:space:TabArena/leaderboard": {
       "desc_en": "Elo-ranked leaderboards for tabular ML, IID and beyond",
       "pushed_at": "",
       "release_tag": "",
-      "sent_date": "2026-11-19",
+      "sent_date": "2026-11-27",
       "stars_int": 0
     },
     "hf:space:aet256/Qwen-Image-Edit-Rapid-AIO-Loras-Experimental": {
@@ -1285,7 +1341,7 @@
       "desc_en": "generate a video from an image with a text prompt",
       "pushed_at": "",
       "release_tag": "",
-      "sent_date": "2026-11-19",
+      "sent_date": "2026-11-27",
       "stars_int": 0
     },
     "homeassistant-ai/ha-mcp": {
@@ -1297,10 +1353,10 @@
     },
     "jingyaogong/minimind": {
       "desc_en": "🧠 两小时从 0 训出你的 64M 大模型。Train your own 64M LLM from scratch in 2 hours.",
-      "pushed_at": "2026-11-23T04:01:07Z",
+      "pushed_at": "2026-11-26T08:55:11Z",
       "release_tag": "v2",
-      "sent_date": "2026-11-24",
-      "stars_int": 69611
+      "sent_date": "2026-11-27",
+      "stars_int": 71688
     },
     "jquery/jquery": {
       "desc_en": "jQuery JavaScript Library",
@@ -1345,18 +1401,18 @@
       "stars_int": 19925
     },
     "mjmirza/app-store-compliance": {
-      "desc_en": "Avoid common App Store and Google Play rejections. Open playbook and pre-submission guard with 124 documented rejection patterns and fixes, privacy manifest and Data safety checks, 114 tracked deadlines (EU AI Act, DSA, COPPA, age laws), and a skill for AI coding agents.",
-      "pushed_at": "2026-11-26T01:52:17Z",
-      "release_tag": "v2.5.2",
-      "sent_date": "2026-11-26",
-      "stars_int": 6513
+      "desc_en": "Avoid common App Store and Google Play rejections. Open playbook and pre-submission guard with 125 documented rejection patterns and fixes, privacy manifest and Data safety checks, 117 tracked deadlines (EU AI Act, DSA, COPPA, age laws), and a skill for AI coding agents.",
+      "pushed_at": "2026-11-26T23:21:53Z",
+      "release_tag": "v2.5.3",
+      "sent_date": "2026-11-27",
+      "stars_int": 7060
     },
     "mvanhorn/last30days-skill": {
       "desc_en": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
-      "pushed_at": "2026-11-25T17:59:27Z",
-      "release_tag": "v4.6.0",
-      "sent_date": "2026-11-26",
-      "stars_int": 75142
+      "pushed_at": "2026-11-26T21:28:08Z",
+      "release_tag": "v4.7.0",
+      "sent_date": "2026-11-27",
+      "stars_int": 75793
     },
     "nginx/nginx": {
       "desc_en": "The official NGINX Open Source repository.",
@@ -1381,10 +1437,10 @@
     },
     "obra/superpowers": {
       "desc_en": "An agentic skills framework & software development methodology that works.",
-      "pushed_at": "2026-11-24T23:59:04Z",
+      "pushed_at": "2026-11-26T11:33:33Z",
       "release_tag": "v7.0.2",
-      "sent_date": "2026-11-25",
-      "stars_int": 325897
+      "sent_date": "2026-11-27",
+      "stars_int": 327542
     },
     "openai/codex-security": {
       "desc_en": "OpenAI's Codex Security CLI and TypeScript SDK for finding, validating, and fixing security vulnerabilities. npm: https://www.npmjs.com/package/@openai/codex-security",
@@ -1395,10 +1451,10 @@
     },
     "openvinotoolkit/openvino": {
       "desc_en": "OpenVINO™ is an open source toolkit for optimizing and deploying AI inference",
-      "pushed_at": "2026-11-19T00:55:37Z",
+      "pushed_at": "2026-11-27T01:33:22Z",
       "release_tag": "2026.4.1",
-      "sent_date": "2026-11-19",
-      "stars_int": 11328
+      "sent_date": "2026-11-27",
+      "stars_int": 12832
     },
     "pookjw/HermesEnabler": {
       "desc_en": "Enable Hermès Watch Faces on any Apple Watch devices",
@@ -1465,10 +1521,10 @@
     },
     "toeverything/AFFiNE": {
       "desc_en": "There can be more than Notion and Miro. AFFiNE(pronounced [ə‘fain]) is a next-gen knowledge base that brings planning, sorting and creating all together. Privacy first, open-source, customizable and ready to use.",
-      "pushed_at": "2026-11-26T01:50:43Z",
+      "pushed_at": "2026-11-27T02:00:54Z",
       "release_tag": "v0.27.4",
-      "sent_date": "2026-11-26",
-      "stars_int": 78521
+      "sent_date": "2026-11-27",
+      "stars_int": 79001
     },
     "tokio-rs/topcoat": {
       "desc_en": "A batteries-included framework for building web apps",
