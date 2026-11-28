@@ -30,10 +30,10 @@
     },
     "GoogleChrome/modern-web-guidance-src": {
       "desc_en": "Keep your coding agent up to date with the latest web best practices",
-      "pushed_at": "2026-11-24T21:38:47Z",
+      "pushed_at": "2026-11-27T19:59:25Z",
       "release_tag": "",
-      "sent_date": "2026-11-25",
-      "stars_int": 10843
+      "sent_date": "2026-11-28",
+      "stars_int": 11468
     },
     "HKUDS/CLI-Anything": {
       "desc_en": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
@@ -93,17 +93,17 @@
     },
     "Tracer-Cloud/opensre": {
       "desc_en": "The open-source agent for CI/CD reliability.",
-      "pushed_at": "2026-11-27T00:57:58Z",
-      "release_tag": "v0.1.2026.11.27",
-      "sent_date": "2026-11-27",
-      "stars_int": 15842
+      "pushed_at": "2026-11-28T00:56:56Z",
+      "release_tag": "v0.1.2026.11.28",
+      "sent_date": "2026-11-28",
+      "stars_int": 16150
     },
     "XiaoYouChR/Ghost-Downloader-3": {
       "desc_en": "The only downloader you need. 下载器的集大成者。",
-      "pushed_at": "2026-11-25T13:11:40Z",
-      "release_tag": "v4.6",
-      "sent_date": "2026-11-26",
-      "stars_int": 18304
+      "pushed_at": "2026-11-26T14:05:12Z",
+      "release_tag": "v4.6.1",
+      "sent_date": "2026-11-28",
+      "stars_int": 19892
     },
     "ZhuLinsen/daily_stock_analysis": {
       "desc_en": "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。  LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.",
@@ -135,10 +135,10 @@
     },
     "alibaba/open-code-review": {
       "desc_en": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
-      "pushed_at": "2026-11-24T16:19:18Z",
-      "release_tag": "v1.14.3",
-      "sent_date": "2026-11-25",
-      "stars_int": 56081
+      "pushed_at": "2026-11-26T02:19:51Z",
+      "release_tag": "v1.14.4",
+      "sent_date": "2026-11-28",
+      "stars_int": 56906
     },
     "anthropics/claude-quickstarts": {
       "desc_en": "A collection of projects designed to help developers quickly get started with building deployable applications using the Claude API",
@@ -184,10 +184,10 @@
     },
     "backnotprop/plannotator": {
       "desc_en": "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click.",
-      "pushed_at": "2026-11-26T02:07:57Z",
-      "release_tag": "v0.29.4",
-      "sent_date": "2026-11-26",
-      "stars_int": 15094
+      "pushed_at": "2026-11-28T01:56:05Z",
+      "release_tag": "v0.29.6",
+      "sent_date": "2026-11-28",
+      "stars_int": 15433
     },
     "block/buzz": {
       "desc_en": "A hive mind communication platform",
@@ -240,10 +240,10 @@
     },
     "firecrawl/firecrawl": {
       "desc_en": "Knowledge infrastructure to make your agents smarter. Search, scrape and access 550+ data providers through one API.",
-      "pushed_at": "2026-11-27T00:15:09Z",
+      "pushed_at": "2026-11-28T01:49:53Z",
       "release_tag": "v2.11.0",
-      "sent_date": "2026-11-27",
-      "stars_int": 210993
+      "sent_date": "2026-11-28",
+      "stars_int": 211712
     },
     "garrytan/gbrain": {
       "desc_en": "Garry's Opinionated OpenClaw/Hermes Agent Brain",
@@ -445,14 +445,14 @@
       "desc_en": "",
       "pushed_at": "",
       "release_tag": "",
-      "sent_date": "2026-11-16",
+      "sent_date": "2026-11-28",
       "stars_int": 0
     },
     "hf:model:RadixArk/DaisyRose-27B": {
       "desc_en": "",
       "pushed_at": "",
       "release_tag": "",
-      "sent_date": "2026-11-20",
+      "sent_date": "2026-11-28",
       "stars_int": 0
     },
     "hf:model:ai-sage/GigaChat4-37B-A4B": {
@@ -460,6 +460,13 @@
       "pushed_at": "",
       "release_tag": "",
       "sent_date": "2026-11-27",
+      "stars_int": 0
+    },
+    "hf:model:ai-sage/GigaChat4-37B-A4B-GGUF": {
+      "desc_en": "",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-28",
       "stars_int": 0
     },
     "hf:model:ai-sage/GigaChat4-708B-A41B": {
@@ -543,7 +550,7 @@
       "desc_en": "",
       "pushed_at": "",
       "release_tag": "",
-      "sent_date": "2026-11-17",
+      "sent_date": "2026-11-28",
       "stars_int": 0
     },
     "hf:model:microsoft/Aion-1.0-Instruct-2.3B": {
@@ -656,6 +663,13 @@
       "pushed_at": "",
       "release_tag": "",
       "sent_date": "2026-11-24",
+      "stars_int": 0
+    },
+    "hf:model:thinkingmachines/TML-d24-varloop-research": {
+      "desc_en": "",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-28",
       "stars_int": 0
     },
     "hf:model:unsloth/Inkling-2-Mini-GGUF": {
@@ -1127,11 +1141,46 @@
       "sent_date": "2026-11-27",
       "stars_int": 0
     },
+    "hf:paper:2611.34232": {
+      "desc_en": "A live cross-platform benchmark evaluates computer-using agents on long-horizon workflows across Windows, Ubuntu, macOS, iOS, Android, and Web, showing that current agents remain far from platform-robust computer use and trail humans on iOS and macOS.",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-28",
+      "stars_int": 0
+    },
+    "hf:paper:2611.34290": {
+      "desc_en": "StateWeaver improves long-video generation by preserving cross-shot consistency and updating visual references through active state tracking and hierarchical collaboration.",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-28",
+      "stars_int": 0
+    },
+    "hf:paper:2611.34466": {
+      "desc_en": "AI wearables, such as smart glasses, extend the context available to agents beyond digital environments to users' physical surroundings. With these devices, computer tasks can originate from users' ongoing activities rather than solely from explicit instructions. Through first-person observations, a",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-28",
+      "stars_int": 0
+    },
     "hf:paper:2611.34575": {
       "desc_en": "Establishing effective scaling laws for medical multimodal large language models (MLLMs) remains a persistent and fundamental challenge. Our systematic evaluation shows that existing medical MLLMs tend to underperform frontier general-purpose MLLMs across a range of medical tasks, while scaling mode",
       "pushed_at": "",
       "release_tag": "",
       "sent_date": "2026-11-27",
+      "stars_int": 0
+    },
+    "hf:paper:2611.34813": {
+      "desc_en": "Video generation models are increasingly evaluated as visual reasoners: given a first frame and a natural-language prompt, can the model produce the video in which the specified task is carried out? The paradigm is considered advantageous because the reasoning is native to the visual medium, unfoldi",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-28",
+      "stars_int": 0
+    },
+    "hf:paper:2611.34852": {
+      "desc_en": "Deep research agents gather information from multiple sources and synthesize it into reports on complex, open-ended questions. Existing benchmarks assess report quality along several dimensions, but lack a dedicated knowledge-centric evaluation of which research directions a report covers and how de",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-28",
       "stars_int": 0
     },
     "hf:space:0ppxnhximxr/snapref": {
@@ -1194,7 +1243,7 @@
       "desc_en": "Open weights for image editing, generation and layouts",
       "pushed_at": "",
       "release_tag": "",
-      "sent_date": "2026-11-20",
+      "sent_date": "2026-11-28",
       "stars_int": 0
     },
     "hf:space:dream2589632147/Dream-wan2-2-fp8da-aoti-preview-2": {
@@ -1215,7 +1264,7 @@
       "desc_en": "Cloudflare Clairic 27B typed structured extraction",
       "pushed_at": "",
       "release_tag": "",
-      "sent_date": "2026-11-20",
+      "sent_date": "2026-11-28",
       "stars_int": 0
     },
     "hf:space:hugging-apps/haru-4b": {
@@ -1223,6 +1272,13 @@
       "pushed_at": "",
       "release_tag": "",
       "sent_date": "2026-11-18",
+      "stars_int": 0
+    },
+    "hf:space:hugging-apps/juggernaut-moss-turbo": {
+      "desc_en": "6-step turbo MOSS-Image text-to-image (DMD2, CFG 1)",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-28",
       "stars_int": 0
     },
     "hf:space:hugging-apps/mirage-vision": {
@@ -1288,6 +1344,13 @@
       "sent_date": "2026-11-19",
       "stars_int": 0
     },
+    "hf:space:not-lain/background-removal": {
+      "desc_en": "",
+      "pushed_at": "",
+      "release_tag": "",
+      "sent_date": "2026-11-28",
+      "stars_int": 0
+    },
     "hf:space:prithivMLmods/Qwen-Image-Edit-2509-LoRAs-Fast": {
       "desc_en": "Demo of the Collection of Qwen Image Edit LoRAs",
       "pushed_at": "",
@@ -1327,7 +1390,7 @@
       "desc_en": "",
       "pushed_at": "",
       "release_tag": "",
-      "sent_date": "2026-11-20",
+      "sent_date": "2026-11-28",
       "stars_int": 0
     },
     "hf:space:trellis-community/TRELLIS": {
@@ -1402,17 +1465,24 @@
     },
     "mjmirza/app-store-compliance": {
       "desc_en": "Avoid common App Store and Google Play rejections. Open playbook and pre-submission guard with 125 documented rejection patterns and fixes, privacy manifest and Data safety checks, 117 tracked deadlines (EU AI Act, DSA, COPPA, age laws), and a skill for AI coding agents.",
-      "pushed_at": "2026-11-26T23:21:53Z",
+      "pushed_at": "2026-11-28T01:49:36Z",
       "release_tag": "v2.5.3",
-      "sent_date": "2026-11-27",
-      "stars_int": 7060
+      "sent_date": "2026-11-28",
+      "stars_int": 7948
     },
     "mvanhorn/last30days-skill": {
       "desc_en": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
-      "pushed_at": "2026-11-26T21:28:08Z",
-      "release_tag": "v4.7.0",
-      "sent_date": "2026-11-27",
-      "stars_int": 75793
+      "pushed_at": "2026-11-27T06:30:50Z",
+      "release_tag": "v4.8.0",
+      "sent_date": "2026-11-28",
+      "stars_int": 76389
+    },
+    "n8n-io/nod": {
+      "desc_en": "Open source personal agent with its own computer. It chases invoices, preps your calls and cancels trials on real websites, and asks before it acts. Runs on your machine with the model you choose. By n8n.",
+      "pushed_at": "2026-11-28T01:44:00Z",
+      "release_tag": "nod-v0.10.3",
+      "sent_date": "2026-11-28",
+      "stars_int": 4354
     },
     "nginx/nginx": {
       "desc_en": "The official NGINX Open Source repository.",
@@ -1562,11 +1632,11 @@
       "stars_int": 15342
     },
     "zhouxiaoka/autoclip": {
-      "desc_en": "AutoClip｜一个链接，一键出片。开源 AI 视频剪辑桌面工具，将播客、访谈、课程等长视频自动剪成短视频，生成字幕、封面和发布文案，适配抖音、小红书、TikTok、Reels 与 YouTube Shorts。Open-source AI video clipping & content repurposing.",
-      "pushed_at": "2026-11-26T02:12:39Z",
-      "release_tag": "v1.6.1",
-      "sent_date": "2026-11-26",
-      "stars_int": 16215
+      "desc_en": "AutoClip｜The open-source OpusClip alternative — local-first AI clipping & MCP server, zero subscriptions. 一个链接，一键出片。开源 AI 视频剪辑桌面工具，将播客、访谈、课程等长视频自动剪成短视频，生成字幕、封面和发布文案，适配抖音、小红书、TikTok、Reels 与 YouTube Shorts。",
+      "pushed_at": "2026-11-27T16:59:46Z",
+      "release_tag": "v1.6.2",
+      "sent_date": "2026-11-28",
+      "stars_int": 17619
     }
   }
 }
